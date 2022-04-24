@@ -1,3 +1,5 @@
+import java.awt.Button;
+import java.awt.Frame;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -25,6 +27,7 @@ public class Login implements ActionListener{
 	
 	public static void main(String[] args) {
 		JPanel panel = new JPanel();
+		
 		JFrame frame = new JFrame();
 		frame.setSize(350, 200);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -62,28 +65,33 @@ public class Login implements ActionListener{
 		frame.setVisible(true);
 
 	}
-	
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		String user = userText.getText();
 		String password = passwordText.getText();
-       
-
+		boolean user_found=false; 
         try {
 			Scanner in = new Scanner(new File("./src/RounterInfo.txt"));
 			while(in.hasNextLine()){
 				 //if there is a line, print it out
 				 String line = in.nextLine();
-				 System.out.println(line);
+				 String[] output = line.split(";");
+				 String user_from_file = output[0]; 
+				 String password_form_file = output[1];
+				 if(user.equals(user_from_file) && password.equals(password_form_file)) {
+					 success.setText("login Successful");
+					 user_found=true;
+					 break;
+				 }
 			 }
 		} catch (FileNotFoundException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
         
-		if(user.equals("Dina") && password.equals("123")) {
-			success.setText("login Successful");
+		if(user_found==false) {
+			success.setText("Login error");
 			
 		}
 	}
