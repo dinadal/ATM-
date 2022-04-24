@@ -1,5 +1,3 @@
-import java.awt.Button;
-import java.awt.Frame;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -27,7 +25,6 @@ public class Login implements ActionListener{
 	
 	public static void main(String[] args) {
 		JPanel panel = new JPanel();
-		
 		JFrame frame = new JFrame();
 		frame.setSize(350, 200);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
