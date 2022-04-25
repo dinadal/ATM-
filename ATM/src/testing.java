@@ -1,5 +1,5 @@
 //this is a test made by Mayan
-//testinggg
+//test
 public class testing {
 
 }
