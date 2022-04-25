@@ -17,6 +17,11 @@ public class DepositeFrame extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField txtTf;
+	private JTextField balanceText;
+	
+	//my additions
+	double balance = 1000.101;
+	String balanceS = String.valueOf(balance);
 
 	/**
 	 * Launch the application.
@@ -48,7 +53,7 @@ public class DepositeFrame extends JFrame {
 		contentPane.setLayout(null);
 		
 		JLabel lblNewLabel = new JLabel("Enter the amount that you want to deposite.");
-		lblNewLabel.setBounds(33, 38, 367, 42);
+		lblNewLabel.setBounds(32, 49, 367, 42);
 		contentPane.add(lblNewLabel);
 		
 		txtTf = new JTextField();
@@ -59,9 +64,38 @@ public class DepositeFrame extends JFrame {
 		JButton btnNewButton = new JButton("ok");
 		btnNewButton.setBounds(43, 181, 302, 35);
 		btnNewButton.addActionListener(new ActionListener() {
+		
+			
+			
+			
+			
 			public void actionPerformed(ActionEvent e) {
+				//adds deposited amount to the balance 
+				
+				//balance = balance ;
+				
+				String depositeAmount;
+				depositeAmount = txtTf.getText();				
+				double depositeD = Double.parseDouble(depositeAmount);
+				balance = balance + depositeD; //answer as double
+				String newBalance = String.valueOf(balance);
+				balanceText.setText(newBalance);
+				
+				
+				
+				
 			}
 		});
 		contentPane.add(btnNewButton);
+		
+		JLabel lblNewLabel_1 = new JLabel("Your balance is:");
+		lblNewLabel_1.setBounds(32, 32, 112, 16);
+		contentPane.add(lblNewLabel_1);
+		
+		balanceText = new JTextField();
+		balanceText.setBounds(159, 27, 130, 26);
+		contentPane.add(balanceText);
+		balanceText.setColumns(10);
+		balanceText.setText(balanceS);
 	}
 }
