@@ -1,40 +1,52 @@
-import java.awt.BorderLayout;
-import java.awt.EventQueue;
-
 import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
+import javax.swing.AbstractButton;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import javax.swing.JLabel;
+import java.awt.Font;
+import java.awt.Color;
+import java.awt.SystemColor;
 
-public class Window2 extends JFrame {
-
-	private JPanel contentPane;
-
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					Window2 frame = new Window2();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
+public class Window2 {
+	
+		public static void main(String[] args) {
+			showWindow();
+			// TODO Auto-generated method stub
+		}
+		
+		
+		public static void showWindow() {
+		
+			JFrame frame = new JFrame("WINDOW 1");
+			
+			frame.setBounds (100,100,467,315); 
+			frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+			
+			frame.getContentPane().setLayout (null);
+			
+			JLabel lblNewLabel = new JLabel("the function");
+			lblNewLabel.setBackground(SystemColor.controlDkShadow);
+			lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 19));
+			lblNewLabel.setBounds(155, 92, 174, 62);
+			frame.getContentPane().add(lblNewLabel);
+			
+			JButton btnNewButton = new JButton("Back");
+			btnNewButton.setBackground(SystemColor.inactiveCaption);
+			btnNewButton.setBounds(10, 22, 89, 23);
+			frame.getContentPane().add(btnNewButton);
+			btnNewButton.addActionListener(new ActionListener() {
+				@Override
+				public void actionPerformed(ActionEvent arg0) {
+					frame.setVisible(false);
+					Window1 w1 = new Window1();
+					w1.showWindow();
 				}
-			}
-		});
+			
+			});
+			
+			
+			frame.setVisible(true);
+			
+		}
 	}
-
-	/**
-	 * Create the frame.
-	 */
-	public Window2() {
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
-		contentPane = new JPanel();
-		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-		contentPane.setLayout(new BorderLayout(0, 0));
-		setContentPane(contentPane);
-	}
-
-}

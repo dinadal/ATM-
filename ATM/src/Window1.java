@@ -1,40 +1,81 @@
-import java.awt.BorderLayout;
-import java.awt.EventQueue;
-
 import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
+import javax.swing.AbstractButton;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import java.awt.Color;
+import java.awt.SystemColor;
+import java.awt.Font;
+import javax.swing.JTextField;
+import javax.swing.JLabel;
 
-public class Window1 extends JFrame {
+public class Window1 {
 
-	private JPanel contentPane;
-
-	/**
-	 * Launch the application.
-	 */
 	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					Window1 frame = new Window1();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
+		// TODO Auto-generated method stub
+		showWindow();
+
+	}
+	
+
+	public static void showWindow() {
+
+		JFrame frame = new JFrame("WINDOW 1");
+		frame.getContentPane().setBackground(Color.WHITE);
+		frame.getContentPane().setForeground(Color.WHITE);
+
+		frame.setBounds (100,100,583,383);
+
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+		frame.getContentPane().setLayout (null);
+		
+		JButton btnNewButton = new JButton("deposit");
+		btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 10));
+		btnNewButton.setBackground(SystemColor.activeCaption);
+		btnNewButton.setBounds(132, 181, 111, 23);
+		frame.getContentPane().add(btnNewButton);
+		
+		JButton btnNewButton_1 = new JButton("withdraw");
+		btnNewButton_1.setFont(new Font("Tahoma", Font.PLAIN, 10));
+		btnNewButton_1.setBackground(SystemColor.activeCaption);
+		btnNewButton_1.setBounds(327, 181, 102, 23);
+		frame.getContentPane().add(btnNewButton_1);
+		
+		JLabel lblNewLabel = new JLabel("Welcome to your acount");
+		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 21));
+		lblNewLabel.setBounds(28, 27, 286, 48);
+		frame.getContentPane().add(lblNewLabel);
+		
+		JLabel lblNewLabel_1 = new JLabel("Please select the desired process");
+		lblNewLabel_1.setForeground(SystemColor.controlDkShadow);
+		lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 17));
+		lblNewLabel_1.setBounds(146, 104, 298, 33);
+		frame.getContentPane().add(lblNewLabel_1);
+		
+		btnNewButton.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				frame.setVisible(false);
+				Window2 w2 = new Window2();
+				w2.showWindow();
 			}
+			
 		});
-	}
+		
+		btnNewButton_1.addActionListener(new ActionListener() {
+					
+					@Override
+					public void actionPerformed(ActionEvent e) {
+						frame.setVisible(false);
+						Window2 w2 = new Window2();
+						w2.showWindow();
+					}
+					
+				});
+		
 
-	/**
-	 * Create the frame.
-	 */
-	public Window1() {
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
-		contentPane = new JPanel();
-		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-		contentPane.setLayout(new BorderLayout(0, 0));
-		setContentPane(contentPane);
+		frame.setVisible(true);
 	}
-
 }
