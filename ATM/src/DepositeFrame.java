@@ -73,17 +73,16 @@ public class DepositeFrame extends JFrame {
 				//adds deposited amount to the balance 
 				
 				//balance = balance ;
-				
 				String depositeAmount;
 				depositeAmount = txtTf.getText();				
 				double depositeD = Double.parseDouble(depositeAmount);
+				if (depositeD < 0) {
+		            throw new IllegalArgumentException("Don't deposit a negative amount!");
+		        }
 				balance = balance + depositeD; //answer as double
 				String newBalance = String.valueOf(balance);
 				balanceText.setText(newBalance);
-				
-				
-				
-				
+
 			}
 		});
 		contentPane.add(btnNewButton);
