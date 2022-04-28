@@ -22,7 +22,7 @@ public class DepositeFrame extends JFrame {
 	private static JLabel nonNegative;
 	
 	//my additions
-	double balance = 1000.101;
+	double balance = 1000.101;  //For now! The data will be later taken from main menu
 	String balanceS = String.valueOf(balance);
 
 	/**
