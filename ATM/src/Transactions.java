@@ -24,9 +24,9 @@ public class Transactions {
 		return date.toString();
 	}
 	/** Set a new type */
-	public void setType(char type) {
+	/*public void setType(char type) {
 		this.type = type;
-	}
+	}*/
 
 	/** Return type */
 	public char getType() {
@@ -34,9 +34,9 @@ public class Transactions {
 	}
 
 	/** Set new amount */
-	public void setAmount(double amount) {
+	/*public void setAmount(double amount) {
 		this.amount = amount;
-	}
+	}*/
 
 	/** Return amount */
 	public double getAmount() {
@@ -44,9 +44,9 @@ public class Transactions {
 	}
 
 	/** Set a new balance */
-	public void setBalance(double balance) {
+	/*public void setBalance(double balance) {
 		this.balance = balance;
-	}
+	}*/
 
 	/** Return balance */
 	public double getBalance() {
@@ -54,9 +54,9 @@ public class Transactions {
 	}
 
 	/** Set a new description */
-	public void setDescription(String description) {
+	/*public void setDescription(String description) {
 		this.description = description;
-	}
+	}*/
 
 	/** Return description */
 	public String getDescription() {
