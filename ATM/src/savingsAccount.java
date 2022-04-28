@@ -3,8 +3,8 @@ public class savingsAccount extends Account {
 	
 	  double overdraftLimit = 0;
 
-	    public savingsAccount(String id, double balance) {
-	        super(id, balance);
+	    public savingsAccount(String id, double balance, int pin) {
+	        super(id, balance,pin);
 	    }
 
 	    @Override
