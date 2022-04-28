@@ -55,22 +55,24 @@ public class Window1 {
 		
 		btnNewButton.addActionListener(new ActionListener() {
 			
-			@Override
+			@Override //Takes the user to the deposite frame
 			public void actionPerformed(ActionEvent e) {
-				frame.setVisible(false);
-				Window2 w2 = new Window2();
-				w2.showWindow();
+				DepositeFrame panel = new DepositeFrame();
+				panel.setVisible(true);
+				panel.setLocation(400,250);
 			}
 			
 		});
 		
+		
+		
 		btnNewButton_1.addActionListener(new ActionListener() {
 					
-					@Override
+					@Override  //Takes the user to the withdraw frame
 					public void actionPerformed(ActionEvent e) {
-						frame.setVisible(false);
-						Window2 w2 = new Window2();
-						w2.showWindow();
+						WithdrawFrame panel = new WithdrawFrame();
+						panel.setVisible(true);
+						panel.setLocation(400,250);
 					}
 					
 				});
