@@ -5,6 +5,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
@@ -18,6 +19,7 @@ public class DepositeFrame extends JFrame {
 	private JPanel contentPane;
 	private JTextField txtTf;
 	private JTextField balanceText;
+	private static JLabel nonNegative;
 	
 	//my additions
 	double balance = 1000.101;
@@ -65,10 +67,6 @@ public class DepositeFrame extends JFrame {
 		btnNewButton.setBounds(43, 181, 302, 35);
 		btnNewButton.addActionListener(new ActionListener() {
 		
-			
-			
-			
-			
 			public void actionPerformed(ActionEvent e) {
 				//adds deposited amount to the balance 
 				
@@ -76,13 +74,20 @@ public class DepositeFrame extends JFrame {
 				String depositeAmount;
 				depositeAmount = txtTf.getText();				
 				double depositeD = Double.parseDouble(depositeAmount);
+				nonNegative = new JLabel("");
+				nonNegative.setBounds(10, 130, 300, 25);
+				contentPane.add(nonNegative);
+				nonNegative.setText(null);
 				if (depositeD < 0) {
-		            throw new IllegalArgumentException("Don't deposit a negative amount!");
+					nonNegative.setText("Don't deposit a negative amount!");
 		        }
-				balance = balance + depositeD; //answer as double
-				String newBalance = String.valueOf(balance);
-				balanceText.setText(newBalance);
-
+				else {
+					balance = balance + depositeD; //answer as double
+					String newBalance = String.valueOf(balance);
+					balanceText.setText(newBalance);
+					nonNegative.setText("Balance updated");
+				}
+				
 			}
 		});
 		contentPane.add(btnNewButton);
@@ -96,5 +101,19 @@ public class DepositeFrame extends JFrame {
 		contentPane.add(balanceText);
 		balanceText.setColumns(10);
 		balanceText.setText(balanceS);
+		JButton backButton = new JButton("Main Menu");
+
+		backButton.setBounds(43, 221, 302, 35);
+		backButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent m) {
+				dispose();
+				// main frame should be here
+				Login panel = new Login();
+				panel.setVisible(true);
+				panel.setLocation(400,250);
+				}
+		});
+		contentPane.add(backButton);
+		
 	}
 }

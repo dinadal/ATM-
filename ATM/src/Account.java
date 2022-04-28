@@ -7,6 +7,7 @@ public class Account {
 	String name;
 	double balance;
 	double annualInterestRate;
+	int pin;
 	Date date;
     ArrayList<Transactions> transactions = new ArrayList<Transactions>();
 	
@@ -15,24 +16,26 @@ public class Account {
 		
 	}
 	
-	public Account(String n, double b) {
+	public Account(String n, double b,int p) {
 		if (b < 0) {
             throw new IllegalArgumentException("Accounts with a negative balance cannot be created!");
         }
 		accountNumber = n;
 		balance = b;
+		pin = p;
 		//annualInterestRate = r;
 		//date = d;
 		
 	}
 	
-	public Account(String n, String i,  double b) {
+	public Account(String n, String i,  double b, int p) {
 		if (b < 0) {
             throw new IllegalArgumentException("Accounts with a negative balance cannot be created!");
         }
 		name = n;
 		accountNumber = i;
 		balance = b;
+		pin = p;
 		
 	}
 	
@@ -60,7 +63,9 @@ public class Account {
 	public double getBalance() {
 		return balance;
 	}
-	
+	public int getPin() {
+		return pin;
+	}
 	/* public void setAnnualInterestRate(double r) {
 		annualInterestRate = r;
 	}*/
@@ -88,16 +93,17 @@ public class Account {
     	    transactions.add(new Transactions('W', amount, balance, "withdraw" ));
     	   }
     	   else  if (amount < 0) {
-               throw new IllegalArgumentException("Don't withdraw a negative amount!");
+    		   System.out.println("Don't withdraw a negative amount!");
            }
     	   else if (balance < amount) {
-    		   throw new IllegalArgumentException("Don't withdraw a negative amount!");
+    		   System.out.println("Insuffiecient funds");
     	      }
     }
 
     public void deposit(double amount) {
+    	
     	if (amount < 0) {
-            throw new IllegalArgumentException("Don't deposit a negative amount!");
+    		System.out.println("Don't deposit a negative amount!");
         }
     	else {
     		 balance += amount;
