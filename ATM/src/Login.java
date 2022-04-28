@@ -7,6 +7,7 @@ import javax.lang.model.element.NestingKind;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
@@ -15,7 +16,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-public class Login implements ActionListener{
+public class Login extends JFrame implements ActionListener{
 
 	
 	private static JLabel userLabel;
@@ -24,11 +25,10 @@ public class Login implements ActionListener{
 	private static JPasswordField passwordText;
 	private static JButton button;
 	private static JLabel success;
-	
+	static JPanel panel = new JPanel();
+	static JFrame frame = new JFrame();
 	public static void main(String[] args) {
-		JPanel panel = new JPanel();
 		
-		JFrame frame = new JFrame();
 		frame.setSize(350, 200);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().add(panel);
@@ -94,5 +94,14 @@ public class Login implements ActionListener{
 			success.setText("Login error");
 			
 		}
+		else {
+			frame.dispose();
+			JOptionPane.showMessageDialog(null,"Welcome "+userText.getText(),"Welcome",JOptionPane.INFORMATION_MESSAGE);
+			// main frame should be here
+			DepositeFrame panel = new DepositeFrame();
+			panel.setVisible(true);
+			panel.setLocation(400,250);
+		}
+		
 	}
 }
