@@ -128,7 +128,7 @@ public class SignUp extends JFrame implements ActionListener{
 					success.setText("Enter a valid phone number (10 digits)");
 				else if (passLength != 4)
 					success.setText("Enter a valid pin number (4 digits");
-				else if (passlength1 != 4)
+				else if (passLength1 != 4)
 					success.setText("Error: Passwords dont match");
 				
 				if(PinText.equals(ConfirmPinText)) {
