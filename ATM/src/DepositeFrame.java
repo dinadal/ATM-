@@ -62,7 +62,7 @@ public class DepositeFrame extends JFrame {
 		contentPane.add(lblNewLabel);
 		
 		txtTf = new JTextField();
-		txtTf.setBounds(43, 92, 287, 35);
+		txtTf.setBounds(43, 92, 287, 35); //Testing
 		contentPane.add(txtTf);
 		txtTf.setColumns(10);
 		
@@ -111,10 +111,20 @@ public class DepositeFrame extends JFrame {
 			public void actionPerformed(ActionEvent m) {
 				dispose();
 				// main frame should be here
+
 				MainMenu panel = new MainMenu();
 				panel.frame.setVisible(true);
+
+				//Login panel = new Login();
+				//panel.setVisible(true);
+				//panel.setLocation(400,250);
+							
+				
+
 				}
 		});
+		
+		
 		
 		contentPane.add(backButton);
 		
