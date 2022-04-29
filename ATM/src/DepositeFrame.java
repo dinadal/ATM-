@@ -16,6 +16,8 @@ import java.awt.event.ActionEvent;
 
 public class DepositeFrame extends JFrame {
 
+	public JFrame frame;
+	private JTextField JLabDisplay;
 	private JPanel contentPane;
 	private JTextField txtTf;
 	private JTextField balanceText;
@@ -45,6 +47,7 @@ public class DepositeFrame extends JFrame {
 	 * Create the frame.
 	 */
 	public DepositeFrame() {
+		
 		setTitle("Deposite");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
@@ -112,6 +115,7 @@ public class DepositeFrame extends JFrame {
 				panel.frame.setVisible(true);
 				}
 		});
+		
 		contentPane.add(backButton);
 		
 	}
