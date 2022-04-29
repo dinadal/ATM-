@@ -22,7 +22,7 @@ public class DepositeFrame extends JFrame {
 	private static JLabel nonNegative;
 	
 	//my additions
-	double balance = 1000.101;
+	double balance = 1000.101;  //For now! The data will be later taken from main menu
 	String balanceS = String.valueOf(balance);
 
 	/**
@@ -108,9 +108,8 @@ public class DepositeFrame extends JFrame {
 			public void actionPerformed(ActionEvent m) {
 				dispose();
 				// main frame should be here
-				Login panel = new Login();
-				panel.setVisible(true);
-				panel.setLocation(400,250);
+				MainMenu panel = new MainMenu();
+				panel.showWindow();
 				}
 		});
 		contentPane.add(backButton);

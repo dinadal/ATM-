@@ -26,6 +26,8 @@ public class Login extends JFrame implements ActionListener {
 	private static JPasswordField passwordText;
 	private static JButton button;
 	private static JLabel success;
+	private static String name;
+
 
 
 	/**
@@ -96,6 +98,7 @@ public class Login extends JFrame implements ActionListener {
 						 String[] output = line.split(";");
 						 String AccNum_from_file = output[0]; 
 						 String password_form_file = output[1];
+						 name = output[2];
 						 if(user.equals(AccNum_from_file) && password.equals(password_form_file)) {
 							 success.setText("login Successful");
 							 user_found=true;
@@ -113,11 +116,10 @@ public class Login extends JFrame implements ActionListener {
 				}
 				else {
 					dispose();
-					JOptionPane.showMessageDialog(null,"Welcome "+userText.getText(),"Welcome",JOptionPane.INFORMATION_MESSAGE);
+					JOptionPane.showMessageDialog(null,"Welcome "+name,"Welcome",JOptionPane.INFORMATION_MESSAGE);
 					// main frame should be here
-					DepositeFrame panel = new DepositeFrame();
-					panel.setVisible(true);
-					panel.setLocation(400,250);
+					MainMenu panel = new MainMenu();
+					panel.showWindow();
 				}	
 			}
 		});
