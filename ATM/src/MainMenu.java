@@ -2,31 +2,20 @@ import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-import javax.swing.JPasswordField;
 import javax.swing.border.BevelBorder;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.util.Scanner;
 import java.awt.event.ActionEvent;
 import java.awt.Color;
 import javax.swing.JLabel;
-import javax.swing.JOptionPane;
-
 import java.awt.Font;
 import javax.swing.JTextField;
 import javax.swing.ImageIcon;
 
-public class Login {
+public class MainMenu {
 
-	private JFrame frame;
-	private JTextField jLabDisplay;
-	private JTextField userText;
-	private JTextField passwordText;
-	private static JLabel success;
-	private static String name;
-	private JTextField LoginLab;
+	public JFrame frame;
+	private JTextField JLabDisplay;
 
 	/**
 	 * Launch the application.
@@ -35,7 +24,7 @@ public class Login {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Login window = new Login();
+					MainMenu window = new MainMenu();
 					window.frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -47,14 +36,8 @@ public class Login {
 	/**
 	 * Create the application.
 	 */
-	public Login() {
-		initialize();
-	}
-
-	/**
-	 * Initialize the contents of the frame.
-	 */
-	private void initialize() {
+	public MainMenu() {
+		
 		frame = new JFrame();
 		frame.setBounds(100, 100, 600, 600);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -66,38 +49,24 @@ public class Login {
 		frame.getContentPane().add(panel);
 		panel.setLayout(null);
 		
-		JButton btnAccNum = new JButton("Account Number");
-		btnAccNum.addActionListener(new ActionListener() {
-			
-			@Override  //Takes the user to the withdraw frame
-			public void actionPerformed(ActionEvent e) {
-				jLabDisplay  = userText;
-			}
-			
-		});
-		btnAccNum.setBounds(25, 29, 141, 52);
-		panel.add(btnAccNum);
+		JButton btnBalance = new JButton("Balance");
+		btnBalance.setBounds(25, 29, 117, 52);
+		panel.add(btnBalance);
 		
-		JButton btnPin = new JButton("Pin");
-		btnPin.addActionListener(new ActionListener() {
+		JButton btnWithdraw = new JButton("Withdraw");
+		btnWithdraw.addActionListener(new ActionListener() {
 					
 					@Override  //Takes the user to the withdraw frame
 					public void actionPerformed(ActionEvent e) {
-						jLabDisplay  = passwordText;
+						frame.dispose();
+						WithdrawFrame panel = new WithdrawFrame();
+						panel.setVisible(true);
+						panel.setLocation(400,250);
 					}
 					
 				});
-		btnPin.setBounds(25, 105, 141, 52);
-		panel.add(btnPin);
-		
-		jLabDisplay = new JTextField();
-		jLabDisplay.setBounds(6, 122, 14, 15);
-		panel.add(jLabDisplay);
-		jLabDisplay.setVisible(false);
-		jLabDisplay.setForeground(Color.WHITE);
-		jLabDisplay.setBackground(Color.WHITE);
-		jLabDisplay.setFont(new Font("Lucida Grande", Font.BOLD, 14));
-		jLabDisplay.setColumns(10);
+		btnWithdraw.setBounds(25, 105, 117, 52);
+		panel.add(btnWithdraw);
 		
 		JPanel panel_1 = new JPanel();
 		panel_1.setBackground(Color.LIGHT_GRAY);
@@ -106,21 +75,11 @@ public class Login {
 		frame.getContentPane().add(panel_1);
 		panel_1.setLayout(null);
 		
-		userText = new JTextField();
-		userText.setBounds(6, 40, 130, 26);
-		panel_1.add(userText);
-		userText.setColumns(10);
-		
-		passwordText = new JPasswordField();
-		passwordText.setBounds(6, 117, 130, 26);
-		panel_1.add(passwordText);
-		passwordText.setColumns(10);
-		
-		LoginLab = new JTextField("Enter your information:");
-		LoginLab.setBackground(Color.LIGHT_GRAY);
-		LoginLab.setColumns(10);
-		LoginLab.setBounds(20, 6, 156, 22);
-		panel_1.add(LoginLab);
+		JLabDisplay = new JTextField();
+		JLabDisplay.setFont(new Font("Lucida Grande", Font.BOLD, 14));
+		JLabDisplay.setBounds(6, 22, 188, 133);
+		panel_1.add(JLabDisplay);
+		JLabDisplay.setColumns(10);
 		
 		JPanel panel_2 = new JPanel();
 		panel_2.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
@@ -128,51 +87,22 @@ public class Login {
 		frame.getContentPane().add(panel_2);
 		panel_2.setLayout(null);
 		
-		JButton btnLogin = new JButton("Login");
-		btnLogin.setBounds(24, 25, 120, 52);
-		btnLogin.addActionListener(new ActionListener() {
+		JButton btnDeposit = new JButton("Deposit");
+		btnDeposit.setBounds(24, 25, 120, 52);
+		btnDeposit.addActionListener(new ActionListener() {
 		public void actionPerformed(ActionEvent e) {
-			jLabDisplay = LoginLab;
-			String user = userText.getText();
-			String password = passwordText.getText();
-			boolean user_found=false; 
-	        try {
-				Scanner in = new Scanner(new File("./src/RounterInfo.txt"));
-				while(in.hasNextLine()){
-					 //if there is a line, print it out
-					 String line = in.nextLine();
-					 String[] output = line.split(";");
-					 String AccNum_from_file = output[0]; 
-					 String password_form_file = output[1];
-					 name = output[2];
-					 if(user.equals(AccNum_from_file) && password.equals(password_form_file)) {
-						 jLabDisplay.setText("login Successful");
-						 user_found=true;
-						 break;
-					 }
-				 }
-			} catch (FileNotFoundException e1) {
-				// TODO Auto-generated catch block
-				e1.printStackTrace();
-			}
-	        
-			if(user_found==false) {
-				jLabDisplay.setText("Login error");
-				
-			}
-			else {
-				frame.dispose();
-				MainMenu panel = new MainMenu();
-				panel.frame.setVisible(true);
-			}	
+			frame.dispose();
+			DepositeFrame panel = new DepositeFrame();
+			panel.setVisible(true);
+			panel.setLocation(400,250);
 		}
 		
 	});
-		panel_2.add(btnLogin);
+		panel_2.add(btnDeposit);
 		
-		JButton btnSignUp = new JButton("Sign Up");
-		btnSignUp.setBounds(24, 101, 120, 52);
-		panel_2.add(btnSignUp);
+		JButton btnMiniState = new JButton("Mini Statement");
+		btnMiniState.setBounds(24, 101, 120, 52);
+		panel_2.add(btnMiniState);
 		
 		JPanel panel_3 = new JPanel();
 		panel_3.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
@@ -184,8 +114,8 @@ public class Login {
 		jBtn2.setIcon(new ImageIcon(MainMenu.class.getResource("/Icons/2.jpeg")));
 		jBtn2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				String enterNumber = jLabDisplay.getText() + "2";
-				jLabDisplay.setText(enterNumber);
+				String enterNumber = JLabDisplay.getText() + "2";
+				JLabDisplay.setText(enterNumber);
 			}
 		});
 		jBtn2.setBounds(184, 25, 101, 64);
@@ -195,8 +125,8 @@ public class Login {
 		jBtn3.setIcon(new ImageIcon(MainMenu.class.getResource("/Icons/3.jpeg")));
 		jBtn3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				String enterNumber = jLabDisplay.getText() + "3";
-				jLabDisplay.setText(enterNumber);
+				String enterNumber = JLabDisplay.getText() + "3";
+				JLabDisplay.setText(enterNumber);
 			}
 		});
 		jBtn3.setBounds(297, 25, 101, 64);
@@ -206,8 +136,8 @@ public class Login {
 		jBtn5.setIcon(new ImageIcon(MainMenu.class.getResource("/Icons/5.jpeg")));
 		jBtn5.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				String enterNumber = jLabDisplay.getText() + "5";
-				jLabDisplay.setText(enterNumber);
+				String enterNumber = JLabDisplay.getText() + "5";
+				JLabDisplay.setText(enterNumber);
 			}
 		});
 		jBtn5.setBounds(184, 101, 101, 64);
@@ -216,8 +146,8 @@ public class Login {
 		JButton jBtn4 = new JButton("");
 		jBtn4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				String enterNumber = jLabDisplay.getText() + "4";
-				jLabDisplay.setText(enterNumber);
+				String enterNumber = JLabDisplay.getText() + "4";
+				JLabDisplay.setText(enterNumber);
 			}
 		});
 			
@@ -228,8 +158,8 @@ public class Login {
 		JButton jBtn6 = new JButton("");
 		jBtn6.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				String enterNumber = jLabDisplay.getText() + "6";
-				jLabDisplay.setText(enterNumber);
+				String enterNumber = JLabDisplay.getText() + "6";
+				JLabDisplay.setText(enterNumber);
 			}
 		});
 		jBtn6.setIcon(new ImageIcon(MainMenu.class.getResource("/Icons/6.jpeg")));
@@ -245,8 +175,8 @@ public class Login {
 		jBtn8.setIcon(new ImageIcon(MainMenu.class.getResource("/Icons/8.jpeg")));
 		jBtn8.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				String enterNumber = jLabDisplay.getText() + "8";
-				jLabDisplay.setText(enterNumber);
+				String enterNumber = JLabDisplay.getText() + "8";
+				JLabDisplay.setText(enterNumber);
 			}
 		});
 		jBtn8.setBounds(184, 176, 101, 64);
@@ -256,8 +186,8 @@ public class Login {
 		jBtn7.setIcon(new ImageIcon(MainMenu.class.getResource("/Icons/7.jpeg")));
 		jBtn7.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				String enterNumber = jLabDisplay.getText() + "7";
-				jLabDisplay.setText(enterNumber);
+				String enterNumber = JLabDisplay.getText() + "7";
+				JLabDisplay.setText(enterNumber);
 			}
 		});
 		jBtn7.setBounds(71, 176, 101, 64);
@@ -267,8 +197,8 @@ public class Login {
 		jBtn9.setIcon(new ImageIcon(MainMenu.class.getResource("/Icons/9.jpeg")));
 		jBtn9.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				String enterNumber = jLabDisplay.getText() + "9";
-				jLabDisplay.setText(enterNumber);
+				String enterNumber = JLabDisplay.getText() + "9";
+				JLabDisplay.setText(enterNumber);
 			}
 		});
 		jBtn9.setBounds(297, 176, 101, 64);
@@ -283,8 +213,8 @@ public class Login {
 		jBtn0.setIcon(new ImageIcon(MainMenu.class.getResource("/Icons/0.jpeg")));
 		jBtn0.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				String enterNumber = jLabDisplay.getText() + "0";
-				jLabDisplay.setText(enterNumber);
+				String enterNumber = JLabDisplay.getText() + "0";
+				JLabDisplay.setText(enterNumber);
 			}
 		});
 		jBtn0.setBounds(184, 251, 101, 64);
@@ -299,8 +229,8 @@ public class Login {
 		jBtn1.setIcon(new ImageIcon(MainMenu.class.getResource("/Icons/1.jpeg")));
 		jBtn1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				String enterNumber = jLabDisplay.getText() + "1";
-				jLabDisplay.setText(enterNumber);
+				String enterNumber = JLabDisplay.getText() + "1";
+				JLabDisplay.setText(enterNumber);
 			}
 		});
 		jBtn1.setBounds(71, 25, 101, 64);

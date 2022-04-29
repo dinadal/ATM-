@@ -89,6 +89,20 @@ public class WithdrawFrame extends JFrame {
 				
 			}
 		});
+
+		JButton backButton = new JButton("Main Menu");
+
+		backButton.setBounds(43, 221, 302, 35);
+		backButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent m) {
+				dispose();
+				// main frame should be here
+				MainMenu panel = new MainMenu();
+				panel.frame.setVisible(true);
+				}
+		});
+		contentPane.add(backButton);
+
 		btnNewButton.setBounds(55, 172, 289, 41);
 		contentPane.add(btnNewButton);
 		

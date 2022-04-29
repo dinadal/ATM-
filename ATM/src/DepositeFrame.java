@@ -108,9 +108,8 @@ public class DepositeFrame extends JFrame {
 			public void actionPerformed(ActionEvent m) {
 				dispose();
 				// main frame should be here
-				Login panel = new Login();
-				panel.setVisible(true);
-				panel.setLocation(400,250);
+				MainMenu panel = new MainMenu();
+				panel.frame.setVisible(true);
 				}
 		});
 		contentPane.add(backButton);
