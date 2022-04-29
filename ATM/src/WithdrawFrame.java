@@ -98,7 +98,7 @@ public class WithdrawFrame extends JFrame {
 				dispose();
 				// main frame should be here
 				MainMenu panel = new MainMenu();
-				panel.showWindow();
+				panel.frame.setVisible(true);
 				}
 		});
 		contentPane.add(backButton);
