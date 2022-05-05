@@ -10,12 +10,19 @@
 		import javax.swing.JLabel;
 		import javax.swing.JOptionPane;
 		import javax.swing.JTextField;
-		import javax.swing.ImageIcon;
+import javax.print.attribute.standard.OutputDeviceAssigned;
+import javax.swing.ImageIcon;
 		import javax.swing.JButton;
 		import java.awt.event.ActionListener;
-		import java.io.File;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
 		import java.io.FileNotFoundException;
-		import java.util.Scanner;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.Scanner;
 		import java.awt.event.ActionEvent;
 
 		public class WithdrawFrame extends JFrame {
@@ -149,10 +156,35 @@
 							nonNegative.setText("Don't withdraw a negative amount!");
 				        }
 						else {
+							String b = Double. toString(balance);
 							balance = balance - withdrawD; //answer as double
 							String newBalance = String.valueOf(balance);
 							balanceText.setText(newBalance);
 							nonNegative.setText("Balance updated");
+							FileWriter fw = null;
+							BufferedWriter bw = null;
+							PrintWriter out = null;
+							try {
+								updateFile();
+							} catch (IOException e2) {
+								// TODO Auto-generated catch block
+								e2.printStackTrace();
+							}
+							    try {
+									fw = new FileWriter("./src/RounterInfo.txt", true);
+								} catch (IOException e1) {
+									// TODO Auto-generated catch block
+									e1.printStackTrace();
+								}
+							    bw = new BufferedWriter(fw);
+							    out = new PrintWriter(bw);
+							    String text = Login.AccNum_from_file+";"+Login.password_form_file+";"+Login.name+";"+b;
+							    text.replaceAll(text, "");
+							    out.println(Login.AccNum_from_file+";"+Login.password_form_file+";"+Login.name+";"+newBalance);
+							    out.close();
+							
+							
+								
 						}
 						
 					}
@@ -325,5 +357,25 @@
 				
 				//
 			}
+			public void updateFile() throws IOException {
+				File inputFile = new File("./src/RounterInfo.txt");
+		        File tempFile = new File("./src/myTempFile.txt");
+
+		        BufferedReader reader = new BufferedReader(new FileReader(inputFile));
+		        BufferedWriter writer = new BufferedWriter(new FileWriter(tempFile));
+		        String currentLine;
+
+		        while((currentLine = reader.readLine()) != null) {
+		            // trim newline when comparing with lineToRemove
+		            String trimmedLine = currentLine.trim();
+		            if(trimmedLine.startsWith(Login.AccNum_from_file)) continue;
+		            writer.write(currentLine + System.getProperty("line.separator"));
+		        }
+		        writer.close(); 
+		        reader.close(); 
+		        boolean successful = tempFile.renameTo(inputFile);
+		        System.out.println(successful);
+			}
+
 
 }

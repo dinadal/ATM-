@@ -26,9 +26,10 @@ public class Login {
 	private JTextField userText;
 	private JTextField passwordText;
 	private static JLabel success;
-	private static String name;
+	 static String name;
 	private JTextField LoginLab;
-	String AccNum_from_file;
+	static String AccNum_from_file;
+	static  String password_form_file;
 	boolean user_found=false; 
 	static double balance = 0;
 
@@ -57,8 +58,8 @@ public class Login {
 				 //if there is a line, print it out
 				 String line = in.nextLine();
 				 String[] output = line.split(";");
-				 String AccNum_from_file = output[0]; 
-				 String password_form_file = output[1];
+				 AccNum_from_file = output[0]; 
+				 password_form_file = output[1];
 				 name = output[2];
 				 b = output[3];
 				 if(user.equals(AccNum_from_file) && password.equals(password_form_file)) {

@@ -1,4 +1,4 @@
 Acc num; Pin; Name; Balance
-20106;1234;Dina;20000
-Mayan;1235;Dina;20000
-Layal;4321;Dina;20000
+24562;4321;Layal;19700.0
+22133;1235;Mayan;19277.0
+20106;1234;Dina;19287.0
