@@ -27,7 +27,7 @@ public class DepositeFrame extends JFrame {
 	private static JLabel nonNegative;
 	
 	//my additions
-	double balance = 1000.101;  //For now! The data will be later taken from main menu
+	double balance = Login.balance;  //For now! The data will be later taken from main menu
 	String balanceS = String.valueOf(balance);
 
 	/**
@@ -135,6 +135,7 @@ public class DepositeFrame extends JFrame {
 		contentPane.add(lblNewLabel_1);
 		
 		balanceText = new JTextField();
+		balanceText.setEditable(false);
 		balanceText.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		balanceText.setBounds(186, 11, 159, 45);
 		contentPane.add(balanceText);

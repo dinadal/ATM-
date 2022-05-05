@@ -8,6 +8,7 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.security.PublicKey;
 import java.util.Scanner;
 import java.awt.event.ActionEvent;
 import java.awt.Color;
@@ -27,6 +28,9 @@ public class Login {
 	private static JLabel success;
 	private static String name;
 	private JTextField LoginLab;
+	String AccNum_from_file;
+	boolean user_found=false; 
+	static double balance = 0;
 
 	/**
 	 * Launch the application.
@@ -43,13 +47,41 @@ public class Login {
 			}
 		});
 	}
-
+	public void Verify() {
+		String user = userText.getText();
+		String password = passwordText.getText();
+		String b = null;
+        try {
+			Scanner in = new Scanner(new File("./src/RounterInfo.txt"));
+			while(in.hasNextLine()){
+				 //if there is a line, print it out
+				 String line = in.nextLine();
+				 String[] output = line.split(";");
+				 String AccNum_from_file = output[0]; 
+				 String password_form_file = output[1];
+				 name = output[2];
+				 b = output[3];
+				 if(user.equals(AccNum_from_file) && password.equals(password_form_file)) {
+					 jLabDisplay.setText("login Successful");
+					 user_found=true;
+					 break;
+				 }
+			 }
+		} catch (FileNotFoundException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		balance = Double.parseDouble(b);
+	}
 	/**
 	 * Create the application.
 	 */
 	public Login() {
 		initialize();
+		
+
 	}
+
 
 	/**
 	 * Initialize the contents of the frame.
@@ -133,29 +165,8 @@ public class Login {
 		btnLogin.addActionListener(new ActionListener() {
 		public void actionPerformed(ActionEvent e) {
 			jLabDisplay = LoginLab;
-			String user = userText.getText();
-			String password = passwordText.getText();
-			boolean user_found=false; 
-	        try {
-				Scanner in = new Scanner(new File("./src/RounterInfo.txt"));
-				while(in.hasNextLine()){
-					 //if there is a line, print it out
-					 String line = in.nextLine();
-					 String[] output = line.split(";");
-					 String AccNum_from_file = output[0]; 
-					 String password_form_file = output[1];
-					 name = output[2];
-					 if(user.equals(AccNum_from_file) && password.equals(password_form_file)) {
-						 jLabDisplay.setText("login Successful");
-						 user_found=true;
-						 break;
-					 }
-				 }
-			} catch (FileNotFoundException e1) {
-				// TODO Auto-generated catch block
-				e1.printStackTrace();
-			}
-	        
+			
+			Verify();
 			if(user_found==false) {
 				jLabDisplay.setText("Login error");
 				
