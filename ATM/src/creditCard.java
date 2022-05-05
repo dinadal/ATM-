@@ -21,15 +21,17 @@ import java.io.*;
 
 public class creditCard extends JFrame {
 	
-	String fullName = "Alice J. Brown";  //Will be taken from file later
+	//String fullName = "Alice J. Brown";  //Will be taken from file later
+	
 //	File file = new File("src/RouterInfo.txt");
 //	Scanner infile = new Scanner(System.in);
 //	String n = infile.nextLine();
 	
 
-
-	
-	
+//**
+	String name = Login.name; 
+	String nameS = String.valueOf(name);
+//	
 
 	
 	
@@ -130,7 +132,9 @@ public class creditCard extends JFrame {
 	      }
 	      */
 	    
-		  cardHolderName.setText(fullName);
+		
+		  cardHolderName.setText(nameS);
+		  //cardHolderName.setText(fullName);
 		
 		JLabel cardNumber = new JLabel("New label");
 		cardNumber.setForeground(Color.GRAY);
