@@ -1,6 +1,18 @@
 import java.awt.EventQueue;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
+import java.util.Scanner;
+
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -34,6 +46,7 @@ public class SignUp extends JFrame implements ActionListener{
 			}
 		});
 	}
+
 	public SignUp(){
 		setTitle("SignUp");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -129,21 +142,28 @@ public class SignUp extends JFrame implements ActionListener{
 				//else if (passLength != 4)
 					//success.setText("Enter a valid pin number (4 digits");
 				//else if (passLength1 != 4)
-					//success.setText("Error: Passwords dont match");
+					//success.setText("Error: Passwords don't match");
 				
 				if(PinText.equals(ConfirmPinText)) {
 					 success.setText("Sign Up Successful! The account has been created");
+					}
+				
 			}
-		}});
-	
-	
+		});
 		
-	}
+		try {
+		    Files.write(Paths.get("Rounter.txt"), "the text".getBytes(), StandardOpenOption.APPEND);
+		    System.out.println("successful");
+		}catch (IOException e) {
+		    //exception handling left as an exercise for the reader
+		}
+				
 	
+
+}
+
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
 		
-	}
-	
-}
+	}}
