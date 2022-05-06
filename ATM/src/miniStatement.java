@@ -34,7 +34,7 @@ public class miniStatement  extends JFrame implements ActionListener{
 			contentPane.setLayout(null);
 			JFrame frame = new JFrame ("Ministatement");
 			String [] [] data= {
-					{"001","Shaymaa", "200", "1000"}
+					{"001","Shaymaa", "200", "1000"}//example
 			};
 			
 			String[] columnNames = {"Account Number", "Name" , "Amount", "Balance"};
@@ -50,13 +50,14 @@ public class miniStatement  extends JFrame implements ActionListener{
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Scanner sc = new Scanner(new BufferedReader(new FileReader("/src/RounterInfo.txt")));
+					Scanner sc = new Scanner(new BufferedReader(new FileReader("./src/RounterInfo.txt")));
 				      int rows = 4;
 				      int columns = 4;
 				      int [][] myArray = new int[rows][columns];
 				      while(sc.hasNextLine()) {
 				         for (int i=0; i<myArray.length; i++) {
 				            String[] line = sc.nextLine().trim().split(" ");
+				            
 				            for (int j=0; j<line.length; j++) {
 				               myArray[i][j] = Integer.parseInt(line[j]);
 				            }
