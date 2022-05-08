@@ -250,19 +250,19 @@ public class MainMenu {
 		
 		//Clear button
 		JButton jBtnClear = new JButton("");
-		jBtnClear.setIcon(new ImageIcon("/Users/dina_dal/Desktop/Icons/clear.jpeg"));
+		jBtnClear.setIcon(new ImageIcon("/Icons2/Clear.jpg"));
 		jBtnClear.setBounds(410, 140, 101, 64);
 		panel_3.add(jBtnClear);
 		
 		//Enter button
 		JButton jBtnEnter = new JButton("");
-		jBtnEnter.setIcon(new ImageIcon("/Users/dina_dal/Desktop/Icons/enter.jpeg"));
+		jBtnEnter.setIcon(new ImageIcon("/Icons2/Enter.jpg"));
 		jBtnEnter.setBounds(410, 230, 101, 64);
 		panel_3.add(jBtnEnter);
 		
 		//Cancel button
 		JButton jBtnCancel = new JButton("");
-		jBtnCancel.setIcon(new ImageIcon("/Users/dina_dal/Desktop/Icons/cancel.jpeg"));
+		jBtnCancel.setIcon(new ImageIcon("/Icons2/Cancel.jpg"));
 		jBtnCancel.setBounds(410, 45, 101, 64);
 		panel_3.add(jBtnCancel);
 	}
