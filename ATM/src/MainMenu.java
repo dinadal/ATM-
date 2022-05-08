@@ -76,7 +76,19 @@ public class MainMenu {
 		panel_3.setLayout(null);
 		
 		//Balance button
-		JButton btnBalance = new JButton("Balance");
+		JButton btnBalance = new JButton("create credit card");
+		btnBalance.addActionListener(new ActionListener() {
+			
+			@Override  //Takes the user to the withdraw frame
+			public void actionPerformed(ActionEvent e) {
+				frame.dispose();
+				creditCard panel = new creditCard();
+				panel.setVisible(true);
+				panel.setLocation(400,250);
+			}
+			
+		});
+
 		btnBalance.setBounds(25, 29, 117, 52);
 		panel.add(btnBalance);
 		
