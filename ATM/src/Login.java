@@ -21,6 +21,7 @@ import javax.swing.ImageIcon;
 
 public class Login {
 
+
 	private JFrame frame; //frame for login interface
 	private JTextField jLabDisplay; //Hidden label for later uses
 	private JTextField userText; //Account number from user
@@ -31,6 +32,8 @@ public class Login {
 	static String password_form_file; //Password from data stored in the text file
 	boolean user_found = false; //Checks if the user logged in with the correct info
 	static double balance = 0; //balance
+
+//test
 
 	//Launch the application
 	public static void main(String[] args) {

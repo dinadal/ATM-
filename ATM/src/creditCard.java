@@ -22,8 +22,13 @@ import java.io.*;
 
 public class creditCard extends JFrame {
 	
+
 	//String fullName = "Alice J. Brown";  //Will be taken from file later
 	
+
+	String fullName = "Alice J. Brown";  //Will be taken from file later
+	//	String fullName = Login.name;  //Is taken from file
+
 //	File file = new File("src/RouterInfo.txt");
 //	Scanner infile = new Scanner(System.in);
 //	String n = infile.nextLine();
