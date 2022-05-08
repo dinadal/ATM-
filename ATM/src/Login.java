@@ -22,7 +22,7 @@ import javax.swing.ImageIcon;
 public class Login {
 
 
-	private JFrame frame; //frame for login interface
+	JFrame frame; //frame for login interface
 	private JTextField jLabDisplay; //Hidden label for later uses
 	private JTextField userText; //Account number from user
 	private JTextField passwordText; //Password from user
@@ -298,7 +298,7 @@ public class Login {
 		
 		//Clear button
 		JButton jBtnClear = new JButton("");
-		jBtnClear.setIcon(new ImageIcon("/Users/dina_dal/Desktop/Icons/clear.jpeg"));
+		jBtnClear.setIcon(new ImageIcon(MainMenu.class.getResource("/Icons2/Clear.jpg")));
 		jBtnClear.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				userText.setText("");
@@ -311,7 +311,7 @@ public class Login {
 		
 		//Enter button
 		JButton jBtnEnter = new JButton("");
-		jBtnEnter.setIcon(new ImageIcon("/Users/dina_dal/Desktop/Icons/enter.jpeg"));
+		jBtnEnter.setIcon(new ImageIcon(MainMenu.class.getResource("/Icons2/Enter.jpg")));
 		jBtnEnter.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				jLabDisplay = loginLab;
@@ -334,7 +334,7 @@ public class Login {
 		
 		//Cancel button
 		JButton jBtnCancel = new JButton("");
-		jBtnCancel.setIcon(new ImageIcon("/Users/dina_dal/Desktop/Icons/cancel.jpeg"));
+		jBtnCancel.setIcon(new ImageIcon(MainMenu.class.getResource("/Icons2/Cancel.jpg")));
 		jBtnCancel.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				userText.setText("");

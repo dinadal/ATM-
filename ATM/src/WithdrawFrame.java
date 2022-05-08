@@ -56,7 +56,7 @@ public class WithdrawFrame extends JFrame {
 		
 		setTitle("Withdraw");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 605, 589);
+		setBounds(100, 100, 600, 600);
 		contentPane = new JPanel();
 		contentPane.setToolTipText("");
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -286,7 +286,7 @@ public class WithdrawFrame extends JFrame {
 				
 		//Clear button
 		JButton jBtnClear = new JButton("");
-		jBtnClear.setIcon(new ImageIcon("/Users/dina_dal/Desktop/Icons/clear.jpeg"));
+		jBtnClear.setIcon(new ImageIcon(MainMenu.class.getResource("/Icons2/Clear.jpg")));
 		jBtnClear.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				jLabDisplay.setText("");
@@ -299,7 +299,7 @@ public class WithdrawFrame extends JFrame {
 		
 		//Enter button
 		JButton jBtnEnter = new JButton("");
-		jBtnEnter.setIcon(new ImageIcon("/Users/dina_dal/Desktop/Icons/enter.jpeg"));
+		jBtnEnter.setIcon(new ImageIcon(MainMenu.class.getResource("/Icons2/Enter.jpg")));
 		jBtnEnter.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				//The "ok" button
@@ -346,7 +346,7 @@ public class WithdrawFrame extends JFrame {
 		
 		//Cancel button
 		JButton jBtnCancel = new JButton("");
-		jBtnCancel.setIcon(new ImageIcon("/Users/dina_dal/Desktop/Icons/cancel.jpeg"));
+		jBtnCancel.setIcon(new ImageIcon(MainMenu.class.getResource("/Icons2/Cancel.jpg")));
 		jBtnCancel.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent m) {
 				dispose();

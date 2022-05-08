@@ -1,0 +1,2782 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:UMLLabProfile="http:///schemas/UMLLabProfile/NS/0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/UMLLabProfile/NS/0 pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile-Annotation_2-UMLLabProfile">
+  <uml:Model xmi:id="_ts6LQM3KEeyfrJp-I4FQJw" name="ATM">
+    <eAnnotations xmi:id="_uDGdsM3KEeyfrJp-I4FQJw" source="http://ns.yatta.de/umllab">
+      <contents xmi:type="ecore:EAnnotation" xmi:id="_uDGdsc3KEeyfrJp-I4FQJw" source="codegen">
+        <details xmi:id="_uDHEwM3KEeyfrJp-I4FQJw" key="codegenDirectory" value="/ATM/src"/>
+        <details xmi:id="_yDLA4M3KEeyfrJp-I4FQJw" key="AssociatedSourceCode" value="/ATM/src/SignUp.java;2830024754/1;/ATM/src/Account.java;1039443895/1;/ATM/src/DepositeFrame.java;1652943275/1;/ATM/src/Login.java;4022311490/1;/ATM/src/MainMenu.java;4292825945/1;/ATM/src/Transactions.java;3633300145/1;/ATM/src/WithdrawFrame.java;1361554525/1;/ATM/src/checkingAccount.java;1381793291/1;/ATM/src/creditCard.java;4157736844/1;/ATM/src/miniStatement.java;2375939650/1;/ATM/src/savingsAccount.java;2384669727/1;"/>
+      </contents>
+    </eAnnotations>
+    <elementImport xmi:id="_uzn7sM3KEeyfrJp-I4FQJw">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+    </elementImport>
+    <elementImport xmi:id="_uzn7sc3KEeyfrJp-I4FQJw">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#byte"/>
+    </elementImport>
+    <elementImport xmi:id="_uzoiwM3KEeyfrJp-I4FQJw">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#char"/>
+    </elementImport>
+    <elementImport xmi:id="_uzoiwc3KEeyfrJp-I4FQJw">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+    </elementImport>
+    <elementImport xmi:id="_uzoiws3KEeyfrJp-I4FQJw">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#float"/>
+    </elementImport>
+    <elementImport xmi:id="_uzoiw83KEeyfrJp-I4FQJw">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+    </elementImport>
+    <elementImport xmi:id="_uzpJ0M3KEeyfrJp-I4FQJw">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+    </elementImport>
+    <elementImport xmi:id="_uzpJ0c3KEeyfrJp-I4FQJw">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#short"/>
+    </elementImport>
+    <elementImport xmi:id="_uzpw4M3KEeyfrJp-I4FQJw">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </elementImport>
+    <packagedElement xmi:type="uml:Package" xmi:id="_uxgb0M3KEeyfrJp-I4FQJw" name="java">
+      <packagedElement xmi:type="uml:Package" xmi:id="_uxhC4M3KEeyfrJp-I4FQJw" name="util">
+        <packagedElement xmi:type="uml:DataType" xmi:id="_u9zLYM3KEeyfrJp-I4FQJw" name="Date"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_u90Zgc3KEeyfrJp-I4FQJw" name="ArrayList"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_u-XMEM3KEeyfrJp-I4FQJw" name="Scanner"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_u-z4Ac3KEeyfrJp-I4FQJw" name="GregorianCalendar"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_u-1tMc3KEeyfrJp-I4FQJw" name="Random"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_u_AFQM3KEeyfrJp-I4FQJw" name="Arrays"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_uyCAQM3KEeyfrJp-I4FQJw" name="awt">
+        <packagedElement xmi:type="uml:Package" xmi:id="_uyD1cM3KEeyfrJp-I4FQJw" name="event">
+          <packagedElement xmi:type="uml:Interface" xmi:id="_u-NbEM3KEeyfrJp-I4FQJw" name="ActionListener"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_u-XzIc3KEeyfrJp-I4FQJw" name="ActionEvent"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_u94q8M3KEeyfrJp-I4FQJw" name="BorderLayout"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_u96gIM3KEeyfrJp-I4FQJw" name="EventQueue"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_u97HMc3KEeyfrJp-I4FQJw" name="Font"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_u98VUM3KEeyfrJp-I4FQJw" name="SystemColor"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_u-dSsc3KEeyfrJp-I4FQJw" name="Color"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_u-yC0M3KEeyfrJp-I4FQJw" name="Image"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_uyEcgM3KEeyfrJp-I4FQJw" name="io">
+        <packagedElement xmi:type="uml:Class" xmi:id="_u-OpMc3KEeyfrJp-I4FQJw" name="BufferedReader"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_u-P3Uc3KEeyfrJp-I4FQJw" name="BufferedWriter"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_u-RsgM3KEeyfrJp-I4FQJw" name="File"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_u-STkc3KEeyfrJp-I4FQJw" name="FileNotFoundException"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_u-S6oc3KEeyfrJp-I4FQJw" name="FileReader"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_u-Thsc3KEeyfrJp-I4FQJw" name="FileWriter"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_u-UIwc3KEeyfrJp-I4FQJw" name="IOException"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_u-VW4c3KEeyfrJp-I4FQJw" name="PrintWriter"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_uyPboM3KEeyfrJp-I4FQJw" name="security">
+        <packagedElement xmi:type="uml:Interface" xmi:id="_u-croc3KEeyfrJp-I4FQJw" name="PublicKey"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_uyYlkM3KEeyfrJp-I4FQJw" name="nio">
+        <packagedElement xmi:type="uml:Package" xmi:id="_uyZMoM3KEeyfrJp-I4FQJw" name="file">
+          <packagedElement xmi:type="uml:Class" xmi:id="_u-l1kM3KEeyfrJp-I4FQJw" name="Files"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_u-nDsc3KEeyfrJp-I4FQJw" name="Paths"/>
+          <packagedElement xmi:type="uml:Enumeration" xmi:id="_u-nqwc3KEeyfrJp-I4FQJw" name="StandardOpenOption"/>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_uyCnUM3KEeyfrJp-I4FQJw" name="javax">
+      <packagedElement xmi:type="uml:Package" xmi:id="_uyDOYM3KEeyfrJp-I4FQJw" name="swing">
+        <packagedElement xmi:type="uml:Package" xmi:id="_uyDOYc3KEeyfrJp-I4FQJw" name="border">
+          <packagedElement xmi:type="uml:Class" xmi:id="_u-Cb8M3KEeyfrJp-I4FQJw" name="BevelBorder"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_u-DqEc3KEeyfrJp-I4FQJw" name="EmptyBorder"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_u-3iYM3KEeyfrJp-I4FQJw" name="LineBorder"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_u9-Kgc3KEeyfrJp-I4FQJw" name="JFrame"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_u-AmwM3KEeyfrJp-I4FQJw" name="JPanel"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_u-FfQc3KEeyfrJp-I4FQJw" name="JLabel"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_u-HUcM3KEeyfrJp-I4FQJw" name="JOptionPane"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_u-IikM3KEeyfrJp-I4FQJw" name="JTextField"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_u-JJoc3KEeyfrJp-I4FQJw" name="ImageIcon"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_u-Jwsc3KEeyfrJp-I4FQJw" name="JButton"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_u-a2cM3KEeyfrJp-I4FQJw" name="JPasswordField"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_uyodMM3KEeyfrJp-I4FQJw" name="print">
+        <packagedElement xmi:type="uml:Package" xmi:id="_uyodMc3KEeyfrJp-I4FQJw" name="attribute">
+          <packagedElement xmi:type="uml:Package" xmi:id="_uyodMs3KEeyfrJp-I4FQJw" name="standard">
+            <packagedElement xmi:type="uml:Class" xmi:id="_u-tKUM3KEeyfrJp-I4FQJw" name="OutputDeviceAssigned"/>
+          </packagedElement>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_uzgm8M3KEeyfrJp-I4FQJw" name="Account">
+      <ownedAttribute xmi:id="_u_tP4M3KEeyfrJp-I4FQJw" name="accountNumber" visibility="package">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_u_ueAc3KEeyfrJp-I4FQJw" name="name" visibility="package">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_u_vFEc3KEeyfrJp-I4FQJw" name="balance" visibility="package">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_u_vsIM3KEeyfrJp-I4FQJw" name="annualInterestRate" visibility="package">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_u_wTMM3KEeyfrJp-I4FQJw" name="pin" visibility="package">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_u_w6Qc3KEeyfrJp-I4FQJw" name="date" visibility="package" type="_u9zLYM3KEeyfrJp-I4FQJw"/>
+      <ownedAttribute xmi:id="_u_xhUc3KEeyfrJp-I4FQJw" name="transactions" visibility="package" type="_u90Zgc3KEeyfrJp-I4FQJw" association="_vBkREM3KEeyfrJp-I4FQJw">
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_u_zWgc3KEeyfrJp-I4FQJw" value="new ArrayList&lt;Transactions>()"/>
+      </ownedAttribute>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_vA9NEM3KEeyfrJp-I4FQJw" name="Account" specification="_uzxFoM3KEeyfrJp-I4FQJw">
+        <ownedParameter xmi:id="_vA9NEc3KEeyfrJp-I4FQJw" name="n">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_vA9NEs3KEeyfrJp-I4FQJw" name="b">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_vA9NE83KEeyfrJp-I4FQJw" name="p">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_vA9NFM3KEeyfrJp-I4FQJw" type="_uzgm8M3KEeyfrJp-I4FQJw" direction="return"/>
+        <language>java</language>
+        <body>if (b &lt; 0) {
+         throw new IllegalArgumentException(&quot;Accounts with a negative balance cannot be created!&quot;);
+     }
+		accountNumber = n;
+		balance = b;
+		pin = p;
+		//annualInterestRate = r;
+		//date = d;
+		
+	</body>
+      </ownedBehavior>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_vBBegM3KEeyfrJp-I4FQJw" name="Account" specification="_uz0wAM3KEeyfrJp-I4FQJw">
+        <ownedParameter xmi:id="_vBBegc3KEeyfrJp-I4FQJw" name="n">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_vBBegs3KEeyfrJp-I4FQJw" name="i">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_vBBeg83KEeyfrJp-I4FQJw" name="b">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_vBBehM3KEeyfrJp-I4FQJw" name="p">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_vBBehc3KEeyfrJp-I4FQJw" type="_uzgm8M3KEeyfrJp-I4FQJw" direction="return"/>
+        <language>java</language>
+        <body>if (b &lt; 0) {
+         throw new IllegalArgumentException(&quot;Accounts with a negative balance cannot be created!&quot;);
+     }
+		name = n;
+		accountNumber = i;
+		balance = b;
+		pin = p;
+		
+	</body>
+      </ownedBehavior>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_vBCFkM3KEeyfrJp-I4FQJw" name="setName" specification="_uz3MQM3KEeyfrJp-I4FQJw">
+        <ownedParameter xmi:id="_vBCFkc3KEeyfrJp-I4FQJw" name="n">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <language>java</language>
+        <body>name = n;
+	</body>
+      </ownedBehavior>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_vBCFks3KEeyfrJp-I4FQJw" name="getName" specification="_uz4aYM3KEeyfrJp-I4FQJw">
+        <ownedParameter xmi:id="_vBCFk83KEeyfrJp-I4FQJw" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <language>java</language>
+        <body>return name;
+	</body>
+      </ownedBehavior>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_vBCsoM3KEeyfrJp-I4FQJw" name="getAccountNumber" specification="_uz5BcM3KEeyfrJp-I4FQJw">
+        <ownedParameter xmi:id="_vBCsoc3KEeyfrJp-I4FQJw" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <language>java</language>
+        <body>return accountNumber;
+	</body>
+      </ownedBehavior>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_vBCsos3KEeyfrJp-I4FQJw" name="getBalance" specification="_uz5ogM3KEeyfrJp-I4FQJw">
+        <ownedParameter xmi:id="_vBCso83KEeyfrJp-I4FQJw" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+        </ownedParameter>
+        <language>java</language>
+        <body>return balance;
+	</body>
+      </ownedBehavior>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_vBDTsM3KEeyfrJp-I4FQJw" name="getPin" specification="_uz6PkM3KEeyfrJp-I4FQJw">
+        <ownedParameter xmi:id="_vBDTsc3KEeyfrJp-I4FQJw" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+        <language>java</language>
+        <body>return pin;
+	</body>
+      </ownedBehavior>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_vBFI4M3KEeyfrJp-I4FQJw" name="getAnnualInterestRate" specification="_uz62oM3KEeyfrJp-I4FQJw">
+        <ownedParameter xmi:id="_vBFI4c3KEeyfrJp-I4FQJw" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+        </ownedParameter>
+        <language>java</language>
+        <body>return annualInterestRate;
+	</body>
+      </ownedBehavior>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_vBFv8M3KEeyfrJp-I4FQJw" name="getDate" specification="_uz7dsM3KEeyfrJp-I4FQJw">
+        <ownedParameter xmi:id="_vBFv8c3KEeyfrJp-I4FQJw" type="_u9zLYM3KEeyfrJp-I4FQJw" direction="return"/>
+        <language>java</language>
+        <body>return date;
+	</body>
+      </ownedBehavior>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_vBGXAM3KEeyfrJp-I4FQJw" name="withdraw" specification="_uz9S4M3KEeyfrJp-I4FQJw">
+        <ownedParameter xmi:id="_vBGXAc3KEeyfrJp-I4FQJw" name="amount">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+        </ownedParameter>
+        <language>java</language>
+        <body>//We can have exceptions here
+ 	   if(amount &lt; balance)
+ 	   {
+ 	    balance = balance-amount;
+ 	    System.out.println(&quot;You have withdrawn &quot;+amount+ &quot; and your new balance is &quot;+balance);
+ 	    transactions.add(new Transactions('W', amount, balance, &quot;withdraw&quot; ));
+ 	   }
+ 	   else  if (amount &lt; 0) {
+ 		   System.out.println(&quot;Don't withdraw a negative amount!&quot;);
+        }
+ 	   else if (balance &lt; amount) {
+ 		   System.out.println(&quot;Insuffiecient funds&quot;);
+ 	      }
+ </body>
+      </ownedBehavior>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_vBGXAs3KEeyfrJp-I4FQJw" name="deposit" specification="_uz958M3KEeyfrJp-I4FQJw">
+        <ownedParameter xmi:id="_vBGXA83KEeyfrJp-I4FQJw" name="amount">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+        </ownedParameter>
+        <language>java</language>
+        <body>if (amount &lt; 0) {
+ 		System.out.println(&quot;Don't deposit a negative amount!&quot;);
+     }
+ 	else {
+ 		 balance += amount;
+ 	     transactions.add(new Transactions('D', amount, balance, &quot;deposite&quot; ));
+		}
+ </body>
+      </ownedBehavior>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_vBG-EM3KEeyfrJp-I4FQJw" name="getTransactions" specification="_uz-hAM3KEeyfrJp-I4FQJw">
+        <ownedParameter xmi:id="_vBG-Ec3KEeyfrJp-I4FQJw" type="_u90Zgc3KEeyfrJp-I4FQJw" direction="return"/>
+        <language>java</language>
+        <body>return transactions;
+	</body>
+      </ownedBehavior>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_vBG-Es3KEeyfrJp-I4FQJw" name="getTransaction" specification="_u0CLYM3KEeyfrJp-I4FQJw">
+        <ownedParameter xmi:id="_vBG-E83KEeyfrJp-I4FQJw" type="_u90Zgc3KEeyfrJp-I4FQJw" direction="return"/>
+        <language>java</language>
+        <body>for(int i = 0; i &lt; transactions.size(); i++) {
+			System.out.println(transactions.get(i));
+		}
+		return transactions;
+	</body>
+      </ownedBehavior>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_vBHlIM3KEeyfrJp-I4FQJw" name="toString" specification="_u0EnoM3KEeyfrJp-I4FQJw">
+        <ownedParameter xmi:id="_vBHlIc3KEeyfrJp-I4FQJw" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <language>java</language>
+        <body>return &quot;Account holder name: &quot; + name + &quot;\n&quot; + &quot;Account number: &quot; + accountNumber + &quot;\n&quot; +
+     &quot;Balance: &quot; + balance + &quot;\n&quot; + &quot;Transactions: &quot; + transactions;
+ </body>
+      </ownedBehavior>
+      <ownedOperation xmi:id="_uzsNIM3KEeyfrJp-I4FQJw" name="Account">
+        <eAnnotations xmi:id="_uzs0MM3KEeyfrJp-I4FQJw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <details xmi:id="_uztbQM3KEeyfrJp-I4FQJw" key="create"/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_uzv3gM3KEeyfrJp-I4FQJw" type="_uzgm8M3KEeyfrJp-I4FQJw" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_uzxFoM3KEeyfrJp-I4FQJw" name="Account" method="_vA9NEM3KEeyfrJp-I4FQJw">
+        <eAnnotations xmi:id="_uzy60M3KEeyfrJp-I4FQJw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <details xmi:id="_uzy60c3KEeyfrJp-I4FQJw" key="create"/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_uzyTwM3KEeyfrJp-I4FQJw" name="n">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_uzyTwc3KEeyfrJp-I4FQJw" name="b">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_uzyTws3KEeyfrJp-I4FQJw" name="p">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_uzy60s3KEeyfrJp-I4FQJw" type="_uzgm8M3KEeyfrJp-I4FQJw" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_uz0wAM3KEeyfrJp-I4FQJw" name="Account" method="_vBBegM3KEeyfrJp-I4FQJw">
+        <eAnnotations xmi:id="_uz1-IM3KEeyfrJp-I4FQJw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <details xmi:id="_uz1-Ic3KEeyfrJp-I4FQJw" key="create"/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_uz0wAc3KEeyfrJp-I4FQJw" name="n">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_uz1XEM3KEeyfrJp-I4FQJw" name="i">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_uz1XEc3KEeyfrJp-I4FQJw" name="b">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_uz1XEs3KEeyfrJp-I4FQJw" name="p">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_uz1-Is3KEeyfrJp-I4FQJw" type="_uzgm8M3KEeyfrJp-I4FQJw" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_uz3MQM3KEeyfrJp-I4FQJw" name="setName" method="_vBCFkM3KEeyfrJp-I4FQJw">
+        <ownedParameter xmi:id="_uz3zUM3KEeyfrJp-I4FQJw" name="n">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_uz4aYM3KEeyfrJp-I4FQJw" name="getName" method="_vBCFks3KEeyfrJp-I4FQJw">
+        <ownedParameter xmi:id="_uz4aYc3KEeyfrJp-I4FQJw" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_uz5BcM3KEeyfrJp-I4FQJw" name="getAccountNumber" method="_vBCsoM3KEeyfrJp-I4FQJw">
+        <ownedParameter xmi:id="_uz5Bcc3KEeyfrJp-I4FQJw" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_uz5ogM3KEeyfrJp-I4FQJw" name="getBalance" method="_vBCsos3KEeyfrJp-I4FQJw">
+        <ownedParameter xmi:id="_uz5ogc3KEeyfrJp-I4FQJw" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_uz6PkM3KEeyfrJp-I4FQJw" name="getPin" method="_vBDTsM3KEeyfrJp-I4FQJw">
+        <ownedParameter xmi:id="_uz6Pkc3KEeyfrJp-I4FQJw" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_uz62oM3KEeyfrJp-I4FQJw" name="getAnnualInterestRate" method="_vBFI4M3KEeyfrJp-I4FQJw">
+        <ownedParameter xmi:id="_uz62oc3KEeyfrJp-I4FQJw" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_uz7dsM3KEeyfrJp-I4FQJw" name="getDate" method="_vBFv8M3KEeyfrJp-I4FQJw">
+        <ownedParameter xmi:id="_u_M5kM3KEeyfrJp-I4FQJw" type="_u9zLYM3KEeyfrJp-I4FQJw" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_uz9S4M3KEeyfrJp-I4FQJw" name="withdraw" method="_vBGXAM3KEeyfrJp-I4FQJw">
+        <ownedParameter xmi:id="_uz9S4c3KEeyfrJp-I4FQJw" name="amount">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_uz958M3KEeyfrJp-I4FQJw" name="deposit" method="_vBGXAs3KEeyfrJp-I4FQJw">
+        <ownedParameter xmi:id="_uz958c3KEeyfrJp-I4FQJw" name="amount">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_uz-hAM3KEeyfrJp-I4FQJw" name="getTransactions" method="_vBG-EM3KEeyfrJp-I4FQJw">
+        <ownedParameter xmi:id="_u_M5kc3KEeyfrJp-I4FQJw" type="_u90Zgc3KEeyfrJp-I4FQJw" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_u0CLYM3KEeyfrJp-I4FQJw" name="getTransaction" visibility="package" method="_vBG-Es3KEeyfrJp-I4FQJw">
+        <ownedParameter xmi:id="_u_NgoM3KEeyfrJp-I4FQJw" type="_u90Zgc3KEeyfrJp-I4FQJw" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_u0EnoM3KEeyfrJp-I4FQJw" name="toString" method="_vBHlIM3KEeyfrJp-I4FQJw">
+        <ownedParameter xmi:id="_u0Enoc3KEeyfrJp-I4FQJw" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_u0NxkM3KEeyfrJp-I4FQJw" name="DepositeFrame">
+      <generalization xmi:id="_u_Qj8M3KEeyfrJp-I4FQJw" general="_u9-Kgc3KEeyfrJp-I4FQJw"/>
+      <ownedAttribute xmi:id="_u_0koM3KEeyfrJp-I4FQJw" name="frame" type="_u9-Kgc3KEeyfrJp-I4FQJw" association="_vBlfMc3KEeyfrJp-I4FQJw"/>
+      <ownedAttribute xmi:id="_u_1Lsc3KEeyfrJp-I4FQJw" name="jLabDisplay" visibility="private" type="_u-IikM3KEeyfrJp-I4FQJw" association="_vBmtUc3KEeyfrJp-I4FQJw"/>
+      <ownedAttribute xmi:id="_u_1ywc3KEeyfrJp-I4FQJw" name="contentPane" visibility="private" type="_u-AmwM3KEeyfrJp-I4FQJw" association="_vBoigM3KEeyfrJp-I4FQJw"/>
+      <ownedAttribute xmi:id="_u_2Z0c3KEeyfrJp-I4FQJw" name="txtTf" visibility="private" type="_u-IikM3KEeyfrJp-I4FQJw" association="_vBpJkc3KEeyfrJp-I4FQJw"/>
+      <ownedAttribute xmi:id="_u_4PAM3KEeyfrJp-I4FQJw" name="balanceText" visibility="private" type="_u-IikM3KEeyfrJp-I4FQJw" association="_vBpwoc3KEeyfrJp-I4FQJw"/>
+      <ownedAttribute xmi:id="_u_42EM3KEeyfrJp-I4FQJw" name="nonNegative" visibility="private" type="_u-IikM3KEeyfrJp-I4FQJw" association="_vBtbAc3KEeyfrJp-I4FQJw"/>
+      <ownedAttribute xmi:id="_u_5dIM3KEeyfrJp-I4FQJw" name="balance" visibility="package">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_u_5dIc3KEeyfrJp-I4FQJw" value="Login.balance"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_u_6EMc3KEeyfrJp-I4FQJw" name="balanceS" visibility="package">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_u_6EMs3KEeyfrJp-I4FQJw" value="String.valueOf(balance)"/>
+      </ownedAttribute>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_vBIMMM3KEeyfrJp-I4FQJw" name="main" specification="_u0SDAM3KEeyfrJp-I4FQJw">
+        <ownedParameter xmi:id="_vBIMMc3KEeyfrJp-I4FQJw" name="args">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_vBIMMs3KEeyfrJp-I4FQJw" value="*"/>
+        </ownedParameter>
+        <language>java</language>
+        <body>EventQueue.invokeLater(new Runnable() {&#xD;
+			public void run() {&#xD;
+				try {&#xD;
+					DepositeFrame frame = new DepositeFrame();&#xD;
+					frame.setVisible(true);&#xD;
+				} catch (Exception e) {&#xD;
+					e.printStackTrace();&#xD;
+				}&#xD;
+			}&#xD;
+		});&#xD;
+	</body>
+      </ownedBehavior>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_vBIMM83KEeyfrJp-I4FQJw" name="DepositeFrame" specification="_u0TRIM3KEeyfrJp-I4FQJw">
+        <ownedParameter xmi:id="_vBIzQM3KEeyfrJp-I4FQJw" type="_u0NxkM3KEeyfrJp-I4FQJw" direction="return"/>
+        <language>java</language>
+        <body>setTitle(&quot;Deposit&quot;);&#xD;
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);&#xD;
+		setBounds(100, 100, 605, 589);&#xD;
+		contentPane = new JPanel();&#xD;
+		contentPane.setToolTipText(&quot;&quot;);&#xD;
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));&#xD;
+		setContentPane(contentPane);&#xD;
+		contentPane.setLayout(null);&#xD;
+		&#xD;
+		JLabel lblNewLabel = new JLabel(&quot;Enter the amount that you want to deposit.&quot;);&#xD;
+		lblNewLabel.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 14));&#xD;
+		lblNewLabel.setBounds(10, 67, 317, 26);&#xD;
+		contentPane.add(lblNewLabel);&#xD;
+		&#xD;
+		jLabDisplay = new JTextField();&#xD;
+		jLabDisplay.setBounds(184, 95, 209, 78);&#xD;
+		contentPane.add(jLabDisplay);&#xD;
+		jLabDisplay.setFont(new Font(&quot;Lucida Grande&quot;, Font.BOLD, 14));&#xD;
+		jLabDisplay.setColumns(10);&#xD;
+		&#xD;
+		nonNegative = new JTextField();&#xD;
+		nonNegative.setFont(new Font(&quot;Lucida Grande&quot;, Font.PLAIN, 13));&#xD;
+		nonNegative.setEditable(false);&#xD;
+		nonNegative.setBackground(SystemColor.window);&#xD;
+		nonNegative.setBounds(10, 109, 162, 52);&#xD;
+		contentPane.add(nonNegative);&#xD;
+		nonNegative.setColumns(10);&#xD;
+		&#xD;
+		JButton btnNewButton = new JButton(&quot;OK&quot;);&#xD;
+		btnNewButton.setBounds(405, 107, 159, 56);&#xD;
+		btnNewButton.addActionListener(new ActionListener() {&#xD;
+			public void actionPerformed(ActionEvent e) {&#xD;
+				//adds deposited amount to the balance &#xD;
+				String depositeAmount;&#xD;
+				depositeAmount = jLabDisplay.getText();				&#xD;
+				double depositeD = Double.parseDouble(depositeAmount);&#xD;
+				contentPane.add(nonNegative);&#xD;
+				nonNegative.setText(null);&#xD;
+				if (depositeD &lt; 0) {&#xD;
+					nonNegative.setText(&quot;Error: negative amount!&quot;);&#xD;
+		        }&#xD;
+				else {&#xD;
+					balance = balance + depositeD; //answer as double&#xD;
+					String newBalance = String.valueOf(balance);&#xD;
+					balanceText.setText(newBalance);&#xD;
+					nonNegative.setText(&quot;Balance updated&quot;);&#xD;
+					String b = Double. toString(balance);&#xD;
+					balanceText.setText(newBalance);&#xD;
+					nonNegative.setText(&quot;Balance updated&quot;);&#xD;
+					FileWriter fw = null;&#xD;
+					BufferedWriter bw = null;&#xD;
+					PrintWriter out = null;&#xD;
+					try {&#xD;
+						updateFile(); //Changes balance in file&#xD;
+					} catch (IOException e2) {&#xD;
+						e2.printStackTrace();&#xD;
+					}&#xD;
+					    try {&#xD;
+							fw = new FileWriter(&quot;./src/RounterInfo.txt&quot;, true);&#xD;
+						} catch (IOException e1) {&#xD;
+							e1.printStackTrace();&#xD;
+						}&#xD;
+					    bw = new BufferedWriter(fw);&#xD;
+					    out = new PrintWriter(bw);&#xD;
+					    String text = Login.accNum_from_file+&quot;;&quot;+Login.password_form_file+&quot;;&quot;+Login.name+&quot;;&quot;+b;&#xD;
+					    text.replaceAll(text, &quot;&quot;);&#xD;
+					    out.println(Login.accNum_from_file+&quot;;&quot;+Login.password_form_file+&quot;;&quot;+Login.name+&quot;;&quot;+newBalance);&#xD;
+					    out.close();&#xD;
+				}&#xD;
+			}&#xD;
+		});&#xD;
+		contentPane.add(btnNewButton);&#xD;
+		&#xD;
+		JLabel lblNewLabel_1 = new JLabel(&quot;Your balance is:&quot;);&#xD;
+		lblNewLabel_1.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 15));&#xD;
+		lblNewLabel_1.setBounds(21, 14, 154, 42);&#xD;
+		contentPane.add(lblNewLabel_1);&#xD;
+		&#xD;
+		balanceText = new JTextField();&#xD;
+		balanceText.setEditable(false);&#xD;
+		balanceText.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 14));&#xD;
+		balanceText.setBounds(186, 11, 159, 45);&#xD;
+		contentPane.add(balanceText);&#xD;
+		balanceText.setColumns(10);&#xD;
+		balanceText.setText(balanceS);&#xD;
+		&#xD;
+		//Main Menu button&#xD;
+		JButton backButton = new JButton(&quot;Main Menu&quot;);&#xD;
+		backButton.setBounds(405, 17, 159, 41);&#xD;
+		backButton.addActionListener(new ActionListener() {&#xD;
+			public void actionPerformed(ActionEvent m) {&#xD;
+				dispose();&#xD;
+				// main frame should be here&#xD;
+				MainMenu panel = new MainMenu();&#xD;
+				panel.frame.setVisible(true);&#xD;
+				}&#xD;
+		});&#xD;
+		contentPane.add(backButton);&#xD;
+&#xD;
+		&#xD;
+		JPanel panel = new JPanel();&#xD;
+		panel.setBounds(10, 205, 571, 336);&#xD;
+		panel.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));&#xD;
+		contentPane.add(panel);&#xD;
+		//frame.getContentPane().add(panel);&#xD;
+		panel.setLayout(null);&#xD;
+		&#xD;
+		/**&#xD;
+		txtTf = new JTextField();&#xD;
+		panel_1.add(txtTf);&#xD;
+		txtTf.setColumns(10);&#xD;
+		*/&#xD;
+		JButton btnNewButton_1 = new JButton(&quot; &quot;);&#xD;
+		btnNewButton_1.setIcon(new ImageIcon(MainMenu.class.getResource(&quot;/Icons/1.jpeg&quot;)));&#xD;
+		btnNewButton_1.addActionListener(new ActionListener() {&#xD;
+			public void actionPerformed(ActionEvent e) {&#xD;
+				String enterNumber = jLabDisplay.getText() + &quot;1&quot;;&#xD;
+				jLabDisplay.setText(enterNumber);&#xD;
+			}&#xD;
+		});&#xD;
+		btnNewButton_1.setBounds(54, 25, 101, 64);&#xD;
+		panel.add(btnNewButton_1);&#xD;
+		&#xD;
+		//Adding the number buttons 0-9&#xD;
+		&#xD;
+		//Button for number 0&#xD;
+		JButton jBtn0 = new JButton(&quot;&quot;);&#xD;
+		jBtn0.setIcon(new ImageIcon(MainMenu.class.getResource(&quot;/Icons/0.jpeg&quot;)));&#xD;
+		jBtn0.addActionListener(new ActionListener() {&#xD;
+		public void actionPerformed(ActionEvent e) {&#xD;
+			String enterNumber = jLabDisplay.getText() + &quot;0&quot;;&#xD;
+			jLabDisplay.setText(enterNumber);&#xD;
+			}&#xD;
+		});&#xD;
+		jBtn0.setBounds(184, 251, 101, 64);&#xD;
+		panel.add(jBtn0);&#xD;
+				&#xD;
+		//Button for number 1&#xD;
+		JButton jBtn1 = new JButton(&quot;&quot;);&#xD;
+		jBtn1.setIcon(new ImageIcon(MainMenu.class.getResource(&quot;/Icons/1.jpeg&quot;)));&#xD;
+		jBtn1.addActionListener(new ActionListener() {&#xD;
+			public void actionPerformed(ActionEvent e) {&#xD;
+				String enterNumber = jLabDisplay.getText() + &quot;1&quot;;&#xD;
+				jLabDisplay.setText(enterNumber);&#xD;
+			}&#xD;
+		});&#xD;
+		jBtn1.setBounds(71, 25, 101, 64);&#xD;
+		panel.add(jBtn1);&#xD;
+				&#xD;
+		//Button for number 2&#xD;
+		JButton jBtn2 = new JButton(&quot;&quot;);&#xD;
+		jBtn2.setIcon(new ImageIcon(MainMenu.class.getResource(&quot;/Icons/2.jpeg&quot;)));&#xD;
+		jBtn2.addActionListener(new ActionListener() {&#xD;
+			public void actionPerformed(ActionEvent e) {&#xD;
+				String enterNumber = jLabDisplay.getText() + &quot;2&quot;;&#xD;
+				jLabDisplay.setText(enterNumber);&#xD;
+			}&#xD;
+		});&#xD;
+		jBtn2.setBounds(184, 25, 101, 64);&#xD;
+		panel.add(jBtn2);&#xD;
+				&#xD;
+		//Button for number 3&#xD;
+		JButton jBtn3 = new JButton(&quot;&quot;);&#xD;
+		jBtn3.setIcon(new ImageIcon(MainMenu.class.getResource(&quot;/Icons/3.jpeg&quot;)));&#xD;
+		jBtn3.addActionListener(new ActionListener() {&#xD;
+			public void actionPerformed(ActionEvent e) {&#xD;
+				String enterNumber = jLabDisplay.getText() + &quot;3&quot;;&#xD;
+				jLabDisplay.setText(enterNumber);&#xD;
+			}&#xD;
+		});&#xD;
+		jBtn3.setBounds(297, 25, 101, 64);&#xD;
+		panel.add(jBtn3);&#xD;
+				&#xD;
+		//Button for number 4&#xD;
+		JButton jBtn4 = new JButton(&quot;&quot;);&#xD;
+		jBtn4.addActionListener(new ActionListener() {&#xD;
+			public void actionPerformed(ActionEvent e) {&#xD;
+				String enterNumber = jLabDisplay.getText() + &quot;4&quot;;&#xD;
+				jLabDisplay.setText(enterNumber);&#xD;
+			}&#xD;
+		});&#xD;
+		jBtn4.setIcon(new ImageIcon(MainMenu.class.getResource(&quot;/Icons/4.jpeg&quot;)));&#xD;
+		jBtn4.setBounds(71, 101, 101, 64);&#xD;
+		panel.add(jBtn4);&#xD;
+		&#xD;
+		//Button for number 5&#xD;
+		JButton jBtn5 = new JButton(&quot;&quot;);&#xD;
+		jBtn5.setIcon(new ImageIcon(MainMenu.class.getResource(&quot;/Icons/5.jpeg&quot;)));&#xD;
+		jBtn5.addActionListener(new ActionListener() {&#xD;
+			public void actionPerformed(ActionEvent e) {&#xD;
+				String enterNumber = jLabDisplay.getText() + &quot;5&quot;;&#xD;
+				jLabDisplay.setText(enterNumber);&#xD;
+			}&#xD;
+		});&#xD;
+		jBtn5.setBounds(184, 101, 101, 64);&#xD;
+		panel.add(jBtn5);&#xD;
+		&#xD;
+		//Button for number 6&#xD;
+		JButton jBtn6 = new JButton(&quot;&quot;);&#xD;
+		jBtn6.addActionListener(new ActionListener() {&#xD;
+			public void actionPerformed(ActionEvent e) {&#xD;
+				String enterNumber = jLabDisplay.getText() + &quot;6&quot;;&#xD;
+				jLabDisplay.setText(enterNumber);&#xD;
+			}&#xD;
+		});&#xD;
+		jBtn6.setIcon(new ImageIcon(MainMenu.class.getResource(&quot;/Icons/6.jpeg&quot;)));&#xD;
+		jBtn6.setBounds(297, 101, 101, 64);&#xD;
+		panel.add(jBtn6);&#xD;
+		&#xD;
+		//Button for number 7&#xD;
+		JButton jBtn7 = new JButton(&quot;&quot;);&#xD;
+		jBtn7.setIcon(new ImageIcon(MainMenu.class.getResource(&quot;/Icons/7.jpeg&quot;)));&#xD;
+		jBtn7.addActionListener(new ActionListener() {&#xD;
+			public void actionPerformed(ActionEvent e) {&#xD;
+				String enterNumber = jLabDisplay.getText() + &quot;7&quot;;&#xD;
+				jLabDisplay.setText(enterNumber);&#xD;
+			}&#xD;
+		});&#xD;
+		jBtn7.setBounds(71, 176, 101, 64);&#xD;
+		panel.add(jBtn7);&#xD;
+		&#xD;
+		//Button for number 8&#xD;
+		JButton jBtn8 = new JButton(&quot;&quot;);&#xD;
+		jBtn8.setIcon(new ImageIcon(MainMenu.class.getResource(&quot;/Icons/8.jpeg&quot;)));&#xD;
+		jBtn8.addActionListener(new ActionListener() {&#xD;
+			public void actionPerformed(ActionEvent e) {&#xD;
+				String enterNumber = jLabDisplay.getText() + &quot;8&quot;;&#xD;
+				jLabDisplay.setText(enterNumber);&#xD;
+			}&#xD;
+		});&#xD;
+		jBtn8.setBounds(184, 176, 101, 64);&#xD;
+		panel.add(jBtn8);&#xD;
+		&#xD;
+		//Button for number 9&#xD;
+		JButton jBtn9 = new JButton(&quot;&quot;);&#xD;
+		jBtn9.setIcon(new ImageIcon(MainMenu.class.getResource(&quot;/Icons/9.jpeg&quot;)));&#xD;
+		jBtn9.addActionListener(new ActionListener() {&#xD;
+			public void actionPerformed(ActionEvent e) {&#xD;
+				String enterNumber = jLabDisplay.getText() + &quot;9&quot;;&#xD;
+				jLabDisplay.setText(enterNumber);&#xD;
+			}&#xD;
+		});&#xD;
+		jBtn9.setBounds(297, 176, 101, 64);&#xD;
+		panel.add(jBtn9);&#xD;
+				&#xD;
+		//Clear button&#xD;
+		JButton jBtnClear = new JButton(&quot;&quot;);&#xD;
+		jBtnClear.setIcon(new ImageIcon(&quot;/Users/dina_dal/Desktop/Icons/clear.jpeg&quot;));&#xD;
+		jBtnClear.addActionListener(new ActionListener() {&#xD;
+			public void actionPerformed(ActionEvent e) {&#xD;
+				jLabDisplay.setText(&quot;&quot;);&#xD;
+				nonNegative.setText(&quot;&quot;);&#xD;
+				&#xD;
+			}&#xD;
+		});&#xD;
+		jBtnClear.setBounds(410, 140, 101, 64);&#xD;
+		panel.add(jBtnClear);&#xD;
+		&#xD;
+		//Enter button&#xD;
+		JButton jBtnEnter = new JButton(&quot;&quot;);&#xD;
+		jBtnEnter.setIcon(new ImageIcon(&quot;/Users/dina_dal/Desktop/Icons/enter.jpeg&quot;));&#xD;
+		jBtnEnter.addActionListener(new ActionListener() {&#xD;
+			public void actionPerformed(ActionEvent e) {&#xD;
+				//adds deposited amount to the balance &#xD;
+				String depositeAmount;&#xD;
+				depositeAmount = jLabDisplay.getText();				&#xD;
+				double depositeD = Double.parseDouble(depositeAmount);&#xD;
+				contentPane.add(nonNegative);&#xD;
+				nonNegative.setText(null);&#xD;
+				if (depositeD &lt; 0) {&#xD;
+					nonNegative.setText(&quot;Error: negative amount!&quot;);&#xD;
+		        }&#xD;
+				else {&#xD;
+					balance = balance + depositeD; //answer as double&#xD;
+					String newBalance = String.valueOf(balance);&#xD;
+					balanceText.setText(newBalance);&#xD;
+					nonNegative.setText(&quot;Balance updated&quot;);&#xD;
+					String b = Double. toString(balance);&#xD;
+					balanceText.setText(newBalance);&#xD;
+					nonNegative.setText(&quot;Balance updated&quot;);&#xD;
+					FileWriter fw = null;&#xD;
+					BufferedWriter bw = null;&#xD;
+					PrintWriter out = null;&#xD;
+					try {&#xD;
+						updateFile(); //Changes balance in file&#xD;
+					} catch (IOException e2) {&#xD;
+						e2.printStackTrace();&#xD;
+					}&#xD;
+					    try {&#xD;
+							fw = new FileWriter(&quot;./src/RounterInfo.txt&quot;, true);&#xD;
+						} catch (IOException e1) {&#xD;
+							e1.printStackTrace();&#xD;
+						}&#xD;
+					    bw = new BufferedWriter(fw);&#xD;
+					    out = new PrintWriter(bw);&#xD;
+					    String text = Login.accNum_from_file+&quot;;&quot;+Login.password_form_file+&quot;;&quot;+Login.name+&quot;;&quot;+b;&#xD;
+					    text.replaceAll(text, &quot;&quot;);&#xD;
+					    out.println(Login.accNum_from_file+&quot;;&quot;+Login.password_form_file+&quot;;&quot;+Login.name+&quot;;&quot;+newBalance);&#xD;
+					    out.close();&#xD;
+				}&#xD;
+			}&#xD;
+		});&#xD;
+&#xD;
+		jBtnEnter.setBounds(410, 230, 101, 64);&#xD;
+		panel.add(jBtnEnter);&#xD;
+		&#xD;
+		//Cancel button&#xD;
+		JButton jBtnCancel = new JButton(&quot;&quot;);&#xD;
+		jBtnCancel.setIcon(new ImageIcon(&quot;/Users/dina_dal/Desktop/Icons/cancel.jpeg&quot;));&#xD;
+		jBtnCancel.addActionListener(new ActionListener() {&#xD;
+			public void actionPerformed(ActionEvent m) {&#xD;
+				dispose();&#xD;
+				// main frame should be here&#xD;
+				MainMenu panel = new MainMenu();&#xD;
+				panel.frame.setVisible(true);&#xD;
+				}&#xD;
+		});&#xD;
+		jBtnCancel.setBounds(410, 45, 101, 64);&#xD;
+		panel.add(jBtnCancel);&#xD;
+		&#xD;
+	</body>
+      </ownedBehavior>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_vBIzQc3KEeyfrJp-I4FQJw" name="updateFile" specification="_u0UfQM3KEeyfrJp-I4FQJw">
+        <language>java</language>
+        <body>File inputFile = new File(&quot;./src/RounterInfo.txt&quot;);&#xD;
+     File tempFile = new File(&quot;./src/myTempFile.txt&quot;);&#xD;
+&#xD;
+     BufferedReader reader = new BufferedReader(new FileReader(inputFile));&#xD;
+     BufferedWriter writer = new BufferedWriter(new FileWriter(tempFile));&#xD;
+     String currentLine;&#xD;
+&#xD;
+     while((currentLine = reader.readLine()) != null) {&#xD;
+         // trim newline when comparing with lineToRemove&#xD;
+         String trimmedLine = currentLine.trim();&#xD;
+         if(trimmedLine.startsWith(Login.accNum_from_file)) continue;&#xD;
+         writer.write(currentLine + System.getProperty(&quot;line.separator&quot;));&#xD;
+     }&#xD;
+     writer.close(); &#xD;
+     reader.close(); &#xD;
+	</body>
+      </ownedBehavior>
+      <ownedOperation xmi:id="_u0SDAM3KEeyfrJp-I4FQJw" name="main" isStatic="true" method="_vBIMMM3KEeyfrJp-I4FQJw">
+        <ownedParameter xmi:id="_u0SDAc3KEeyfrJp-I4FQJw" name="args">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_u0SqEM3KEeyfrJp-I4FQJw" value="*"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_u0TRIM3KEeyfrJp-I4FQJw" name="DepositeFrame" method="_vBIMM83KEeyfrJp-I4FQJw">
+        <eAnnotations xmi:id="_u0T4MM3KEeyfrJp-I4FQJw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <details xmi:id="_u0T4Mc3KEeyfrJp-I4FQJw" key="create"/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_u0T4Ms3KEeyfrJp-I4FQJw" type="_u0NxkM3KEeyfrJp-I4FQJw" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_u0UfQM3KEeyfrJp-I4FQJw" name="updateFile" method="_vBIzQc3KEeyfrJp-I4FQJw" raisedException="_u-UIwc3KEeyfrJp-I4FQJw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_u0e3UM3KEeyfrJp-I4FQJw" name="Login">
+      <ownedAttribute xmi:id="_u_7SUM3KEeyfrJp-I4FQJw" name="frame" visibility="private" type="_u9-Kgc3KEeyfrJp-I4FQJw" association="_vBuCEc3KEeyfrJp-I4FQJw"/>
+      <ownedAttribute xmi:id="_u_8gcM3KEeyfrJp-I4FQJw" name="jLabDisplay" visibility="private" type="_u-IikM3KEeyfrJp-I4FQJw" association="_vBupIc3KEeyfrJp-I4FQJw"/>
+      <ownedAttribute xmi:id="_u_9HgM3KEeyfrJp-I4FQJw" name="userText" visibility="private" type="_u-IikM3KEeyfrJp-I4FQJw" association="_vBvQMc3KEeyfrJp-I4FQJw"/>
+      <ownedAttribute xmi:id="_u_9Hgs3KEeyfrJp-I4FQJw" name="passwordText" visibility="private" type="_u-IikM3KEeyfrJp-I4FQJw" association="_vBv3Qc3KEeyfrJp-I4FQJw"/>
+      <ownedAttribute xmi:id="_u_9ukc3KEeyfrJp-I4FQJw" name="name" visibility="package" isStatic="true">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_u_-Voc3KEeyfrJp-I4FQJw" name="loginLab" visibility="private" type="_u-IikM3KEeyfrJp-I4FQJw" association="_vBxFYM3KEeyfrJp-I4FQJw"/>
+      <ownedAttribute xmi:id="_u__jwM3KEeyfrJp-I4FQJw" name="accNum_from_file" visibility="package" isStatic="true">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_vAAK0M3KEeyfrJp-I4FQJw" name="password_form_file" visibility="package" isStatic="true">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_vAAx4c3KEeyfrJp-I4FQJw" name="user_found" visibility="package">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_vABY8M3KEeyfrJp-I4FQJw" value="false"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_vACAAc3KEeyfrJp-I4FQJw" name="balance" visibility="package" isStatic="true">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_vACnEM3KEeyfrJp-I4FQJw" value="0"/>
+      </ownedAttribute>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_vBJaUM3KEeyfrJp-I4FQJw" name="main" specification="_u0h6oM3KEeyfrJp-I4FQJw">
+        <ownedParameter xmi:id="_vBJaUc3KEeyfrJp-I4FQJw" name="args">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_vBJaUs3KEeyfrJp-I4FQJw" value="*"/>
+        </ownedParameter>
+        <language>java</language>
+        <body>EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Login window = new Login();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	</body>
+      </ownedBehavior>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_vBKBYM3KEeyfrJp-I4FQJw" name="Login" specification="_u0jIwM3KEeyfrJp-I4FQJw">
+        <ownedParameter xmi:id="_vBKBYc3KEeyfrJp-I4FQJw" type="_u0e3UM3KEeyfrJp-I4FQJw" direction="return"/>
+        <language>java</language>
+        <body>initialize();
+		</body>
+      </ownedBehavior>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_vBKBYs3KEeyfrJp-I4FQJw" name="initialize" specification="_u0k98M3KEeyfrJp-I4FQJw">
+        <language>java</language>
+        <body>//Setting the size of the frame
+		frame = new JFrame();
+		frame.setBounds(100, 100, 600, 600);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.getContentPane().setLayout(null);
+		
+		//Setting the size of the panel
+		JPanel panel = new JPanel();
+		panel.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
+		panel.setBounds(22, 6, 172, 188);
+		frame.getContentPane().add(panel);
+		panel.setLayout(null);
+		
+		//Account number button
+		JButton btnAccNum = new JButton(&quot;Account Number&quot;);
+		btnAccNum.addActionListener(new ActionListener() {
+			@Override  //Enables the user to enter the account number
+			public void actionPerformed(ActionEvent e) {
+				jLabDisplay  = userText; 
+				}
+			});
+		btnAccNum.setBounds(25, 29, 141, 52);
+		panel.add(btnAccNum);
+		
+		//Pin button
+		JButton btnPin = new JButton(&quot;Pin&quot;);
+		btnPin.addActionListener(new ActionListener() {
+			@Override  //Enables the user to enter the pin
+			public void actionPerformed(ActionEvent e) {
+				jLabDisplay  = passwordText;
+				}
+			});
+		btnPin.setBounds(25, 105, 141, 52);
+		panel.add(btnPin);
+		
+		//Properties of jLabDisplay
+		jLabDisplay = new JTextField();
+		jLabDisplay.setBounds(6, 122, 14, 15);
+		panel.add(jLabDisplay);
+		jLabDisplay.setVisible(false);
+		jLabDisplay.setForeground(Color.WHITE);
+		jLabDisplay.setBackground(Color.WHITE);
+		jLabDisplay.setFont(new Font(&quot;Lucida Grande&quot;, Font.BOLD, 14));
+		jLabDisplay.setColumns(10);
+		
+		//Properties of panel_1
+		JPanel panel_1 = new JPanel();
+		panel_1.setBackground(Color.LIGHT_GRAY);
+		panel_1.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
+		panel_1.setBounds(206, 6, 200, 188);
+		frame.getContentPane().add(panel_1);
+		panel_1.setLayout(null);
+		
+		//Properties of userText
+		userText = new JTextField();
+		userText.setBounds(6, 40, 130, 26);
+		panel_1.add(userText);
+		userText.setColumns(10);
+		
+		//Properties of passwordText
+		passwordText = new JPasswordField();
+		passwordText.setBounds(6, 117, 130, 26);
+		panel_1.add(passwordText);
+		passwordText.setColumns(10);
+		
+		//Properties of LoginLab
+		loginLab = new JTextField(&quot;Enter your information:&quot;);
+		loginLab.setEditable(false);
+		loginLab.setBackground(Color.LIGHT_GRAY);
+		loginLab.setColumns(10);
+		loginLab.setBounds(20, 6, 156, 22);
+		panel_1.add(loginLab);
+		
+		//Properties of panel_2
+		JPanel panel_2 = new JPanel();
+		panel_2.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
+		panel_2.setBounds(414, 6, 180, 188);
+		frame.getContentPane().add(panel_2);
+		panel_2.setLayout(null);
+		
+		//Login button
+		JButton btnLogin = new JButton(&quot;Login&quot;);
+		btnLogin.setBounds(24, 25, 120, 52);
+		btnLogin.addActionListener(new ActionListener() {
+		public void actionPerformed(ActionEvent e) {
+			jLabDisplay = loginLab;
+			Verify();
+			if(user_found==false) {
+				jLabDisplay.setText(&quot;Login error&quot;);
+			}
+			else {
+				frame.dispose();
+				MainMenu panel = new MainMenu();
+				panel.frame.setVisible(true);
+			}	
+		}
+	});
+		panel_2.add(btnLogin);
+		
+		//Sign up button
+		JButton btnSignUp = new JButton(&quot;Sign Up&quot;);
+		btnSignUp.addActionListener(new ActionListener() {
+		public void actionPerformed(ActionEvent e) {
+			frame.dispose();
+			SignUp frame = new SignUp();
+			frame.setVisible(true);
+			}
+		});
+		btnSignUp.setBounds(24, 101, 120, 52);
+		panel_2.add(btnSignUp);
+		
+		//Properties of panel_3
+		JPanel panel_3 = new JPanel();
+		panel_3.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
+		panel_3.setBounds(16, 206, 578, 356);
+		frame.getContentPane().add(panel_3);
+		panel_3.setLayout(null);
+		
+		//Adding the number buttons 0-9
+		
+		//Button for number 0
+		JButton jBtn0 = new JButton(&quot;&quot;);
+		jBtn0.setIcon(new ImageIcon(MainMenu.class.getResource(&quot;/Icons/0.jpeg&quot;)));
+		jBtn0.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String enterNumber = jLabDisplay.getText() + &quot;0&quot;;
+				jLabDisplay.setText(enterNumber);
+			}
+		});
+		jBtn0.setBounds(184, 251, 101, 64);
+		panel_3.add(jBtn0);
+		
+		//Button for number 1
+		JButton jBtn1 = new JButton(&quot;&quot;);
+		jBtn1.setIcon(new ImageIcon(MainMenu.class.getResource(&quot;/Icons/1.jpeg&quot;)));
+		jBtn1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String enterNumber = jLabDisplay.getText() + &quot;1&quot;;
+				jLabDisplay.setText(enterNumber);
+			}
+		});
+		jBtn1.setBounds(71, 25, 101, 64);
+		panel_3.add(jBtn1);
+		
+		//Button for number 2
+		JButton jBtn2 = new JButton(&quot;&quot;);
+		jBtn2.setIcon(new ImageIcon(MainMenu.class.getResource(&quot;/Icons/2.jpeg&quot;)));
+		jBtn2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String enterNumber = jLabDisplay.getText() + &quot;2&quot;;
+				jLabDisplay.setText(enterNumber);
+			}
+		});
+		jBtn2.setBounds(184, 25, 101, 64);
+		panel_3.add(jBtn2);
+		
+		//Button for number 3
+		JButton jBtn3 = new JButton(&quot;&quot;);
+		jBtn3.setIcon(new ImageIcon(MainMenu.class.getResource(&quot;/Icons/3.jpeg&quot;)));
+		jBtn3.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String enterNumber = jLabDisplay.getText() + &quot;3&quot;;
+				jLabDisplay.setText(enterNumber);
+			}
+		});
+		jBtn3.setBounds(297, 25, 101, 64);
+		panel_3.add(jBtn3);
+		
+		//Button for number 4
+		JButton jBtn4 = new JButton(&quot;&quot;);
+		jBtn4.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String enterNumber = jLabDisplay.getText() + &quot;4&quot;;
+				jLabDisplay.setText(enterNumber);
+			}
+		});
+		jBtn4.setIcon(new ImageIcon(MainMenu.class.getResource(&quot;/Icons/4.jpeg&quot;)));
+		jBtn4.setBounds(71, 101, 101, 64);
+		panel_3.add(jBtn4);
+		
+		//Button for number 5
+		JButton jBtn5 = new JButton(&quot;&quot;);
+		jBtn5.setIcon(new ImageIcon(MainMenu.class.getResource(&quot;/Icons/5.jpeg&quot;)));
+		jBtn5.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String enterNumber = jLabDisplay.getText() + &quot;5&quot;;
+				jLabDisplay.setText(enterNumber);
+			}
+		});
+		jBtn5.setBounds(184, 101, 101, 64);
+		panel_3.add(jBtn5);
+		
+		//Button for number 6
+		JButton jBtn6 = new JButton(&quot;&quot;);
+		jBtn6.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String enterNumber = jLabDisplay.getText() + &quot;6&quot;;
+				jLabDisplay.setText(enterNumber);
+			}
+		});
+		jBtn6.setIcon(new ImageIcon(MainMenu.class.getResource(&quot;/Icons/6.jpeg&quot;)));
+		jBtn6.setBounds(297, 101, 101, 64);
+		panel_3.add(jBtn6);
+		
+		//Button for number 7
+		JButton jBtn7 = new JButton(&quot;&quot;);
+		jBtn7.setIcon(new ImageIcon(MainMenu.class.getResource(&quot;/Icons/7.jpeg&quot;)));
+		jBtn7.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String enterNumber = jLabDisplay.getText() + &quot;7&quot;;
+				jLabDisplay.setText(enterNumber);
+			}
+		});
+		jBtn7.setBounds(71, 176, 101, 64);
+		panel_3.add(jBtn7);
+		
+		//Button for number 8
+		JButton jBtn8 = new JButton(&quot;&quot;);
+		jBtn8.setIcon(new ImageIcon(MainMenu.class.getResource(&quot;/Icons/8.jpeg&quot;)));
+		jBtn8.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String enterNumber = jLabDisplay.getText() + &quot;8&quot;;
+				jLabDisplay.setText(enterNumber);
+			}
+		});
+		jBtn8.setBounds(184, 176, 101, 64);
+		panel_3.add(jBtn8);
+		
+		//Button for number 9
+		JButton jBtn9 = new JButton(&quot;&quot;);
+		jBtn9.setIcon(new ImageIcon(MainMenu.class.getResource(&quot;/Icons/9.jpeg&quot;)));
+		jBtn9.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String enterNumber = jLabDisplay.getText() + &quot;9&quot;;
+				jLabDisplay.setText(enterNumber);
+			}
+		});
+		jBtn9.setBounds(297, 176, 101, 64);
+		panel_3.add(jBtn9);
+		
+		//Clear button
+		JButton jBtnClear = new JButton(&quot;&quot;);
+		jBtnClear.setIcon(new ImageIcon(&quot;/Users/dina_dal/Desktop/Icons/clear.jpeg&quot;));
+		jBtnClear.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				userText.setText(&quot;&quot;);
+				passwordText.setText(&quot;&quot;);
+				loginLab.setText(&quot;Enter your information:&quot;); 
+			}
+		});
+		jBtnClear.setBounds(410, 140, 101, 64);
+		panel_3.add(jBtnClear);
+		
+		//Enter button
+		JButton jBtnEnter = new JButton(&quot;&quot;);
+		jBtnEnter.setIcon(new ImageIcon(&quot;/Users/dina_dal/Desktop/Icons/enter.jpeg&quot;));
+		jBtnEnter.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				jLabDisplay = loginLab;
+				
+				Verify();
+				if(user_found==false) {
+					jLabDisplay.setText(&quot;Login error&quot;);
+					
+				}
+				else {
+					frame.dispose();
+					MainMenu panel = new MainMenu();
+					panel.frame.setVisible(true);
+				}	
+			}
+			
+		});
+		jBtnEnter.setBounds(410, 230, 101, 64);
+		panel_3.add(jBtnEnter);
+		
+		//Cancel button
+		JButton jBtnCancel = new JButton(&quot;&quot;);
+		jBtnCancel.setIcon(new ImageIcon(&quot;/Users/dina_dal/Desktop/Icons/cancel.jpeg&quot;));
+		jBtnCancel.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				userText.setText(&quot;&quot;);
+				passwordText.setText(&quot;&quot;);
+				loginLab.setText(&quot;Enter your information:&quot;); 
+			}
+		});
+		jBtnCancel.setBounds(410, 45, 101, 64);
+		panel_3.add(jBtnCancel);
+		
+	</body>
+      </ownedBehavior>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_vBKocM3KEeyfrJp-I4FQJw" name="Verify" specification="_u0k98c3KEeyfrJp-I4FQJw">
+        <language>java</language>
+        <body>String user = userText.getText();
+			String password = passwordText.getText();
+			String b = null;
+	        try {
+	        	//Reads information from the text file
+				Scanner in = new Scanner(new File(&quot;./src/RounterInfo.txt&quot;));
+				while(in.hasNextLine()){
+					 //if there is a line, print it out
+					 String line = in.nextLine();
+					 String[] output = line.split(&quot;;&quot;);
+					 accNum_from_file = output[0]; 
+					 password_form_file = output[1];
+					 name = output[2];
+					 b = output[3];
+					 if(user.equals(accNum_from_file) &amp;&amp; password.equals(password_form_file)) {
+						 jLabDisplay.setText(&quot;login Successful&quot;);
+						 user_found=true;
+						 break;
+					 }
+				 }
+			} catch (FileNotFoundException e1) {
+				e1.printStackTrace();
+			}
+			balance = Double.parseDouble(b);
+		</body>
+      </ownedBehavior>
+      <ownedOperation xmi:id="_u0h6oM3KEeyfrJp-I4FQJw" name="main" isStatic="true" method="_vBJaUM3KEeyfrJp-I4FQJw">
+        <ownedParameter xmi:id="_u0ihsM3KEeyfrJp-I4FQJw" name="args">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_u0ihsc3KEeyfrJp-I4FQJw" value="*"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_u0jIwM3KEeyfrJp-I4FQJw" name="Login" method="_vBKBYM3KEeyfrJp-I4FQJw">
+        <eAnnotations xmi:id="_u0jv0M3KEeyfrJp-I4FQJw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <details xmi:id="_u0jv0c3KEeyfrJp-I4FQJw" key="create"/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_u0jv0s3KEeyfrJp-I4FQJw" type="_u0e3UM3KEeyfrJp-I4FQJw" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_u0k98M3KEeyfrJp-I4FQJw" name="initialize" visibility="private" method="_vBKBYs3KEeyfrJp-I4FQJw"/>
+      <ownedOperation xmi:id="_u0k98c3KEeyfrJp-I4FQJw" name="Verify" method="_vBKocM3KEeyfrJp-I4FQJw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_u0qdgM3KEeyfrJp-I4FQJw" name="MainMenu">
+      <ownedAttribute xmi:id="_vADOIM3KEeyfrJp-I4FQJw" name="frame" type="_u9-Kgc3KEeyfrJp-I4FQJw" association="_vByTgM3KEeyfrJp-I4FQJw"/>
+      <ownedAttribute xmi:id="_vAEcQM3KEeyfrJp-I4FQJw" name="jLabDisplay" visibility="private" type="_u-IikM3KEeyfrJp-I4FQJw" association="_vByTg83KEeyfrJp-I4FQJw"/>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_vBKocc3KEeyfrJp-I4FQJw" name="main" specification="_u0sSsM3KEeyfrJp-I4FQJw">
+        <ownedParameter xmi:id="_vBKocs3KEeyfrJp-I4FQJw" name="args">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_vBKoc83KEeyfrJp-I4FQJw" value="*"/>
+        </ownedParameter>
+        <language>java</language>
+        <body>EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					MainMenu window = new MainMenu();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	</body>
+      </ownedBehavior>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_vBLPgM3KEeyfrJp-I4FQJw" name="MainMenu" specification="_u0s5wc3KEeyfrJp-I4FQJw">
+        <ownedParameter xmi:id="_vBLPgc3KEeyfrJp-I4FQJw" type="_u0qdgM3KEeyfrJp-I4FQJw" direction="return"/>
+        <language>java</language>
+        <body>//Setting the size of the frame
+		frame = new JFrame();
+		frame.setBounds(100, 100, 600, 600);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.getContentPane().setLayout(null);
+		
+		//Setting the size of the panel
+		JPanel panel = new JPanel();
+		panel.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
+		panel.setBounds(22, 6, 172, 188);
+		frame.getContentPane().add(panel);
+		panel.setLayout(null);
+		
+		//Properties of panel_1
+		JPanel panel_1 = new JPanel();
+		panel_1.setBackground(Color.LIGHT_GRAY);
+		panel_1.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
+		panel_1.setBounds(206, 6, 200, 188);
+		frame.getContentPane().add(panel_1);
+		panel_1.setLayout(null);
+		
+		//Properties of jLabDisplay
+		jLabDisplay = new JTextField();
+		jLabDisplay.setFont(new Font(&quot;Lucida Grande&quot;, Font.BOLD, 14));
+		jLabDisplay.setBounds(6, 22, 188, 133);
+		panel_1.add(jLabDisplay);
+		jLabDisplay.setColumns(10);
+		
+		//Properties of panel_2
+		JPanel panel_2 = new JPanel();
+		panel_2.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
+		panel_2.setBounds(414, 6, 180, 188);
+		frame.getContentPane().add(panel_2);
+		panel_2.setLayout(null);
+		
+		//Properties of panel_3
+		JPanel panel_3 = new JPanel();
+		panel_3.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
+		panel_3.setBounds(16, 206, 578, 356);
+		frame.getContentPane().add(panel_3);
+		panel_3.setLayout(null);
+		
+		//Balance button
+		JButton btnBalance = new JButton(&quot;Balance&quot;);
+		btnBalance.setBounds(25, 29, 117, 52);
+		panel.add(btnBalance);
+		
+		//Withdraw button
+		JButton btnWithdraw = new JButton(&quot;Withdraw&quot;);
+		btnWithdraw.addActionListener(new ActionListener() {
+					@Override  //Takes the user to the withdraw frame
+					public void actionPerformed(ActionEvent e) {
+						frame.dispose();
+						WithdrawFrame panel = new WithdrawFrame();
+						panel.setVisible(true);
+						panel.setLocation(400,250);
+					}
+					
+				});
+		btnWithdraw.setBounds(25, 105, 117, 52);
+		panel.add(btnWithdraw);
+		
+		//Deposite button
+		JButton btnDeposit = new JButton(&quot;Deposit&quot;);
+		btnDeposit.setBounds(24, 25, 120, 52);
+		btnDeposit.addActionListener(new ActionListener() {
+		public void actionPerformed(ActionEvent e) {
+			frame.dispose();
+			DepositeFrame panel = new DepositeFrame();
+			panel.setVisible(true);
+			panel.setLocation(400,250);
+		}
+		
+	});
+		panel_2.add(btnDeposit);
+		
+		//Mini statement button
+		JButton btnMiniState = new JButton(&quot;Mini Statement&quot;);
+		btnMiniState.setBounds(24, 101, 120, 52);
+		panel_2.add(btnMiniState);
+		
+		//Adding the number buttons 0-9
+		
+		//Button for number 0
+		JButton jBtn0 = new JButton(&quot;&quot;);
+		jBtn0.setIcon(new ImageIcon(MainMenu.class.getResource(&quot;/Icons/0.jpeg&quot;)));
+		jBtn0.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String enterNumber = jLabDisplay.getText() + &quot;0&quot;;
+				jLabDisplay.setText(enterNumber);
+			}
+		});
+		jBtn0.setBounds(184, 251, 101, 64);
+		panel_3.add(jBtn0);
+		
+		//Button for number 1
+		JButton jBtn1 = new JButton(&quot;&quot;);
+		jBtn1.setIcon(new ImageIcon(MainMenu.class.getResource(&quot;/Icons/1.jpeg&quot;)));
+		jBtn1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String enterNumber = jLabDisplay.getText() + &quot;1&quot;;
+				jLabDisplay.setText(enterNumber);
+			}
+		});
+		jBtn1.setBounds(71, 25, 101, 64);
+		panel_3.add(jBtn1);
+		
+		//Button for number 2
+		JButton jBtn2 = new JButton(&quot;&quot;);
+		jBtn2.setIcon(new ImageIcon(MainMenu.class.getResource(&quot;/Icons/2.jpeg&quot;)));
+		jBtn2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String enterNumber = jLabDisplay.getText() + &quot;2&quot;;
+				jLabDisplay.setText(enterNumber);
+			}
+		});
+		jBtn2.setBounds(184, 25, 101, 64);
+		panel_3.add(jBtn2);
+		
+		//Button for number 3
+		JButton jBtn3 = new JButton(&quot;&quot;);
+		jBtn3.setIcon(new ImageIcon(MainMenu.class.getResource(&quot;/Icons/3.jpeg&quot;)));
+		jBtn3.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String enterNumber = jLabDisplay.getText() + &quot;3&quot;;
+				jLabDisplay.setText(enterNumber);
+			}
+		});
+		jBtn3.setBounds(297, 25, 101, 64);
+		panel_3.add(jBtn3);
+		
+		//Button for number 4
+		JButton jBtn4 = new JButton(&quot;&quot;);
+		jBtn4.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String enterNumber = jLabDisplay.getText() + &quot;4&quot;;
+				jLabDisplay.setText(enterNumber);
+			}
+		});
+		jBtn4.setIcon(new ImageIcon(MainMenu.class.getResource(&quot;/Icons/4.jpeg&quot;)));
+		jBtn4.setBounds(71, 101, 101, 64);
+		panel_3.add(jBtn4);
+		
+		//Button for number 5
+		JButton jBtn5 = new JButton(&quot;&quot;);
+		jBtn5.setIcon(new ImageIcon(MainMenu.class.getResource(&quot;/Icons/5.jpeg&quot;)));
+		jBtn5.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String enterNumber = jLabDisplay.getText() + &quot;5&quot;;
+				jLabDisplay.setText(enterNumber);
+			}
+		});
+		jBtn5.setBounds(184, 101, 101, 64);
+		panel_3.add(jBtn5);
+		
+		//Button for number 6
+		JButton jBtn6 = new JButton(&quot;&quot;);
+		jBtn6.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String enterNumber = jLabDisplay.getText() + &quot;6&quot;;
+				jLabDisplay.setText(enterNumber);
+			}
+		});
+		jBtn6.setIcon(new ImageIcon(MainMenu.class.getResource(&quot;/Icons/6.jpeg&quot;)));
+		jBtn6.setBounds(297, 101, 101, 64);
+		panel_3.add(jBtn6);
+		
+		//Button for number 7
+		JButton jBtn7 = new JButton(&quot;&quot;);
+		jBtn7.setIcon(new ImageIcon(MainMenu.class.getResource(&quot;/Icons/7.jpeg&quot;)));
+		jBtn7.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String enterNumber = jLabDisplay.getText() + &quot;7&quot;;
+				jLabDisplay.setText(enterNumber);
+			}
+		});
+		jBtn7.setBounds(71, 176, 101, 64);
+		panel_3.add(jBtn7);
+		
+		//Button for number 8
+		JButton jBtn8 = new JButton(&quot;&quot;);
+		jBtn8.setIcon(new ImageIcon(MainMenu.class.getResource(&quot;/Icons/8.jpeg&quot;)));
+		jBtn8.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String enterNumber = jLabDisplay.getText() + &quot;8&quot;;
+				jLabDisplay.setText(enterNumber);
+			}
+		});
+		jBtn8.setBounds(184, 176, 101, 64);
+		panel_3.add(jBtn8);
+		
+		//Button for number 9
+		JButton jBtn9 = new JButton(&quot;&quot;);
+		jBtn9.setIcon(new ImageIcon(MainMenu.class.getResource(&quot;/Icons/9.jpeg&quot;)));
+		jBtn9.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String enterNumber = jLabDisplay.getText() + &quot;9&quot;;
+				jLabDisplay.setText(enterNumber);
+			}
+		});
+		jBtn9.setBounds(297, 176, 101, 64);
+		panel_3.add(jBtn9);
+		
+		//Clear button
+		JButton jBtnClear = new JButton(&quot;&quot;);
+		jBtnClear.setIcon(new ImageIcon(&quot;/Users/dina_dal/Desktop/Icons/clear.jpeg&quot;));
+		jBtnClear.setBounds(410, 140, 101, 64);
+		panel_3.add(jBtnClear);
+		
+		//Enter button
+		JButton jBtnEnter = new JButton(&quot;&quot;);
+		jBtnEnter.setIcon(new ImageIcon(&quot;/Users/dina_dal/Desktop/Icons/enter.jpeg&quot;));
+		jBtnEnter.setBounds(410, 230, 101, 64);
+		panel_3.add(jBtnEnter);
+		
+		//Cancel button
+		JButton jBtnCancel = new JButton(&quot;&quot;);
+		jBtnCancel.setIcon(new ImageIcon(&quot;/Users/dina_dal/Desktop/Icons/cancel.jpeg&quot;));
+		jBtnCancel.setBounds(410, 45, 101, 64);
+		panel_3.add(jBtnCancel);
+	</body>
+      </ownedBehavior>
+      <ownedOperation xmi:id="_u0sSsM3KEeyfrJp-I4FQJw" name="main" isStatic="true" method="_vBKocc3KEeyfrJp-I4FQJw">
+        <ownedParameter xmi:id="_u0sSsc3KEeyfrJp-I4FQJw" name="args">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_u0s5wM3KEeyfrJp-I4FQJw" value="*"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_u0s5wc3KEeyfrJp-I4FQJw" name="MainMenu" method="_vBLPgM3KEeyfrJp-I4FQJw">
+        <eAnnotations xmi:id="_u0tg0M3KEeyfrJp-I4FQJw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <details xmi:id="_u0tg0c3KEeyfrJp-I4FQJw" key="create"/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_u0tg0s3KEeyfrJp-I4FQJw" type="_u0qdgM3KEeyfrJp-I4FQJw" direction="return"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_u0v9EM3KEeyfrJp-I4FQJw" name="SignUp">
+      <generalization xmi:id="_u_cxMM3KEeyfrJp-I4FQJw" general="_u9-Kgc3KEeyfrJp-I4FQJw"/>
+      <ownedAttribute xmi:id="_vAFqYM3KEeyfrJp-I4FQJw" name="contentPane" visibility="private" type="_u-AmwM3KEeyfrJp-I4FQJw" association="_vBy6kc3KEeyfrJp-I4FQJw"/>
+      <ownedAttribute xmi:id="_vAG4gc3KEeyfrJp-I4FQJw" name="userLabel" visibility="private" isStatic="true" type="_u-FfQc3KEeyfrJp-I4FQJw" association="_vBzhoc3KEeyfrJp-I4FQJw"/>
+      <ownedAttribute xmi:id="_vAItsM3KEeyfrJp-I4FQJw" name="userText" isStatic="true" type="_u-IikM3KEeyfrJp-I4FQJw" association="_vB0vwM3KEeyfrJp-I4FQJw"/>
+      <ownedAttribute xmi:id="_vAJUwM3KEeyfrJp-I4FQJw" name="PinText" isStatic="true" type="_u-a2cM3KEeyfrJp-I4FQJw" association="_vB1W0c3KEeyfrJp-I4FQJw"/>
+      <ownedAttribute xmi:id="_vAJ70M3KEeyfrJp-I4FQJw" name="ConfirmPinText" isStatic="true" type="_u-a2cM3KEeyfrJp-I4FQJw" association="_vB2k8c3KEeyfrJp-I4FQJw"/>
+      <ownedAttribute xmi:id="_vAKi4M3KEeyfrJp-I4FQJw" name="PhoneNum" visibility="private" isStatic="true" type="_u-IikM3KEeyfrJp-I4FQJw" association="_vB3zEc3KEeyfrJp-I4FQJw"/>
+      <ownedAttribute xmi:id="_vALJ8c3KEeyfrJp-I4FQJw" name="passwordLabel" isStatic="true" type="_u-FfQc3KEeyfrJp-I4FQJw" association="_vB5BMc3KEeyfrJp-I4FQJw"/>
+      <ownedAttribute xmi:id="_vAM_IM3KEeyfrJp-I4FQJw" name="success" isStatic="true" type="_u-FfQc3KEeyfrJp-I4FQJw" association="_vB5oQc3KEeyfrJp-I4FQJw"/>
+      <interfaceRealization xmi:id="_u_ZG0M3KEeyfrJp-I4FQJw" client="_u0v9EM3KEeyfrJp-I4FQJw" supplier="_u-NbEM3KEeyfrJp-I4FQJw" contract="_u-NbEM3KEeyfrJp-I4FQJw"/>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_vBLPgs3KEeyfrJp-I4FQJw" name="main" specification="_u0xLMM3KEeyfrJp-I4FQJw">
+        <ownedParameter xmi:id="_vBLPg83KEeyfrJp-I4FQJw" name="args">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_vBLPhM3KEeyfrJp-I4FQJw" value="*"/>
+        </ownedParameter>
+        <language>java</language>
+        <body>EventQueue.invokeLater(new Runnable() {&#xD;
+			public void run() {&#xD;
+				try {&#xD;
+					SignUp frame = new SignUp();&#xD;
+					frame.setVisible(true);&#xD;
+				} catch (Exception e) {&#xD;
+					e.printStackTrace();&#xD;
+				}&#xD;
+			}&#xD;
+		});&#xD;
+	</body>
+      </ownedBehavior>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_vBL2kM3KEeyfrJp-I4FQJw" name="SignUp" specification="_u0yZUM3KEeyfrJp-I4FQJw">
+        <ownedParameter xmi:id="_vBL2kc3KEeyfrJp-I4FQJw" type="_u0v9EM3KEeyfrJp-I4FQJw" direction="return">
+          <name xsi:nil="true"/>
+        </ownedParameter>
+        <language>java</language>
+        <body>setTitle(&quot;SignUp&quot;);&#xD;
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);&#xD;
+		setBounds(200, 200, 800, 300);&#xD;
+		contentPane = new JPanel();&#xD;
+		contentPane.setToolTipText(&quot;&quot;);&#xD;
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));&#xD;
+		setContentPane(contentPane);&#xD;
+		contentPane.setLayout(null);&#xD;
+		&#xD;
+		userLabel = new JLabel(&quot;First Name&quot;);&#xD;
+		userLabel.setBounds(10, 20, 160, 25);&#xD;
+		contentPane.add(userLabel);&#xD;
+		&#xD;
+		userText = new JTextField();&#xD;
+		userText.setBounds(120, 20, 165, 25);&#xD;
+		contentPane.add(userText);&#xD;
+		&#xD;
+		userLabel = new JLabel(&quot;Last Name&quot;);&#xD;
+		userLabel.setBounds(10, 50, 80, 25);&#xD;
+		contentPane.add(userLabel);&#xD;
+		&#xD;
+		userText = new JTextField();&#xD;
+		userText.setBounds(120, 50, 165, 25);&#xD;
+		contentPane.add(userText);&#xD;
+		&#xD;
+		userLabel = new JLabel(&quot;Address&quot;);&#xD;
+		userLabel.setBounds(10, 80, 80, 25);&#xD;
+		contentPane.add(userLabel);&#xD;
+		&#xD;
+		userText = new JTextField();&#xD;
+		userText.setBounds(120, 80, 200, 65);&#xD;
+		contentPane.add(userText);&#xD;
+		&#xD;
+		userLabel = new JLabel(&quot;Email&quot;);&#xD;
+		userLabel.setBounds(350, 20, 160, 25);&#xD;
+		contentPane.add(userLabel);&#xD;
+		&#xD;
+		userText = new JTextField();&#xD;
+		userText.setBounds(500, 20, 165, 25);&#xD;
+		contentPane.add(userText);&#xD;
+		&#xD;
+		userLabel = new JLabel(&quot;Phone Number&quot;);&#xD;
+		userLabel.setBounds(350, 50, 160, 25);&#xD;
+		contentPane.add(userLabel);&#xD;
+		&#xD;
+		PhoneNum = new JTextField();&#xD;
+		PhoneNum.setBounds(500, 50, 165, 25);&#xD;
+		contentPane.add(PhoneNum);&#xD;
+		&#xD;
+		passwordLabel = new JLabel(&quot;Pin Number&quot;);&#xD;
+		passwordLabel.setBounds(350, 80, 160, 25);&#xD;
+		contentPane.add(passwordLabel);&#xD;
+		&#xD;
+		PinText = new JPasswordField();&#xD;
+		PinText.setBounds(500, 80, 165, 25);&#xD;
+		contentPane.add(PinText);&#xD;
+		PinText.setColumns(4);&#xD;
+		&#xD;
+		passwordLabel = new JLabel(&quot;Confirm Pin Number&quot;);&#xD;
+		passwordLabel.setBounds(350, 110, 160, 25);&#xD;
+		contentPane.add(passwordLabel);&#xD;
+		&#xD;
+		ConfirmPinText = new JPasswordField();&#xD;
+		ConfirmPinText.setBounds(500, 110, 165, 25);&#xD;
+		contentPane.add(ConfirmPinText);&#xD;
+		ConfirmPinText.setColumns(4);&#xD;
+		&#xD;
+		success = new JLabel(&quot;&quot;);&#xD;
+		success.setBounds(10, 110, 300, 25);&#xD;
+		contentPane.add(success);&#xD;
+		success.setText(null);&#xD;
+&#xD;
+		&#xD;
+		JButton btnNewButton = new JButton(&quot;SignUp&quot;);&#xD;
+		btnNewButton.setBounds(250, 200, 302, 35);&#xD;
+		btnNewButton.setVisible(true);&#xD;
+		contentPane.add(btnNewButton);&#xD;
+		&#xD;
+		btnNewButton.addActionListener(new ActionListener() {&#xD;
+&#xD;
+			@Override&#xD;
+			public void actionPerformed(ActionEvent e) {&#xD;
+				String PhoneNumber = PhoneNum.getText();&#xD;
+				//String PinText1 = PinText.getText();&#xD;
+				//String ConfirmPinText1 = ConfirmPinText.getText();&#xD;
+				int phoneLength = PhoneNumber.length();&#xD;
+				//int passLength =  PinText.length();&#xD;
+				//int passLength1 = ConfirmPinText.length();&#xD;
+				&#xD;
+				if (phoneLength != 10) &#xD;
+					success.setText(&quot;Enter a valid phone number (10 digits)&quot;);&#xD;
+				//else if (passLength != 4)&#xD;
+					//success.setText(&quot;Enter a valid pin number (4 digits&quot;);&#xD;
+				//else if (passLength1 != 4)&#xD;
+					//success.setText(&quot;Error: Passwords don't match&quot;);&#xD;
+				&#xD;
+				if(PinText.equals(ConfirmPinText)) {&#xD;
+					 success.setText(&quot;Sign Up Successful! The account has been created&quot;);&#xD;
+					}&#xD;
+				&#xD;
+			}&#xD;
+		});&#xD;
+		&#xD;
+		try {&#xD;
+		    Files.write(Paths.get(&quot;Rounter.txt&quot;), &quot;the text&quot;.getBytes(), StandardOpenOption.APPEND);&#xD;
+		    System.out.println(&quot;successful&quot;);&#xD;
+		}catch (IOException e) {&#xD;
+		    //exception handling left as an exercise for the reader&#xD;
+		}&#xD;
+				&#xD;
+	&#xD;
+&#xD;
+</body>
+      </ownedBehavior>
+      <ownedOperation xmi:id="_u0xLMM3KEeyfrJp-I4FQJw" name="main" isStatic="true" method="_vBLPgs3KEeyfrJp-I4FQJw">
+        <ownedParameter xmi:id="_u0xLMc3KEeyfrJp-I4FQJw" name="args">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_u0xyQM3KEeyfrJp-I4FQJw" value="*"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_u0yZUM3KEeyfrJp-I4FQJw" name="SignUp" method="_vBL2kM3KEeyfrJp-I4FQJw">
+        <eAnnotations xmi:id="_u0yZUc3KEeyfrJp-I4FQJw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <details xmi:id="_u0yZUs3KEeyfrJp-I4FQJw" key="create"/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_u0zAYM3KEeyfrJp-I4FQJw" type="_u0v9EM3KEeyfrJp-I4FQJw" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_u_a8AM3KEeyfrJp-I4FQJw" name="actionPerformed">
+        <ownedParameter xmi:id="_u_a8Ac3KEeyfrJp-I4FQJw" name="e" type="_u-XzIc3KEeyfrJp-I4FQJw"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_u07jQM3KEeyfrJp-I4FQJw" name="Transactions">
+      <ownedAttribute xmi:id="_vAONQM3KEeyfrJp-I4FQJw" name="date" type="_u9zLYM3KEeyfrJp-I4FQJw" isReadOnly="true"/>
+      <ownedAttribute xmi:id="_vAQpgM3KEeyfrJp-I4FQJw" name="type" isReadOnly="true">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#char"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_vAQpgc3KEeyfrJp-I4FQJw" name="amount" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_vARQkc3KEeyfrJp-I4FQJw" name="balance" isReadOnly="true">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_vAR3oM3KEeyfrJp-I4FQJw" name="description" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_vBMdos3KEeyfrJp-I4FQJw" name="Transactions" specification="_u09YcM3KEeyfrJp-I4FQJw">
+        <ownedParameter xmi:id="_vBMdo83KEeyfrJp-I4FQJw" name="t">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#char"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_vBMdpM3KEeyfrJp-I4FQJw" name="a">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_vBMdpc3KEeyfrJp-I4FQJw" name="b">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_vBMdps3KEeyfrJp-I4FQJw" name="d">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_vBMdp83KEeyfrJp-I4FQJw" type="_u07jQM3KEeyfrJp-I4FQJw" direction="return"/>
+        <language>java</language>
+        <body>date = new java.util.Date();
+		type = t;
+		amount = a;
+		balance = b;
+		description = d;
+	</body>
+      </ownedBehavior>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_vBNEsM3KEeyfrJp-I4FQJw" name="getAmount" specification="_u1BC0M3KEeyfrJp-I4FQJw">
+        <ownedParameter xmi:id="_vBNEsc3KEeyfrJp-I4FQJw" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+        </ownedParameter>
+        <language>java</language>
+        <body>return amount;
+	</body>
+      </ownedBehavior>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_vBNrwM3KEeyfrJp-I4FQJw" name="getDescription" specification="_u1Bp4M3KEeyfrJp-I4FQJw">
+        <ownedParameter xmi:id="_vBNrwc3KEeyfrJp-I4FQJw" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <language>java</language>
+        <body>return description;
+	</body>
+      </ownedBehavior>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_vBNrws3KEeyfrJp-I4FQJw" name="toString" specification="_u1C4AM3KEeyfrJp-I4FQJw">
+        <ownedParameter xmi:id="_vBNrw83KEeyfrJp-I4FQJw" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <language>java</language>
+        <body>return &quot;Description: &quot; + description + &quot;\n&quot; + &quot;balance: &quot; + balance;
+	</body>
+      </ownedBehavior>
+      <ownedOperation xmi:id="_u09YcM3KEeyfrJp-I4FQJw" name="Transactions" method="_vBMdos3KEeyfrJp-I4FQJw">
+        <eAnnotations xmi:id="_u1AbwM3KEeyfrJp-I4FQJw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <details xmi:id="_u1Abwc3KEeyfrJp-I4FQJw" key="create"/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_u0-mkM3KEeyfrJp-I4FQJw" name="t">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#char"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_u0_0sM3KEeyfrJp-I4FQJw" name="a">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_u0_0sc3KEeyfrJp-I4FQJw" name="b">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_u0_0ss3KEeyfrJp-I4FQJw" name="d">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_u1Abws3KEeyfrJp-I4FQJw" type="_u07jQM3KEeyfrJp-I4FQJw" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_u1BC0M3KEeyfrJp-I4FQJw" name="getAmount" method="_vBNEsM3KEeyfrJp-I4FQJw">
+        <ownedComment xmi:id="_vBVnkM3KEeyfrJp-I4FQJw">
+          <body>Set new amount</body>
+        </ownedComment>
+        <ownedParameter xmi:id="_u1BC0c3KEeyfrJp-I4FQJw" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_u1Bp4M3KEeyfrJp-I4FQJw" name="getDescription" method="_vBNrwM3KEeyfrJp-I4FQJw">
+        <ownedComment xmi:id="_vBVnkc3KEeyfrJp-I4FQJw">
+          <body>Set a new description</body>
+        </ownedComment>
+        <ownedParameter xmi:id="_u1CQ8M3KEeyfrJp-I4FQJw" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_u1C4AM3KEeyfrJp-I4FQJw" name="toString" method="_vBNrws3KEeyfrJp-I4FQJw">
+        <ownedParameter xmi:id="_u1DfEM3KEeyfrJp-I4FQJw" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_u1F7UM3KEeyfrJp-I4FQJw" name="WithdrawFrame">
+      <generalization xmi:id="_u_gbkM3KEeyfrJp-I4FQJw" general="_u9-Kgc3KEeyfrJp-I4FQJw"/>
+      <ownedAttribute xmi:id="_vASesM3KEeyfrJp-I4FQJw" name="jLabDisplay" visibility="private" type="_u-IikM3KEeyfrJp-I4FQJw" association="_vB62Yc3KEeyfrJp-I4FQJw"/>
+      <ownedAttribute xmi:id="_vATFwc3KEeyfrJp-I4FQJw" name="frame" type="_u9-Kgc3KEeyfrJp-I4FQJw" association="_vB9SoM3KEeyfrJp-I4FQJw"/>
+      <ownedAttribute xmi:id="_vAUT4M3KEeyfrJp-I4FQJw" name="contentPane" visibility="private" type="_u-AmwM3KEeyfrJp-I4FQJw" association="_vB95sM3KEeyfrJp-I4FQJw"/>
+      <ownedAttribute xmi:id="_vAU68c3KEeyfrJp-I4FQJw" name="txtTf" visibility="private" type="_u-IikM3KEeyfrJp-I4FQJw" association="_vCA9AM3KEeyfrJp-I4FQJw"/>
+      <ownedAttribute xmi:id="_vAWJEM3KEeyfrJp-I4FQJw" name="balanceText" visibility="private" type="_u-IikM3KEeyfrJp-I4FQJw" association="_vCCLIM3KEeyfrJp-I4FQJw"/>
+      <ownedAttribute xmi:id="_vAWwIM3KEeyfrJp-I4FQJw" name="nonNegative1" visibility="private" type="_u-IikM3KEeyfrJp-I4FQJw" association="_vCDZQM3KEeyfrJp-I4FQJw"/>
+      <ownedAttribute xmi:id="_vAXXMM3KEeyfrJp-I4FQJw" name="balance" visibility="package">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_vAXXMc3KEeyfrJp-I4FQJw" value="Login.balance"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_vAX-QM3KEeyfrJp-I4FQJw" name="balanceS" visibility="package">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_vAX-Qc3KEeyfrJp-I4FQJw" value="String.valueOf(balance)"/>
+      </ownedAttribute>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_vBOS0M3KEeyfrJp-I4FQJw" name="main" specification="_u1La4M3KEeyfrJp-I4FQJw">
+        <ownedParameter xmi:id="_vBOS0c3KEeyfrJp-I4FQJw" name="args">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_vBOS0s3KEeyfrJp-I4FQJw" value="*"/>
+        </ownedParameter>
+        <language>java</language>
+        <body>EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					WithdrawFrame frame = new WithdrawFrame();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	</body>
+      </ownedBehavior>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_vBO54M3KEeyfrJp-I4FQJw" name="WithdrawFrame" specification="_u1N3IM3KEeyfrJp-I4FQJw">
+        <ownedParameter xmi:id="_vBO54c3KEeyfrJp-I4FQJw" type="_u1F7UM3KEeyfrJp-I4FQJw" direction="return"/>
+        <language>java</language>
+        <body>setTitle(&quot;Withdraw&quot;);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 605, 589);
+		contentPane = new JPanel();
+		contentPane.setToolTipText(&quot;&quot;);
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+
+		JLabel lblNewLabel = new JLabel(&quot;Enter the amount that you want to withdraw&quot;);
+		lblNewLabel.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 14));
+		lblNewLabel.setBounds(10, 67, 317, 26);
+		contentPane.add(lblNewLabel);
+
+		jLabDisplay = new JTextField();
+		jLabDisplay.setBounds(184, 95, 209, 78);
+		contentPane.add(jLabDisplay);
+		jLabDisplay.setFont(new Font(&quot;Lucida Grande&quot;, Font.BOLD, 14));
+		jLabDisplay.setColumns(10);
+		
+
+		nonNegative1 = new JTextField();
+		nonNegative1.setFont(new Font(&quot;Lucida Grande&quot;, Font.PLAIN, 13));
+		nonNegative1.setEditable(false);
+		nonNegative1.setBackground(SystemColor.window);
+		nonNegative1.setBounds(10, 109, 162, 52);
+		contentPane.add(nonNegative1);
+		nonNegative1.setColumns(10);
+		
+		JLabel lblNewLabel_1 = new JLabel(&quot;Your balance is:&quot;);
+		lblNewLabel_1.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 15));
+		lblNewLabel_1.setBounds(21, 14, 154, 42);
+		contentPane.add(lblNewLabel_1);
+		
+		balanceText = new JTextField();
+		balanceText.setEditable(false);
+		balanceText.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 14));
+		balanceText.setBounds(186, 11, 159, 45);
+		contentPane.add(balanceText);
+		balanceText.setColumns(10);
+		balanceText.setText(balanceS);
+		
+		//Main Menu Button
+		JButton backButton = new JButton(&quot;Main Menu&quot;);
+		backButton.setBounds(405, 17, 159, 41);
+		backButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent m) {
+				dispose();
+				// main frame should be here
+				MainMenu panel = new MainMenu();
+				panel.frame.setVisible(true);
+				}
+		});
+		contentPane.add(backButton);
+		
+		//ok Button
+		JButton btnNewButton = new JButton(&quot;ok&quot;);
+		btnNewButton.setBounds(405, 107, 159, 56);
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				//The &quot;ok&quot; button
+				//Subtracts the withdrawn amount from the balance
+				String withdrawAmount;
+				withdrawAmount = jLabDisplay.getText();				
+				double withdrawD = Double.parseDouble(withdrawAmount);
+				nonNegative1.setText(null);
+				if (withdrawD &lt; 0) {
+					nonNegative1.setText(&quot;Error: negative amount!&quot;);
+		        }
+				else {
+					String b = Double. toString(balance);
+					balance = balance - withdrawD; //answer as double
+					String newBalance = String.valueOf(balance);
+					balanceText.setText(newBalance);
+					nonNegative1.setText(&quot;Balance updated&quot;);
+					FileWriter fw = null;
+					BufferedWriter bw = null;
+					PrintWriter out = null;
+					try {
+						updateFile();
+					} catch (IOException e2) {
+						// TODO Auto-generated catch block
+						e2.printStackTrace();
+					}
+					    try {
+							fw = new FileWriter(&quot;./src/RounterInfo.txt&quot;, true);
+						} catch (IOException e1) {
+							// TODO Auto-generated catch block
+							e1.printStackTrace();
+						}
+					    bw = new BufferedWriter(fw);
+					    out = new PrintWriter(bw);
+					    String text = Login.accNum_from_file+&quot;;&quot;+Login.password_form_file+&quot;;&quot;+Login.name+&quot;;&quot;+b;
+					    text.replaceAll(text, &quot;&quot;);
+					    out.println(Login.accNum_from_file+&quot;;&quot;+Login.password_form_file+&quot;;&quot;+Login.name+&quot;;&quot;+newBalance);
+					    out.close();
+				}
+			}
+		});
+		contentPane.add(btnNewButton);
+		
+		JPanel panel = new JPanel();
+		panel.setBounds(10, 205, 571, 336);
+		panel.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
+		contentPane.add(panel);
+		//frame.getContentPane().add(panel);
+		panel.setLayout(null);
+
+		//Adding the number buttons 0-9
+		
+		//Button for number 0
+		JButton jBtn0 = new JButton(&quot;&quot;);
+		jBtn0.setIcon(new ImageIcon(MainMenu.class.getResource(&quot;/Icons/0.jpeg&quot;)));
+		jBtn0.addActionListener(new ActionListener() {
+		public void actionPerformed(ActionEvent e) {
+			String enterNumber = jLabDisplay.getText() + &quot;0&quot;;
+			jLabDisplay.setText(enterNumber);
+			}
+		});
+		jBtn0.setBounds(184, 251, 101, 64);
+		panel.add(jBtn0);
+				
+		//Button for number 1
+		JButton jBtn1 = new JButton(&quot;&quot;);
+		jBtn1.setIcon(new ImageIcon(MainMenu.class.getResource(&quot;/Icons/1.jpeg&quot;)));
+		jBtn1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String enterNumber = jLabDisplay.getText() + &quot;1&quot;;
+				jLabDisplay.setText(enterNumber);
+			}
+		});
+		jBtn1.setBounds(71, 25, 101, 64);
+		panel.add(jBtn1);
+				
+		//Button for number 2
+		JButton jBtn2 = new JButton(&quot;&quot;);
+		jBtn2.setIcon(new ImageIcon(MainMenu.class.getResource(&quot;/Icons/2.jpeg&quot;)));
+		jBtn2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String enterNumber = jLabDisplay.getText() + &quot;2&quot;;
+				jLabDisplay.setText(enterNumber);
+			}
+		});
+		jBtn2.setBounds(184, 25, 101, 64);
+		panel.add(jBtn2);
+				
+		//Button for number 3
+		JButton jBtn3 = new JButton(&quot;&quot;);
+		jBtn3.setIcon(new ImageIcon(MainMenu.class.getResource(&quot;/Icons/3.jpeg&quot;)));
+		jBtn3.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String enterNumber = jLabDisplay.getText() + &quot;3&quot;;
+				jLabDisplay.setText(enterNumber);
+			}
+		});
+		jBtn3.setBounds(297, 25, 101, 64);
+		panel.add(jBtn3);
+				
+		//Button for number 4
+		JButton jBtn4 = new JButton(&quot;&quot;);
+		jBtn4.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String enterNumber = jLabDisplay.getText() + &quot;4&quot;;
+				jLabDisplay.setText(enterNumber);
+			}
+		});
+		jBtn4.setIcon(new ImageIcon(MainMenu.class.getResource(&quot;/Icons/4.jpeg&quot;)));
+		jBtn4.setBounds(71, 101, 101, 64);
+		panel.add(jBtn4);
+		
+		//Button for number 5
+		JButton jBtn5 = new JButton(&quot;&quot;);
+		jBtn5.setIcon(new ImageIcon(MainMenu.class.getResource(&quot;/Icons/5.jpeg&quot;)));
+		jBtn5.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String enterNumber = jLabDisplay.getText() + &quot;5&quot;;
+				jLabDisplay.setText(enterNumber);
+			}
+		});
+		jBtn5.setBounds(184, 101, 101, 64);
+		panel.add(jBtn5);
+		
+		//Button for number 6
+		JButton jBtn6 = new JButton(&quot;&quot;);
+		jBtn6.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String enterNumber = jLabDisplay.getText() + &quot;6&quot;;
+				jLabDisplay.setText(enterNumber);
+			}
+		});
+		jBtn6.setIcon(new ImageIcon(MainMenu.class.getResource(&quot;/Icons/6.jpeg&quot;)));
+		jBtn6.setBounds(297, 101, 101, 64);
+		panel.add(jBtn6);
+		
+		//Button for number 7
+		JButton jBtn7 = new JButton(&quot;&quot;);
+		jBtn7.setIcon(new ImageIcon(MainMenu.class.getResource(&quot;/Icons/7.jpeg&quot;)));
+		jBtn7.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String enterNumber = jLabDisplay.getText() + &quot;7&quot;;
+				jLabDisplay.setText(enterNumber);
+			}
+		});
+		jBtn7.setBounds(71, 176, 101, 64);
+		panel.add(jBtn7);
+		
+		//Button for number 8
+		JButton jBtn8 = new JButton(&quot;&quot;);
+		jBtn8.setIcon(new ImageIcon(MainMenu.class.getResource(&quot;/Icons/8.jpeg&quot;)));
+		jBtn8.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String enterNumber = jLabDisplay.getText() + &quot;8&quot;;
+				jLabDisplay.setText(enterNumber);
+			}
+		});
+		jBtn8.setBounds(184, 176, 101, 64);
+		panel.add(jBtn8);
+		
+		//Button for number 9
+		JButton jBtn9 = new JButton(&quot;&quot;);
+		jBtn9.setIcon(new ImageIcon(MainMenu.class.getResource(&quot;/Icons/9.jpeg&quot;)));
+		jBtn9.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String enterNumber = jLabDisplay.getText() + &quot;9&quot;;
+				jLabDisplay.setText(enterNumber);
+			}
+		});
+		jBtn9.setBounds(297, 176, 101, 64);
+		panel.add(jBtn9);
+				
+		//Clear button
+		JButton jBtnClear = new JButton(&quot;&quot;);
+		jBtnClear.setIcon(new ImageIcon(&quot;/Users/dina_dal/Desktop/Icons/clear.jpeg&quot;));
+		jBtnClear.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				jLabDisplay.setText(&quot;&quot;);
+				nonNegative1.setText(&quot;&quot;);
+				
+			}
+		});
+		jBtnClear.setBounds(410, 140, 101, 64);
+		panel.add(jBtnClear);
+		
+		//Enter button
+		JButton jBtnEnter = new JButton(&quot;&quot;);
+		jBtnEnter.setIcon(new ImageIcon(&quot;/Users/dina_dal/Desktop/Icons/enter.jpeg&quot;));
+		jBtnEnter.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				//The &quot;ok&quot; button
+				//Subtracts the withdrawn amount from the balance
+				String withdrawAmount;
+				withdrawAmount = jLabDisplay.getText();				
+				double withdrawD = Double.parseDouble(withdrawAmount);
+				nonNegative1.setText(null);
+				if (withdrawD &lt; 0) {
+					nonNegative1.setText(&quot;Error: negative amount!&quot;);
+		        }
+				else {
+					String b = Double. toString(balance);
+					balance = balance - withdrawD; //answer as double
+					String newBalance = String.valueOf(balance);
+					balanceText.setText(newBalance);
+					nonNegative1.setText(&quot;Balance updated&quot;);
+					FileWriter fw = null;
+					BufferedWriter bw = null;
+					PrintWriter out = null;
+					try {
+						updateFile();
+					} catch (IOException e2) {
+						// TODO Auto-generated catch block
+						e2.printStackTrace();
+					}
+					    try {
+							fw = new FileWriter(&quot;./src/RounterInfo.txt&quot;, true);
+						} catch (IOException e1) {
+							// TODO Auto-generated catch block
+							e1.printStackTrace();
+						}
+					    bw = new BufferedWriter(fw);
+					    out = new PrintWriter(bw);
+					    String text = Login.accNum_from_file+&quot;;&quot;+Login.password_form_file+&quot;;&quot;+Login.name+&quot;;&quot;+b;
+					    text.replaceAll(text, &quot;&quot;);
+					    out.println(Login.accNum_from_file+&quot;;&quot;+Login.password_form_file+&quot;;&quot;+Login.name+&quot;;&quot;+newBalance);
+					    out.close();
+				}
+			}
+		});
+		jBtnEnter.setBounds(410, 230, 101, 64);
+		panel.add(jBtnEnter);
+		
+		//Cancel button
+		JButton jBtnCancel = new JButton(&quot;&quot;);
+		jBtnCancel.setIcon(new ImageIcon(&quot;/Users/dina_dal/Desktop/Icons/cancel.jpeg&quot;));
+		jBtnCancel.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent m) {
+				dispose();
+				// main frame should be here
+				MainMenu panel = new MainMenu();
+				panel.frame.setVisible(true);
+				}
+		});
+		jBtnCancel.setBounds(410, 45, 101, 64);
+		panel.add(jBtnCancel);
+		
+	</body>
+      </ownedBehavior>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_vBO54s3KEeyfrJp-I4FQJw" name="updateFile" specification="_u1PFQc3KEeyfrJp-I4FQJw">
+        <language>java</language>
+        <body>File inputFile = new File(&quot;./src/RounterInfo.txt&quot;);
+     File tempFile = new File(&quot;./src/myTempFile.txt&quot;);
+
+     BufferedReader reader = new BufferedReader(new FileReader(inputFile));
+     BufferedWriter writer = new BufferedWriter(new FileWriter(tempFile));
+     String currentLine;
+
+     while((currentLine = reader.readLine()) != null) {
+         // trim newline when comparing with lineToRemove
+         String trimmedLine = currentLine.trim();
+         if(trimmedLine.startsWith(Login.accNum_from_file)) continue;
+         writer.write(currentLine + System.getProperty(&quot;line.separator&quot;));
+     }
+     writer.close(); 
+     reader.close(); 
+     boolean successful = tempFile.renameTo(inputFile);
+     System.out.println(successful);
+	</body>
+      </ownedBehavior>
+      <ownedOperation xmi:id="_u1La4M3KEeyfrJp-I4FQJw" name="main" isStatic="true" method="_vBOS0M3KEeyfrJp-I4FQJw">
+        <ownedParameter xmi:id="_u1La4c3KEeyfrJp-I4FQJw" name="args">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_u1MB8M3KEeyfrJp-I4FQJw" value="*"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_u1N3IM3KEeyfrJp-I4FQJw" name="WithdrawFrame" method="_vBO54M3KEeyfrJp-I4FQJw">
+        <eAnnotations xmi:id="_u1OeMM3KEeyfrJp-I4FQJw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <details xmi:id="_u1OeMc3KEeyfrJp-I4FQJw" key="create"/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_u1PFQM3KEeyfrJp-I4FQJw" type="_u1F7UM3KEeyfrJp-I4FQJw" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_u1PFQc3KEeyfrJp-I4FQJw" name="updateFile" method="_vBO54s3KEeyfrJp-I4FQJw" raisedException="_u-UIwc3KEeyfrJp-I4FQJw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_u1bSgc3KEeyfrJp-I4FQJw" name="checkingAccount">
+      <generalization xmi:id="_u-xbwM3KEeyfrJp-I4FQJw" general="_uzgm8M3KEeyfrJp-I4FQJw"/>
+      <ownedAttribute xmi:id="_vAZMYM3KEeyfrJp-I4FQJw" name="overdraftLimit" visibility="package">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_vAZMYc3KEeyfrJp-I4FQJw" value="-100"/>
+      </ownedAttribute>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_vBPg883KEeyfrJp-I4FQJw" name="checkingAccount" specification="_u1dHsM3KEeyfrJp-I4FQJw">
+        <ownedParameter xmi:id="_vBPg9M3KEeyfrJp-I4FQJw" name="id">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_vBPg9c3KEeyfrJp-I4FQJw" name="balance">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_vBPg9s3KEeyfrJp-I4FQJw" name="pin">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_vBPg983KEeyfrJp-I4FQJw" type="_u1bSgc3KEeyfrJp-I4FQJw" direction="return"/>
+        <language>java</language>
+        <body>super(id, balance, pin);
+	    </body>
+      </ownedBehavior>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_vBQIAM3KEeyfrJp-I4FQJw" name="withdraw" specification="_u1duwc3KEeyfrJp-I4FQJw">
+        <ownedParameter xmi:id="_vBQIAc3KEeyfrJp-I4FQJw" name="amount">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+        </ownedParameter>
+        <language>java</language>
+        <body>if (balance - amount >= overdraftLimit) {
+	            super.withdraw(amount);
+	        }
+	    </body>
+      </ownedBehavior>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_vBQIAs3KEeyfrJp-I4FQJw" name="toString" specification="_u1gLAM3KEeyfrJp-I4FQJw">
+        <ownedParameter xmi:id="_vBQIA83KEeyfrJp-I4FQJw" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <language>java</language>
+        <body>return &quot;Checking Account Balance: &quot; + balance;
+	               
+	    </body>
+      </ownedBehavior>
+      <ownedOperation xmi:id="_u1dHsM3KEeyfrJp-I4FQJw" name="checkingAccount" method="_vBPg883KEeyfrJp-I4FQJw">
+        <eAnnotations xmi:id="_u1dHtM3KEeyfrJp-I4FQJw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <details xmi:id="_u1dHtc3KEeyfrJp-I4FQJw" key="create"/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_u1dHsc3KEeyfrJp-I4FQJw" name="id">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_u1dHss3KEeyfrJp-I4FQJw" name="balance">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_u1dHs83KEeyfrJp-I4FQJw" name="pin">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_u1duwM3KEeyfrJp-I4FQJw" type="_u1bSgc3KEeyfrJp-I4FQJw" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_u1duwc3KEeyfrJp-I4FQJw" name="withdraw" method="_vBQIAM3KEeyfrJp-I4FQJw">
+        <ownedParameter xmi:id="_u1eV0M3KEeyfrJp-I4FQJw" name="amount">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_u1gLAM3KEeyfrJp-I4FQJw" name="toString" method="_vBQIAs3KEeyfrJp-I4FQJw">
+        <ownedParameter xmi:id="_u1gyEM3KEeyfrJp-I4FQJw" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_u1jOUM3KEeyfrJp-I4FQJw" name="creditCard">
+      <generalization xmi:id="_u_je4M3KEeyfrJp-I4FQJw" general="_u9-Kgc3KEeyfrJp-I4FQJw"/>
+      <ownedAttribute xmi:id="_vAbBkM3KEeyfrJp-I4FQJw" name="name" visibility="package">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_vAbBkc3KEeyfrJp-I4FQJw" value="Login.name"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_vAbooc3KEeyfrJp-I4FQJw" name="nameS" visibility="package">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_vAcPsM3KEeyfrJp-I4FQJw" value="String.valueOf(name)"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_vAc2wc3KEeyfrJp-I4FQJw" name="cardRandomNumberI" visibility="package" type="_u-1tMc3KEeyfrJp-I4FQJw" association="_vCEAUc3KEeyfrJp-I4FQJw">
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_vAdd0M3KEeyfrJp-I4FQJw" value="new Random()"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_vAeE4M3KEeyfrJp-I4FQJw" name="cardRandomNumberII" visibility="package" type="_u-1tMc3KEeyfrJp-I4FQJw" association="_vCF1gM3KEeyfrJp-I4FQJw">
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_vAeE4c3KEeyfrJp-I4FQJw" value="new Random()"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_vAer8c3KEeyfrJp-I4FQJw" name="cardRandomNumberIII" visibility="package" type="_u-1tMc3KEeyfrJp-I4FQJw" association="_vCGckc3KEeyfrJp-I4FQJw">
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_vAfTAM3KEeyfrJp-I4FQJw" value="new Random()"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_vAf6EM3KEeyfrJp-I4FQJw" name="cardRandomNumberIV" visibility="package" type="_u-1tMc3KEeyfrJp-I4FQJw" association="_vCHDoc3KEeyfrJp-I4FQJw">
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_vAghIM3KEeyfrJp-I4FQJw" value="new Random()"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_vAhIMc3KEeyfrJp-I4FQJw" name="I" visibility="package">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_vAhIMs3KEeyfrJp-I4FQJw" value="10000"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_vAhvQc3KEeyfrJp-I4FQJw" name="II" visibility="package">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_vAiWUM3KEeyfrJp-I4FQJw" value="10000"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_vAjkcM3KEeyfrJp-I4FQJw" name="III" visibility="package">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_vAkLgM3KEeyfrJp-I4FQJw" value="10000"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_vAkykc3KEeyfrJp-I4FQJw" name="IV" visibility="package">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_vAkyks3KEeyfrJp-I4FQJw" value="10000"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_vAlZoc3KEeyfrJp-I4FQJw" name="intRandomI" visibility="package">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_vAlZos3KEeyfrJp-I4FQJw" value="cardRandomNumberI.nextInt(I)"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_vAmAsc3KEeyfrJp-I4FQJw" name="intRandomII" visibility="package">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_vAmAss3KEeyfrJp-I4FQJw" value="cardRandomNumberI.nextInt(II)"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_vAmnwc3KEeyfrJp-I4FQJw" name="intRandomIII" visibility="package">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_vAnO0M3KEeyfrJp-I4FQJw" value="cardRandomNumberI.nextInt(III)"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_vAnO0s3KEeyfrJp-I4FQJw" name="intRandomIV" visibility="package">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_vAn14M3KEeyfrJp-I4FQJw" value="cardRandomNumberI.nextInt(IV)"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_vAoc8M3KEeyfrJp-I4FQJw" name="randomCardI" visibility="package">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_vAoc8c3KEeyfrJp-I4FQJw" value="String.valueOf(intRandomI)"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_vApEAM3KEeyfrJp-I4FQJw" name="randomCardII" visibility="package">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_vApEAc3KEeyfrJp-I4FQJw" value="String.valueOf(intRandomII)"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_vAqSIM3KEeyfrJp-I4FQJw" name="randomCardIII" visibility="package">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_vAqSIc3KEeyfrJp-I4FQJw" value="String.valueOf(intRandomIII)"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_vAq5Mc3KEeyfrJp-I4FQJw" name="randomCardIV" visibility="package">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_vArgQM3KEeyfrJp-I4FQJw" value="String.valueOf(intRandomIV)"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_vAsHUM3KEeyfrJp-I4FQJw" name="Number" visibility="package">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_vAsHUc3KEeyfrJp-I4FQJw" value="randomCardI + &quot; &quot; + randomCardII + &quot; &quot; + randomCardIII + &quot; &quot; + randomCardIV"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_vAtVcM3KEeyfrJp-I4FQJw" name="date" visibility="package" type="_u-z4Ac3KEeyfrJp-I4FQJw" association="_vCIRwM3KEeyfrJp-I4FQJw">
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_vAtVcc3KEeyfrJp-I4FQJw" value="new GregorianCalendar()"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_vAt8gc3KEeyfrJp-I4FQJw" name="year" visibility="package">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_vAujkM3KEeyfrJp-I4FQJw" value="date.get(GregorianCalendar.YEAR) + 4"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_vAvxsM3KEeyfrJp-I4FQJw" name="month" visibility="package">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_vAwYwM3KEeyfrJp-I4FQJw" value="date.get(GregorianCalendar.MONTH)"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_vAw_0c3KEeyfrJp-I4FQJw" name="cardDate" visibility="package">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_vAw_0s3KEeyfrJp-I4FQJw" value="String.valueOf(month) +&quot;/&quot;+ String.valueOf(year)"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_vAyN8M3KEeyfrJp-I4FQJw" name="contentPane" visibility="private" type="_u-AmwM3KEeyfrJp-I4FQJw" association="_vCKG8c3KEeyfrJp-I4FQJw"/>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_vBQvEM3KEeyfrJp-I4FQJw" name="main" specification="_u1p8AM3KEeyfrJp-I4FQJw">
+        <ownedParameter xmi:id="_vBQvEc3KEeyfrJp-I4FQJw" name="args">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_vBQvEs3KEeyfrJp-I4FQJw" value="*"/>
+        </ownedParameter>
+        <language>java</language>
+        <body>EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					creditCard frame = new creditCard();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+		
+		
+	</body>
+      </ownedBehavior>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_vBRWIM3KEeyfrJp-I4FQJw" name="creditCard" specification="_u1sYQM3KEeyfrJp-I4FQJw">
+        <ownedParameter xmi:id="_vBRWIc3KEeyfrJp-I4FQJw" type="_u1jOUM3KEeyfrJp-I4FQJw" direction="return"/>
+        <language>java</language>
+        <body>setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 450, 300);
+		contentPane = new JPanel();
+		contentPane.setBackground(new Color(51, 102, 51));
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		//setBorder(new LineBorder(new Color(0, 128, 128), 7, true));
+		//setBackground(new Color(0, 100, 0));
+		
+		JLabel cardHolderName = new JLabel(&quot;Customer Name&quot;);
+		cardHolderName.setFont(new Font(&quot;Bangla Sangam MN&quot;, Font.PLAIN, 22));
+		cardHolderName.setBounds(34, 245, 270, 28);
+		getContentPane().add(cardHolderName);
+		//cardHolderName.setText(fullName);
+		
+		//More code here
+		//failed attempt to get name from file
+		/*
+	    try {
+	        File myObj = new File(&quot;RouterInfo.txt&quot;);
+	        Scanner myReader = new Scanner(myObj);
+	        while (myReader.hasNextLine()) {
+	          String data = myReader.nextLine();
+	         // System.out.println(data); 
+	          cardHolderName.setText(data);
+	        }
+	        myReader.close();
+	      } catch (FileNotFoundException e) {
+	        System.out.println(&quot;An error occurred.&quot;);
+	        e.printStackTrace();
+	      }
+	      */
+	    
+		
+		  cardHolderName.setText(nameS);
+		  //cardHolderName.setText(fullName);
+		
+		JLabel cardNumber = new JLabel(&quot;New label&quot;);
+		cardNumber.setForeground(Color.GRAY);
+		cardNumber.setFont(new Font(&quot;Kannada Sangam MN&quot;, Font.PLAIN, 28));
+		cardNumber.setBounds(34, 174, 385, 37);
+		getContentPane().add(cardNumber);
+		cardNumber.setText(Number);
+		
+		JLabel dateLabel = new JLabel(&quot;New label&quot;);
+		dateLabel.setBounds(299, 207, 97, 28);
+		getContentPane().add(dateLabel);
+		dateLabel.setText(cardDate);
+		
+		JLabel masterCard = new JLabel(&quot;&quot;);
+		masterCard.setBounds(341, 6, 107, 114);
+		getContentPane().add(masterCard);
+		//masterCard.setIcon(new ImageIcon(creditCard.class.getResource(&quot;images/Mastercard-logo.png&quot;)));
+		//masterCard.setIcon(new ImageIcon(new ImageIcon(&quot;images/Mastercard-logo.png&quot;).getImage().getScaledInstance(20, 20, Image.SCALE_DEFAULT)));
+		ImageIcon image = new ImageIcon (creditCard.class.getResource(&quot;images/Mastercard-logo.png&quot;));
+	    Image newimg = image.getImage().getScaledInstance(60,40, java.awt.Image.SCALE_SMOOTH); 
+	    image=new ImageIcon(newimg); 
+	    
+	    masterCard.setIcon(image);
+	    
+	    JLabel chipLabel = new JLabel(&quot;&quot;);
+	    chipLabel.setBounds(46, 95, 82, 77);
+	    getContentPane().add(chipLabel);
+	    
+		ImageIcon image2 = new ImageIcon (creditCard.class.getResource(&quot;images/chip.jpg&quot;));
+	    Image newimg2 = image2.getImage().getScaledInstance(70,50, java.awt.Image.SCALE_SMOOTH); 
+	    image2=new ImageIcon(newimg2); 
+	    chipLabel.setIcon(image2);
+	    
+	    JLabel lblNewLabel = new JLabel(&quot;National City Bank&quot;);
+	    lblNewLabel.setFont(new Font(&quot;Plantagenet Cherokee&quot;, Font.PLAIN, 25));
+	    lblNewLabel.setForeground(new Color(0, 51, 51));
+	    lblNewLabel.setBounds(24, 40, 241, 43);
+	    getContentPane().add(lblNewLabel);
+	    
+	    JLabel madaLabel = new JLabel(&quot;&quot;);
+	    madaLabel.setBounds(341, 112, 120, 43);
+	    contentPane.add(madaLabel);
+	    
+		ImageIcon image3 = new ImageIcon (creditCard.class.getResource(&quot;images/mada.png&quot;));
+	    Image newimg3 = image3.getImage().getScaledInstance(70,50, java.awt.Image.SCALE_SMOOTH); 
+	    image3=new ImageIcon(newimg3); 
+	    madaLabel.setIcon(image3);
+	    
+	    
+	</body>
+      </ownedBehavior>
+      <ownedOperation xmi:id="_u1p8AM3KEeyfrJp-I4FQJw" name="main" isStatic="true" method="_vBQvEM3KEeyfrJp-I4FQJw">
+        <ownedComment xmi:id="_vBWOoM3KEeyfrJp-I4FQJw">
+          <body>Launch the application.</body>
+        </ownedComment>
+        <ownedParameter xmi:id="_u1p8Ac3KEeyfrJp-I4FQJw" name="args">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_u1qjEM3KEeyfrJp-I4FQJw" value="*"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_u1sYQM3KEeyfrJp-I4FQJw" name="creditCard" method="_vBRWIM3KEeyfrJp-I4FQJw">
+        <eAnnotations xmi:id="_u1s_UM3KEeyfrJp-I4FQJw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <details xmi:id="_u1s_Uc3KEeyfrJp-I4FQJw" key="create"/>
+        </eAnnotations>
+        <ownedComment xmi:id="_vBWOoc3KEeyfrJp-I4FQJw">
+          <body>Create the frame.</body>
+        </ownedComment>
+        <ownedParameter xmi:id="_u1s_Us3KEeyfrJp-I4FQJw" type="_u1jOUM3KEeyfrJp-I4FQJw" direction="return"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_u1zF8M3KEeyfrJp-I4FQJw" name="miniStatement">
+      <generalization xmi:id="_u_o-cs3KEeyfrJp-I4FQJw" general="_u9-Kgc3KEeyfrJp-I4FQJw"/>
+      <ownedAttribute xmi:id="_vAy1AM3KEeyfrJp-I4FQJw" name="contentPane" visibility="private" type="_u-AmwM3KEeyfrJp-I4FQJw" association="_vCLVEc3KEeyfrJp-I4FQJw"/>
+      <interfaceRealization xmi:id="_u_miMM3KEeyfrJp-I4FQJw" client="_u1zF8M3KEeyfrJp-I4FQJw" supplier="_u-NbEM3KEeyfrJp-I4FQJw" contract="_u-NbEM3KEeyfrJp-I4FQJw"/>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_vBRWIs3KEeyfrJp-I4FQJw" name="miniStatement" specification="_u10UEM3KEeyfrJp-I4FQJw">
+        <ownedParameter xmi:id="_vBR9MM3KEeyfrJp-I4FQJw" type="_u1zF8M3KEeyfrJp-I4FQJw" direction="return"/>
+        <language>java</language>
+        <body>setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+			//setBounds(200, 200, 800, 300);
+			contentPane = new JPanel();
+			contentPane.setToolTipText(&quot;&quot;);
+			contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+			setContentPane(contentPane);
+			contentPane.setLayout(null);
+			JFrame frame = new JFrame (&quot;Ministatement&quot;);
+			String [] [] data= {
+					{&quot;001&quot;,&quot;Shaymaa&quot;, &quot;200&quot;, &quot;1000&quot;}//example
+			};
+			
+			String[] columnNames = {&quot;Account Number&quot;, &quot;Name&quot; , &quot;Amount&quot;, &quot;Balance&quot;};
+			JTable table = new JTable(data, columnNames);
+			frame.add(new JScrollPane(table));
+			frame.setVisible(true);
+			frame.setSize(500,500);
+		
+	</body>
+      </ownedBehavior>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_vBR9Mc3KEeyfrJp-I4FQJw" name="main" specification="_u107IM3KEeyfrJp-I4FQJw">
+        <ownedParameter xmi:id="_vBR9Ms3KEeyfrJp-I4FQJw" name="args">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_vBR9M83KEeyfrJp-I4FQJw" value="*"/>
+        </ownedParameter>
+        <language>java</language>
+        <body>EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Scanner sc = new Scanner(new BufferedReader(new FileReader(&quot;./src/RounterInfo.txt&quot;)));
+				      int rows = 4;
+				      int columns = 4;
+				      int [][] myArray = new int[rows][columns];
+				      while(sc.hasNextLine()) {
+				         for (int i=0; i&lt;myArray.length; i++) {
+				            String[] line = sc.nextLine().trim().split(&quot; &quot;);
+				            
+				            for (int j=0; j&lt;line.length; j++) {
+				               myArray[i][j] = Integer.parseInt(line[j]);
+				            }
+				         }
+				      }
+				      System.out.println(Arrays.deepToString(myArray));
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	</body>
+      </ownedBehavior>
+      <ownedOperation xmi:id="_u10UEM3KEeyfrJp-I4FQJw" name="miniStatement" method="_vBRWIs3KEeyfrJp-I4FQJw">
+        <eAnnotations xmi:id="_u10UEc3KEeyfrJp-I4FQJw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <details xmi:id="_u10UEs3KEeyfrJp-I4FQJw" key="create"/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_u10UE83KEeyfrJp-I4FQJw" type="_u1zF8M3KEeyfrJp-I4FQJw" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_u107IM3KEeyfrJp-I4FQJw" name="main" isStatic="true" method="_vBR9Mc3KEeyfrJp-I4FQJw">
+        <ownedParameter xmi:id="_u107Ic3KEeyfrJp-I4FQJw" name="args">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_u11iMM3KEeyfrJp-I4FQJw" value="*"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_u_nwUM3KEeyfrJp-I4FQJw" name="actionPerformed">
+        <ownedParameter xmi:id="_u_nwUc3KEeyfrJp-I4FQJw" name="e" type="_u-XzIc3KEeyfrJp-I4FQJw"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_u14lgM3KEeyfrJp-I4FQJw" name="savingsAccount">
+      <generalization xmi:id="_u_ChgM3KEeyfrJp-I4FQJw" general="_uzgm8M3KEeyfrJp-I4FQJw"/>
+      <ownedAttribute xmi:id="_vA0qMM3KEeyfrJp-I4FQJw" name="overdraftLimit" visibility="package">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_vA0qMc3KEeyfrJp-I4FQJw" value="0"/>
+      </ownedAttribute>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_vBTLUM3KEeyfrJp-I4FQJw" name="savingsAccount" specification="_u18P4M3KEeyfrJp-I4FQJw">
+        <ownedParameter xmi:id="_vBTLUc3KEeyfrJp-I4FQJw" name="id">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_vBTLUs3KEeyfrJp-I4FQJw" name="balance">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_vBTLU83KEeyfrJp-I4FQJw" name="pin">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_vBTLVM3KEeyfrJp-I4FQJw" type="_u14lgM3KEeyfrJp-I4FQJw" direction="return"/>
+        <language>java</language>
+        <body>super(id, balance,pin);
+	    </body>
+      </ownedBehavior>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_vBTLVc3KEeyfrJp-I4FQJw" name="withdraw" specification="_u1-FEM3KEeyfrJp-I4FQJw">
+        <ownedParameter xmi:id="_vBTLVs3KEeyfrJp-I4FQJw" name="amount">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+        </ownedParameter>
+        <language>java</language>
+        <body>if (balance - amount >= overdraftLimit) {
+	            super.withdraw(amount);
+	        }
+	    </body>
+      </ownedBehavior>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_vBTyYM3KEeyfrJp-I4FQJw" name="toString" specification="_u1-sIs3KEeyfrJp-I4FQJw">
+        <ownedParameter xmi:id="_vBTyYc3KEeyfrJp-I4FQJw" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <language>java</language>
+        <body>return &quot;Savings Account Balance: &quot; + balance;
+	    </body>
+      </ownedBehavior>
+      <ownedOperation xmi:id="_u18P4M3KEeyfrJp-I4FQJw" name="savingsAccount" method="_vBTLUM3KEeyfrJp-I4FQJw">
+        <eAnnotations xmi:id="_u19eAM3KEeyfrJp-I4FQJw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <details xmi:id="_u19eAc3KEeyfrJp-I4FQJw" key="create"/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_u18P4c3KEeyfrJp-I4FQJw" name="id">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_u1828M3KEeyfrJp-I4FQJw" name="balance">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_u1828c3KEeyfrJp-I4FQJw" name="pin">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_u19eAs3KEeyfrJp-I4FQJw" type="_u14lgM3KEeyfrJp-I4FQJw" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_u1-FEM3KEeyfrJp-I4FQJw" name="withdraw" method="_vBTLVc3KEeyfrJp-I4FQJw">
+        <ownedParameter xmi:id="_u1-FEc3KEeyfrJp-I4FQJw" name="amount">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_u1-sIs3KEeyfrJp-I4FQJw" name="toString" method="_vBTyYM3KEeyfrJp-I4FQJw">
+        <ownedParameter xmi:id="_u1_TMM3KEeyfrJp-I4FQJw" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_vBkREM3KEeyfrJp-I4FQJw" name="" memberEnd="_vBkREc3KEeyfrJp-I4FQJw _u_xhUc3KEeyfrJp-I4FQJw">
+      <ownedEnd xmi:id="_vBkREc3KEeyfrJp-I4FQJw" name="" type="_uzgm8M3KEeyfrJp-I4FQJw" association="_vBkREM3KEeyfrJp-I4FQJw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_vBlfMc3KEeyfrJp-I4FQJw" name="" memberEnd="_vBlfMs3KEeyfrJp-I4FQJw _u_0koM3KEeyfrJp-I4FQJw">
+      <ownedEnd xmi:id="_vBlfMs3KEeyfrJp-I4FQJw" name="" type="_u0NxkM3KEeyfrJp-I4FQJw" association="_vBlfMc3KEeyfrJp-I4FQJw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_vBmtUc3KEeyfrJp-I4FQJw" name="" memberEnd="_vBmtUs3KEeyfrJp-I4FQJw _u_1Lsc3KEeyfrJp-I4FQJw">
+      <ownedEnd xmi:id="_vBmtUs3KEeyfrJp-I4FQJw" name="" type="_u0NxkM3KEeyfrJp-I4FQJw" association="_vBmtUc3KEeyfrJp-I4FQJw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_vBoigM3KEeyfrJp-I4FQJw" name="" memberEnd="_vBoigc3KEeyfrJp-I4FQJw _u_1ywc3KEeyfrJp-I4FQJw">
+      <ownedEnd xmi:id="_vBoigc3KEeyfrJp-I4FQJw" name="" type="_u0NxkM3KEeyfrJp-I4FQJw" association="_vBoigM3KEeyfrJp-I4FQJw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_vBpJkc3KEeyfrJp-I4FQJw" name="" memberEnd="_vBpJks3KEeyfrJp-I4FQJw _u_2Z0c3KEeyfrJp-I4FQJw">
+      <ownedEnd xmi:id="_vBpJks3KEeyfrJp-I4FQJw" name="" type="_u0NxkM3KEeyfrJp-I4FQJw" association="_vBpJkc3KEeyfrJp-I4FQJw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_vBpwoc3KEeyfrJp-I4FQJw" name="" memberEnd="_vBpwos3KEeyfrJp-I4FQJw _u_4PAM3KEeyfrJp-I4FQJw">
+      <ownedEnd xmi:id="_vBpwos3KEeyfrJp-I4FQJw" name="" type="_u0NxkM3KEeyfrJp-I4FQJw" association="_vBpwoc3KEeyfrJp-I4FQJw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_vBtbAc3KEeyfrJp-I4FQJw" name="" memberEnd="_vBtbAs3KEeyfrJp-I4FQJw _u_42EM3KEeyfrJp-I4FQJw">
+      <ownedEnd xmi:id="_vBtbAs3KEeyfrJp-I4FQJw" name="" type="_u0NxkM3KEeyfrJp-I4FQJw" association="_vBtbAc3KEeyfrJp-I4FQJw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_vBuCEc3KEeyfrJp-I4FQJw" name="" memberEnd="_vBuCEs3KEeyfrJp-I4FQJw _u_7SUM3KEeyfrJp-I4FQJw">
+      <ownedEnd xmi:id="_vBuCEs3KEeyfrJp-I4FQJw" name="" type="_u0e3UM3KEeyfrJp-I4FQJw" association="_vBuCEc3KEeyfrJp-I4FQJw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_vBupIc3KEeyfrJp-I4FQJw" name="" memberEnd="_vBupIs3KEeyfrJp-I4FQJw _u_8gcM3KEeyfrJp-I4FQJw">
+      <ownedEnd xmi:id="_vBupIs3KEeyfrJp-I4FQJw" name="" type="_u0e3UM3KEeyfrJp-I4FQJw" association="_vBupIc3KEeyfrJp-I4FQJw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_vBvQMc3KEeyfrJp-I4FQJw" name="" memberEnd="_vBvQMs3KEeyfrJp-I4FQJw _u_9HgM3KEeyfrJp-I4FQJw">
+      <ownedEnd xmi:id="_vBvQMs3KEeyfrJp-I4FQJw" name="" type="_u0e3UM3KEeyfrJp-I4FQJw" association="_vBvQMc3KEeyfrJp-I4FQJw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_vBv3Qc3KEeyfrJp-I4FQJw" name="" memberEnd="_vBv3Qs3KEeyfrJp-I4FQJw _u_9Hgs3KEeyfrJp-I4FQJw">
+      <ownedEnd xmi:id="_vBv3Qs3KEeyfrJp-I4FQJw" name="" type="_u0e3UM3KEeyfrJp-I4FQJw" association="_vBv3Qc3KEeyfrJp-I4FQJw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_vBxFYM3KEeyfrJp-I4FQJw" name="" memberEnd="_vBxFYc3KEeyfrJp-I4FQJw _u_-Voc3KEeyfrJp-I4FQJw">
+      <ownedEnd xmi:id="_vBxFYc3KEeyfrJp-I4FQJw" name="" type="_u0e3UM3KEeyfrJp-I4FQJw" association="_vBxFYM3KEeyfrJp-I4FQJw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_vByTgM3KEeyfrJp-I4FQJw" name="" memberEnd="_vByTgc3KEeyfrJp-I4FQJw _vADOIM3KEeyfrJp-I4FQJw">
+      <ownedEnd xmi:id="_vByTgc3KEeyfrJp-I4FQJw" name="" type="_u0qdgM3KEeyfrJp-I4FQJw" association="_vByTgM3KEeyfrJp-I4FQJw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_vByTg83KEeyfrJp-I4FQJw" name="" memberEnd="_vByThM3KEeyfrJp-I4FQJw _vAEcQM3KEeyfrJp-I4FQJw">
+      <ownedEnd xmi:id="_vByThM3KEeyfrJp-I4FQJw" name="" type="_u0qdgM3KEeyfrJp-I4FQJw" association="_vByTg83KEeyfrJp-I4FQJw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_vBy6kc3KEeyfrJp-I4FQJw" name="" memberEnd="_vBy6ks3KEeyfrJp-I4FQJw _vAFqYM3KEeyfrJp-I4FQJw">
+      <ownedEnd xmi:id="_vBy6ks3KEeyfrJp-I4FQJw" name="" type="_u0v9EM3KEeyfrJp-I4FQJw" association="_vBy6kc3KEeyfrJp-I4FQJw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_vBzhoc3KEeyfrJp-I4FQJw" name="" memberEnd="_vBzhos3KEeyfrJp-I4FQJw _vAG4gc3KEeyfrJp-I4FQJw">
+      <ownedEnd xmi:id="_vBzhos3KEeyfrJp-I4FQJw" name="" type="_u0v9EM3KEeyfrJp-I4FQJw" association="_vBzhoc3KEeyfrJp-I4FQJw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_vB0vwM3KEeyfrJp-I4FQJw" name="" memberEnd="_vB0vwc3KEeyfrJp-I4FQJw _vAItsM3KEeyfrJp-I4FQJw">
+      <ownedEnd xmi:id="_vB0vwc3KEeyfrJp-I4FQJw" name="" type="_u0v9EM3KEeyfrJp-I4FQJw" association="_vB0vwM3KEeyfrJp-I4FQJw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_vB1W0c3KEeyfrJp-I4FQJw" name="" memberEnd="_vB194M3KEeyfrJp-I4FQJw _vAJUwM3KEeyfrJp-I4FQJw">
+      <ownedEnd xmi:id="_vB194M3KEeyfrJp-I4FQJw" name="" type="_u0v9EM3KEeyfrJp-I4FQJw" association="_vB1W0c3KEeyfrJp-I4FQJw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_vB2k8c3KEeyfrJp-I4FQJw" name="" memberEnd="_vB2k8s3KEeyfrJp-I4FQJw _vAJ70M3KEeyfrJp-I4FQJw">
+      <ownedEnd xmi:id="_vB2k8s3KEeyfrJp-I4FQJw" name="" type="_u0v9EM3KEeyfrJp-I4FQJw" association="_vB2k8c3KEeyfrJp-I4FQJw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_vB3zEc3KEeyfrJp-I4FQJw" name="" memberEnd="_vB3zEs3KEeyfrJp-I4FQJw _vAKi4M3KEeyfrJp-I4FQJw">
+      <ownedEnd xmi:id="_vB3zEs3KEeyfrJp-I4FQJw" name="" type="_u0v9EM3KEeyfrJp-I4FQJw" association="_vB3zEc3KEeyfrJp-I4FQJw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_vB5BMc3KEeyfrJp-I4FQJw" name="" memberEnd="_vB5BMs3KEeyfrJp-I4FQJw _vALJ8c3KEeyfrJp-I4FQJw">
+      <ownedEnd xmi:id="_vB5BMs3KEeyfrJp-I4FQJw" name="" type="_u0v9EM3KEeyfrJp-I4FQJw" association="_vB5BMc3KEeyfrJp-I4FQJw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_vB5oQc3KEeyfrJp-I4FQJw" name="" memberEnd="_vB5oQs3KEeyfrJp-I4FQJw _vAM_IM3KEeyfrJp-I4FQJw">
+      <ownedEnd xmi:id="_vB5oQs3KEeyfrJp-I4FQJw" name="" type="_u0v9EM3KEeyfrJp-I4FQJw" association="_vB5oQc3KEeyfrJp-I4FQJw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_vB62Yc3KEeyfrJp-I4FQJw" name="" memberEnd="_vB62Ys3KEeyfrJp-I4FQJw _vASesM3KEeyfrJp-I4FQJw">
+      <ownedEnd xmi:id="_vB62Ys3KEeyfrJp-I4FQJw" name="" type="_u1F7UM3KEeyfrJp-I4FQJw" association="_vB62Yc3KEeyfrJp-I4FQJw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_vB9SoM3KEeyfrJp-I4FQJw" name="" memberEnd="_vB9Soc3KEeyfrJp-I4FQJw _vATFwc3KEeyfrJp-I4FQJw">
+      <ownedEnd xmi:id="_vB9Soc3KEeyfrJp-I4FQJw" name="" type="_u1F7UM3KEeyfrJp-I4FQJw" association="_vB9SoM3KEeyfrJp-I4FQJw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_vB95sM3KEeyfrJp-I4FQJw" name="" memberEnd="_vB95sc3KEeyfrJp-I4FQJw _vAUT4M3KEeyfrJp-I4FQJw">
+      <ownedEnd xmi:id="_vB95sc3KEeyfrJp-I4FQJw" name="" type="_u1F7UM3KEeyfrJp-I4FQJw" association="_vB95sM3KEeyfrJp-I4FQJw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_vCA9AM3KEeyfrJp-I4FQJw" name="" memberEnd="_vCA9Ac3KEeyfrJp-I4FQJw _vAU68c3KEeyfrJp-I4FQJw">
+      <ownedEnd xmi:id="_vCA9Ac3KEeyfrJp-I4FQJw" name="" type="_u1F7UM3KEeyfrJp-I4FQJw" association="_vCA9AM3KEeyfrJp-I4FQJw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_vCCLIM3KEeyfrJp-I4FQJw" name="" memberEnd="_vCCLIc3KEeyfrJp-I4FQJw _vAWJEM3KEeyfrJp-I4FQJw">
+      <ownedEnd xmi:id="_vCCLIc3KEeyfrJp-I4FQJw" name="" type="_u1F7UM3KEeyfrJp-I4FQJw" association="_vCCLIM3KEeyfrJp-I4FQJw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_vCDZQM3KEeyfrJp-I4FQJw" name="" memberEnd="_vCDZQc3KEeyfrJp-I4FQJw _vAWwIM3KEeyfrJp-I4FQJw">
+      <ownedEnd xmi:id="_vCDZQc3KEeyfrJp-I4FQJw" name="" type="_u1F7UM3KEeyfrJp-I4FQJw" association="_vCDZQM3KEeyfrJp-I4FQJw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_vCEAUc3KEeyfrJp-I4FQJw" name="" memberEnd="_vCEAUs3KEeyfrJp-I4FQJw _vAc2wc3KEeyfrJp-I4FQJw">
+      <ownedEnd xmi:id="_vCEAUs3KEeyfrJp-I4FQJw" name="" type="_u1jOUM3KEeyfrJp-I4FQJw" association="_vCEAUc3KEeyfrJp-I4FQJw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_vCF1gM3KEeyfrJp-I4FQJw" name="" memberEnd="_vCF1gc3KEeyfrJp-I4FQJw _vAeE4M3KEeyfrJp-I4FQJw">
+      <ownedEnd xmi:id="_vCF1gc3KEeyfrJp-I4FQJw" name="" type="_u1jOUM3KEeyfrJp-I4FQJw" association="_vCF1gM3KEeyfrJp-I4FQJw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_vCGckc3KEeyfrJp-I4FQJw" name="" memberEnd="_vCGcks3KEeyfrJp-I4FQJw _vAer8c3KEeyfrJp-I4FQJw">
+      <ownedEnd xmi:id="_vCGcks3KEeyfrJp-I4FQJw" name="" type="_u1jOUM3KEeyfrJp-I4FQJw" association="_vCGckc3KEeyfrJp-I4FQJw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_vCHDoc3KEeyfrJp-I4FQJw" name="" memberEnd="_vCHDos3KEeyfrJp-I4FQJw _vAf6EM3KEeyfrJp-I4FQJw">
+      <ownedEnd xmi:id="_vCHDos3KEeyfrJp-I4FQJw" name="" type="_u1jOUM3KEeyfrJp-I4FQJw" association="_vCHDoc3KEeyfrJp-I4FQJw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_vCIRwM3KEeyfrJp-I4FQJw" name="" memberEnd="_vCIRwc3KEeyfrJp-I4FQJw _vAtVcM3KEeyfrJp-I4FQJw">
+      <ownedEnd xmi:id="_vCIRwc3KEeyfrJp-I4FQJw" name="" type="_u1jOUM3KEeyfrJp-I4FQJw" association="_vCIRwM3KEeyfrJp-I4FQJw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_vCKG8c3KEeyfrJp-I4FQJw" name="" memberEnd="_vCKuAM3KEeyfrJp-I4FQJw _vAyN8M3KEeyfrJp-I4FQJw">
+      <ownedEnd xmi:id="_vCKuAM3KEeyfrJp-I4FQJw" name="" type="_u1jOUM3KEeyfrJp-I4FQJw" association="_vCKG8c3KEeyfrJp-I4FQJw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_vCLVEc3KEeyfrJp-I4FQJw" name="" memberEnd="_vCLVEs3KEeyfrJp-I4FQJw _vAy1AM3KEeyfrJp-I4FQJw">
+      <ownedEnd xmi:id="_vCLVEs3KEeyfrJp-I4FQJw" name="" type="_u1zF8M3KEeyfrJp-I4FQJw" association="_vCLVEc3KEeyfrJp-I4FQJw"/>
+    </packagedElement>
+    <profileApplication xmi:id="_uDKvIM3KEeyfrJp-I4FQJw">
+      <eAnnotations xmi:id="_uDYKgM3KEeyfrJp-I4FQJw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile-Annotation_2-UMLLabProfile"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile"/>
+    </profileApplication>
+  </uml:Model>
+  <UMLLabProfile:TargetLanguage xmi:id="_uDjJoM3KEeyfrJp-I4FQJw" base_Package="_ts6LQM3KEeyfrJp-I4FQJw">
+    <languageName>java</languageName>
+  </UMLLabProfile:TargetLanguage>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_uzupYM3KEeyfrJp-I4FQJw" base_Element="_uzsNIM3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:Generics xmi:id="_u0AWMM3KEeyfrJp-I4FQJw" genericsValue="Transactions" base_Element="_uz-hAM3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:Generics xmi:id="_u0EAkM3KEeyfrJp-I4FQJw" genericsValue="Transactions" base_Element="_u0CLYM3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_u1eV0c3KEeyfrJp-I4FQJw" base_Element="_u1duwc3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:Annotations xmi:id="_u1fj8M3KEeyfrJp-I4FQJw" base_Element="_u1duwc3KEeyfrJp-I4FQJw">
+    <annotations xmi:id="_u1fj8c3KEeyfrJp-I4FQJw" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_u1hZIM3KEeyfrJp-I4FQJw" base_Element="_u1gLAM3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:Annotations xmi:id="_u1iAMM3KEeyfrJp-I4FQJw" base_Element="_u1gLAM3KEeyfrJp-I4FQJw">
+    <annotations xmi:id="_u1iAMc3KEeyfrJp-I4FQJw" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:Array xmi:id="_u1rKIM3KEeyfrJp-I4FQJw" base_Element="_u1p8Ac3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:Array xmi:id="_u12JQM3KEeyfrJp-I4FQJw" base_Element="_u107Ic3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_u1-FEs3KEeyfrJp-I4FQJw" base_Element="_u1-FEM3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:Annotations xmi:id="_u1-sIM3KEeyfrJp-I4FQJw" base_Element="_u1-FEM3KEeyfrJp-I4FQJw">
+    <annotations xmi:id="_u1-sIc3KEeyfrJp-I4FQJw" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_u1_6QM3KEeyfrJp-I4FQJw" base_Element="_u1-sIs3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:Annotations xmi:id="_u2BIYM3KEeyfrJp-I4FQJw" base_Element="_u1-sIs3KEeyfrJp-I4FQJw">
+    <annotations xmi:id="_u2BIYc3KEeyfrJp-I4FQJw" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:Reference xmi:id="_u90ZgM3KEeyfrJp-I4FQJw" base_Element="_u9zLYM3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:Reference xmi:id="_u91noM3KEeyfrJp-I4FQJw" base_Element="_u90Zgc3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:Reference xmi:id="_u955EM3KEeyfrJp-I4FQJw" base_Element="_u94q8M3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:Reference xmi:id="_u97HMM3KEeyfrJp-I4FQJw" base_Element="_u96gIM3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:Reference xmi:id="_u97uQM3KEeyfrJp-I4FQJw" base_Element="_u97HMc3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:Reference xmi:id="_u9-KgM3KEeyfrJp-I4FQJw" base_Element="_u98VUM3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:Reference xmi:id="_u9_YoM3KEeyfrJp-I4FQJw" base_Element="_u9-Kgc3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:Reference xmi:id="_u-B04M3KEeyfrJp-I4FQJw" base_Element="_u-AmwM3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:Reference xmi:id="_u-DqEM3KEeyfrJp-I4FQJw" base_Element="_u-Cb8M3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:Reference xmi:id="_u-FfQM3KEeyfrJp-I4FQJw" base_Element="_u-DqEc3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:Reference xmi:id="_u-GtYM3KEeyfrJp-I4FQJw" base_Element="_u-FfQc3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:Reference xmi:id="_u-H7gM3KEeyfrJp-I4FQJw" base_Element="_u-HUcM3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:Reference xmi:id="_u-JJoM3KEeyfrJp-I4FQJw" base_Element="_u-IikM3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:Reference xmi:id="_u-JwsM3KEeyfrJp-I4FQJw" base_Element="_u-JJoc3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:Reference xmi:id="_u-M0AM3KEeyfrJp-I4FQJw" base_Element="_u-Jwsc3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:Reference xmi:id="_u-OpMM3KEeyfrJp-I4FQJw" base_Element="_u-NbEM3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:Reference xmi:id="_u-P3UM3KEeyfrJp-I4FQJw" base_Element="_u-OpMc3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:Reference xmi:id="_u-RFcM3KEeyfrJp-I4FQJw" base_Element="_u-P3Uc3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:Reference xmi:id="_u-STkM3KEeyfrJp-I4FQJw" base_Element="_u-RsgM3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:Reference xmi:id="_u-S6oM3KEeyfrJp-I4FQJw" base_Element="_u-STkc3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:Reference xmi:id="_u-ThsM3KEeyfrJp-I4FQJw" base_Element="_u-S6oc3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:Reference xmi:id="_u-UIwM3KEeyfrJp-I4FQJw" base_Element="_u-Thsc3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:Reference xmi:id="_u-VW4M3KEeyfrJp-I4FQJw" base_Element="_u-UIwc3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:Reference xmi:id="_u-WlAM3KEeyfrJp-I4FQJw" base_Element="_u-VW4c3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:Reference xmi:id="_u-XzIM3KEeyfrJp-I4FQJw" base_Element="_u-XMEM3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:Reference xmi:id="_u-YaMM3KEeyfrJp-I4FQJw" base_Element="_u-XzIc3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:Reference xmi:id="_u-croM3KEeyfrJp-I4FQJw" base_Element="_u-a2cM3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:Reference xmi:id="_u-dSsM3KEeyfrJp-I4FQJw" base_Element="_u-croc3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:Reference xmi:id="_u-d5wM3KEeyfrJp-I4FQJw" base_Element="_u-dSsc3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:Reference xmi:id="_u-nDsM3KEeyfrJp-I4FQJw" base_Element="_u-l1kM3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:Reference xmi:id="_u-nqwM3KEeyfrJp-I4FQJw" base_Element="_u-nDsc3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:Reference xmi:id="_u-o44M3KEeyfrJp-I4FQJw" base_Element="_u-nqwc3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:Reference xmi:id="_u-txYM3KEeyfrJp-I4FQJw" base_Element="_u-tKUM3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:Reference xmi:id="_u-z4AM3KEeyfrJp-I4FQJw" base_Element="_u-yC0M3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:Reference xmi:id="_u-1tMM3KEeyfrJp-I4FQJw" base_Element="_u-z4Ac3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:Reference xmi:id="_u-27UM3KEeyfrJp-I4FQJw" base_Element="_u-1tMc3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:Reference xmi:id="_u-3iYc3KEeyfrJp-I4FQJw" base_Element="_u-3iYM3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:Reference xmi:id="_u_AsUM3KEeyfrJp-I4FQJw" base_Element="_u_AFQM3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_u_bjEM3KEeyfrJp-I4FQJw" base_Element="_u_a8AM3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:Annotations xmi:id="_u_cKIM3KEeyfrJp-I4FQJw" base_Element="_u_a8AM3KEeyfrJp-I4FQJw">
+    <annotations xmi:id="_u_cKIc3KEeyfrJp-I4FQJw" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_u_oXYM3KEeyfrJp-I4FQJw" base_Element="_u_nwUM3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:Annotations xmi:id="_u_o-cM3KEeyfrJp-I4FQJw" base_Element="_u_nwUM3KEeyfrJp-I4FQJw">
+    <annotations xmi:id="_u_o-cc3KEeyfrJp-I4FQJw" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_u_ueAM3KEeyfrJp-I4FQJw" base_Element="_u_tP4M3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_u_vFEM3KEeyfrJp-I4FQJw" base_Element="_u_ueAc3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_u_vFEs3KEeyfrJp-I4FQJw" base_Element="_u_vFEc3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_u_vsIc3KEeyfrJp-I4FQJw" base_Element="_u_vsIM3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_u_w6QM3KEeyfrJp-I4FQJw" base_Element="_u_wTMM3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_u_xhUM3KEeyfrJp-I4FQJw" base_Element="_u_w6Qc3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:Generics xmi:id="_u_zWgM3KEeyfrJp-I4FQJw" genericsValue="Transactions" base_Element="_u_xhUc3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_u_z9kM3KEeyfrJp-I4FQJw" base_Element="_u_xhUc3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_u_1LsM3KEeyfrJp-I4FQJw" base_Element="_u_0koM3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_u_1ywM3KEeyfrJp-I4FQJw" base_Element="_u_1Lsc3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_u_2Z0M3KEeyfrJp-I4FQJw" base_Element="_u_1ywc3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_u_3n8M3KEeyfrJp-I4FQJw" base_Element="_u_2Z0c3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_u_4PAc3KEeyfrJp-I4FQJw" base_Element="_u_4PAM3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_u_42Ec3KEeyfrJp-I4FQJw" base_Element="_u_42EM3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_u_6EMM3KEeyfrJp-I4FQJw" base_Element="_u_5dIM3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_u_6rQM3KEeyfrJp-I4FQJw" base_Element="_u_6EMc3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_u_75YM3KEeyfrJp-I4FQJw" base_Element="_u_7SUM3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_u_8gcc3KEeyfrJp-I4FQJw" base_Element="_u_8gcM3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_u_9Hgc3KEeyfrJp-I4FQJw" base_Element="_u_9HgM3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_u_9ukM3KEeyfrJp-I4FQJw" base_Element="_u_9Hgs3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_u_-VoM3KEeyfrJp-I4FQJw" base_Element="_u_9ukc3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_u_-8sM3KEeyfrJp-I4FQJw" base_Element="_u_-Voc3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_u__jwc3KEeyfrJp-I4FQJw" base_Element="_u__jwM3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_vAAx4M3KEeyfrJp-I4FQJw" base_Element="_vAAK0M3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_vACAAM3KEeyfrJp-I4FQJw" base_Element="_vAAx4c3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_vACnEc3KEeyfrJp-I4FQJw" base_Element="_vACAAc3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_vAD1MM3KEeyfrJp-I4FQJw" base_Element="_vADOIM3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_vAFDUM3KEeyfrJp-I4FQJw" base_Element="_vAEcQM3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_vAG4gM3KEeyfrJp-I4FQJw" base_Element="_vAFqYM3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_vAHfkM3KEeyfrJp-I4FQJw" base_Element="_vAG4gc3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_vAItsc3KEeyfrJp-I4FQJw" base_Element="_vAItsM3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_vAJUwc3KEeyfrJp-I4FQJw" base_Element="_vAJUwM3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_vAJ70c3KEeyfrJp-I4FQJw" base_Element="_vAJ70M3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_vALJ8M3KEeyfrJp-I4FQJw" base_Element="_vAKi4M3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_vAMYEM3KEeyfrJp-I4FQJw" base_Element="_vALJ8c3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_vAM_Ic3KEeyfrJp-I4FQJw" base_Element="_vAM_IM3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_vAO0UM3KEeyfrJp-I4FQJw" base_Element="_vAONQM3KEeyfrJp-I4FQJw">
+    <associatedElement xmi:type="uml:Operation" xmi:id="_vAO0Uc3KEeyfrJp-I4FQJw" name="getDate" method="_vBMdoM3KEeyfrJp-I4FQJw">
+      <ownedParameter xmi:id="_vAQCcM3KEeyfrJp-I4FQJw" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedParameter>
+    </associatedElement>
+  </UMLLabProfile:LegacyStyledElement>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_vARQkM3KEeyfrJp-I4FQJw" base_Element="_vAQpgc3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_vAR3oc3KEeyfrJp-I4FQJw" base_Element="_vAR3oM3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_vATFwM3KEeyfrJp-I4FQJw" base_Element="_vASesM3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_vATs0M3KEeyfrJp-I4FQJw" base_Element="_vATFwc3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_vAU68M3KEeyfrJp-I4FQJw" base_Element="_vAUT4M3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_vAViAM3KEeyfrJp-I4FQJw" base_Element="_vAU68c3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_vAWJEc3KEeyfrJp-I4FQJw" base_Element="_vAWJEM3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_vAWwIc3KEeyfrJp-I4FQJw" base_Element="_vAWwIM3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_vAXXMs3KEeyfrJp-I4FQJw" base_Element="_vAXXMM3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_vAX-Qs3KEeyfrJp-I4FQJw" base_Element="_vAX-QM3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_vAZzcM3KEeyfrJp-I4FQJw" base_Element="_vAZMYM3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_vAbooM3KEeyfrJp-I4FQJw" base_Element="_vAbBkM3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_vAc2wM3KEeyfrJp-I4FQJw" base_Element="_vAbooc3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_vAdd0c3KEeyfrJp-I4FQJw" base_Element="_vAc2wc3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_vAer8M3KEeyfrJp-I4FQJw" base_Element="_vAeE4M3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_vAfTAc3KEeyfrJp-I4FQJw" base_Element="_vAer8c3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_vAhIMM3KEeyfrJp-I4FQJw" base_Element="_vAf6EM3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_vAhvQM3KEeyfrJp-I4FQJw" base_Element="_vAhIMc3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_vAi9YM3KEeyfrJp-I4FQJw" base_Element="_vAhvQc3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_vAkykM3KEeyfrJp-I4FQJw" base_Element="_vAjkcM3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_vAlZoM3KEeyfrJp-I4FQJw" base_Element="_vAkykc3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_vAmAsM3KEeyfrJp-I4FQJw" base_Element="_vAlZoc3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_vAmnwM3KEeyfrJp-I4FQJw" base_Element="_vAmAsc3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_vAnO0c3KEeyfrJp-I4FQJw" base_Element="_vAmnwc3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_vAn14c3KEeyfrJp-I4FQJw" base_Element="_vAnO0s3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_vAoc8s3KEeyfrJp-I4FQJw" base_Element="_vAoc8M3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_vAprEM3KEeyfrJp-I4FQJw" base_Element="_vApEAM3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_vAq5MM3KEeyfrJp-I4FQJw" base_Element="_vAqSIM3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_vArgQc3KEeyfrJp-I4FQJw" base_Element="_vAq5Mc3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_vAsuYM3KEeyfrJp-I4FQJw" base_Element="_vAsHUM3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_vAt8gM3KEeyfrJp-I4FQJw" base_Element="_vAtVcM3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_vAvKoM3KEeyfrJp-I4FQJw" base_Element="_vAt8gc3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_vAw_0M3KEeyfrJp-I4FQJw" base_Element="_vAvxsM3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_vAxm4M3KEeyfrJp-I4FQJw" base_Element="_vAw_0c3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_vAyN8c3KEeyfrJp-I4FQJw" base_Element="_vAyN8M3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_vAzcEM3KEeyfrJp-I4FQJw" base_Element="_vAy1AM3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_vA1RQM3KEeyfrJp-I4FQJw" base_Element="_vA0qMM3KEeyfrJp-I4FQJw"/>
+  <uml:OpaqueBehavior xmi:id="_vBMdoM3KEeyfrJp-I4FQJw" name="getDate" specification="_vAO0Uc3KEeyfrJp-I4FQJw">
+    <ownedParameter xmi:id="_vBMdoc3KEeyfrJp-I4FQJw" direction="return">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedParameter>
+    <language>java</language>
+    <body>return date.toString();
+	</body>
+  </uml:OpaqueBehavior>
+  <UMLLabProfile:Reference xmi:id="_vBlfMM3KEeyfrJp-I4FQJw" base_Element="_vBkREM3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:Reference xmi:id="_vBmtUM3KEeyfrJp-I4FQJw" base_Element="_vBlfMc3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:Reference xmi:id="_vBn7cM3KEeyfrJp-I4FQJw" base_Element="_vBmtUc3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:Reference xmi:id="_vBpJkM3KEeyfrJp-I4FQJw" base_Element="_vBoigM3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:Reference xmi:id="_vBpwoM3KEeyfrJp-I4FQJw" base_Element="_vBpJkc3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:Reference xmi:id="_vBtbAM3KEeyfrJp-I4FQJw" base_Element="_vBpwoc3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:Reference xmi:id="_vBuCEM3KEeyfrJp-I4FQJw" base_Element="_vBtbAc3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:Reference xmi:id="_vBupIM3KEeyfrJp-I4FQJw" base_Element="_vBuCEc3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:Reference xmi:id="_vBvQMM3KEeyfrJp-I4FQJw" base_Element="_vBupIc3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:Reference xmi:id="_vBv3QM3KEeyfrJp-I4FQJw" base_Element="_vBvQMc3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:Reference xmi:id="_vBweUM3KEeyfrJp-I4FQJw" base_Element="_vBv3Qc3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:Reference xmi:id="_vBxscM3KEeyfrJp-I4FQJw" base_Element="_vBxFYM3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:Reference xmi:id="_vByTgs3KEeyfrJp-I4FQJw" base_Element="_vByTgM3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:Reference xmi:id="_vBy6kM3KEeyfrJp-I4FQJw" base_Element="_vByTg83KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:Reference xmi:id="_vBzhoM3KEeyfrJp-I4FQJw" base_Element="_vBy6kc3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:Reference xmi:id="_vB0IsM3KEeyfrJp-I4FQJw" base_Element="_vBzhoc3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:Reference xmi:id="_vB1W0M3KEeyfrJp-I4FQJw" base_Element="_vB0vwM3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:Reference xmi:id="_vB2k8M3KEeyfrJp-I4FQJw" base_Element="_vB1W0c3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:Reference xmi:id="_vB3zEM3KEeyfrJp-I4FQJw" base_Element="_vB2k8c3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:Reference xmi:id="_vB5BMM3KEeyfrJp-I4FQJw" base_Element="_vB3zEc3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:Reference xmi:id="_vB5oQM3KEeyfrJp-I4FQJw" base_Element="_vB5BMc3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:Reference xmi:id="_vB62YM3KEeyfrJp-I4FQJw" base_Element="_vB5oQc3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:Reference xmi:id="_vB8rkM3KEeyfrJp-I4FQJw" base_Element="_vB62Yc3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:Reference xmi:id="_vB9Sos3KEeyfrJp-I4FQJw" base_Element="_vB9SoM3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:Reference xmi:id="_vCAV8M3KEeyfrJp-I4FQJw" base_Element="_vB95sM3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:Reference xmi:id="_vCBkEM3KEeyfrJp-I4FQJw" base_Element="_vCA9AM3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:Reference xmi:id="_vCCyMM3KEeyfrJp-I4FQJw" base_Element="_vCCLIM3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:Reference xmi:id="_vCEAUM3KEeyfrJp-I4FQJw" base_Element="_vCDZQM3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:Reference xmi:id="_vCFOcM3KEeyfrJp-I4FQJw" base_Element="_vCEAUc3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:Reference xmi:id="_vCGckM3KEeyfrJp-I4FQJw" base_Element="_vCF1gM3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:Reference xmi:id="_vCHDoM3KEeyfrJp-I4FQJw" base_Element="_vCGckc3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:Reference xmi:id="_vCHqsM3KEeyfrJp-I4FQJw" base_Element="_vCHDoc3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:Reference xmi:id="_vCKG8M3KEeyfrJp-I4FQJw" base_Element="_vCIRwM3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:Reference xmi:id="_vCLVEM3KEeyfrJp-I4FQJw" base_Element="_vCKG8c3KEeyfrJp-I4FQJw"/>
+  <UMLLabProfile:Reference xmi:id="_vCL8IM3KEeyfrJp-I4FQJw" base_Element="_vCLVEc3KEeyfrJp-I4FQJw"/>
+</xmi:XMI>

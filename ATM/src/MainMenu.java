@@ -121,10 +121,17 @@ public class MainMenu {
 	});
 		panel_2.add(btnDeposit);
 		
-		//Mini statement button
-		JButton btnMiniState = new JButton("Mini Statement");
-		btnMiniState.setBounds(24, 101, 120, 52);
-		panel_2.add(btnMiniState);
+		//Logout button
+		JButton btnLogout = new JButton("Logout");
+		btnLogout.setBounds(24, 101, 120, 52);
+		panel_2.add(btnLogout);
+		btnLogout.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				frame.dispose();
+				Login window = new Login();
+				window.frame.setVisible(true);
+			}
+		});
 		
 		//Adding the number buttons 0-9
 		
@@ -250,19 +257,19 @@ public class MainMenu {
 		
 		//Clear button
 		JButton jBtnClear = new JButton("");
-		jBtnClear.setIcon(new ImageIcon("/Icons2/Clear.jpg"));
+		jBtnClear.setIcon(new ImageIcon(MainMenu.class.getResource("/Icons2/Clear.jpeg")));
 		jBtnClear.setBounds(410, 140, 101, 64);
 		panel_3.add(jBtnClear);
 		
 		//Enter button
 		JButton jBtnEnter = new JButton("");
-		jBtnEnter.setIcon(new ImageIcon("/Icons2/Enter.jpg"));
+		jBtnEnter.setIcon(new ImageIcon(MainMenu.class.getResource("/Icons2/Enter.jpg")));
 		jBtnEnter.setBounds(410, 230, 101, 64);
 		panel_3.add(jBtnEnter);
 		
 		//Cancel button
 		JButton jBtnCancel = new JButton("");
-		jBtnCancel.setIcon(new ImageIcon("/Icons2/Cancel.jpg"));
+		jBtnCancel.setIcon(new ImageIcon(MainMenu.class.getResource("/Icons2/Cancel.jpg")));
 		jBtnCancel.setBounds(410, 45, 101, 64);
 		panel_3.add(jBtnCancel);
 	}

@@ -174,7 +174,7 @@ public class DepositeFrame extends JFrame {
 				jLabDisplay.setText(enterNumber);
 			}
 		});
-		btnNewButton_1.setBounds(54, 25, 101, 64);
+		btnNewButton_1.setBounds(71, 25, 101, 64);
 		panel.add(btnNewButton_1);
 		
 		//Adding the number buttons 0-9
@@ -301,7 +301,7 @@ public class DepositeFrame extends JFrame {
 				
 		//Clear button
 		JButton jBtnClear = new JButton("");
-		jBtnClear.setIcon(new ImageIcon("/Users/dina_dal/Desktop/Icons/clear.jpeg"));
+		jBtnClear.setIcon(new ImageIcon(MainMenu.class.getResource("/Icons2/Clear.jpg")));
 		jBtnClear.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				jLabDisplay.setText("");
@@ -314,7 +314,7 @@ public class DepositeFrame extends JFrame {
 		
 		//Enter button
 		JButton jBtnEnter = new JButton("");
-		jBtnEnter.setIcon(new ImageIcon("/Users/dina_dal/Desktop/Icons/enter.jpeg"));
+		jBtnEnter.setIcon(new ImageIcon(MainMenu.class.getResource("/Icons2/Enter.jpg")));
 		jBtnEnter.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				//adds deposited amount to the balance 
@@ -362,7 +362,7 @@ public class DepositeFrame extends JFrame {
 		
 		//Cancel button
 		JButton jBtnCancel = new JButton("");
-		jBtnCancel.setIcon(new ImageIcon("/Users/dina_dal/Desktop/Icons/cancel.jpeg"));
+		jBtnCancel.setIcon(new ImageIcon(MainMenu.class.getResource("/Icons2/Cancel.jpg")));
 		jBtnCancel.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent m) {
 				dispose();
