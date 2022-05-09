@@ -257,7 +257,7 @@ public class MainMenu {
 		
 		//Clear button
 		JButton jBtnClear = new JButton("");
-		jBtnClear.setIcon(new ImageIcon(MainMenu.class.getResource("/Icons2/Clear.jpeg")));
+		jBtnClear.setIcon(new ImageIcon(MainMenu.class.getResource("/Icons2/Clear.jpg")));
 		jBtnClear.setBounds(410, 140, 101, 64);
 		panel_3.add(jBtnClear);
 		
