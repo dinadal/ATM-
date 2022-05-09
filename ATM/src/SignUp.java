@@ -12,9 +12,12 @@ import java.io.PrintWriter;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
+import java.util.Random;
+
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
@@ -141,19 +144,14 @@ public class SignUp extends JFrame{
 				password = PinText.getText();
 				b = 0.0;
 				String PhoneNumber = PhoneNum.getText();
-				//String PinText1 = PinText.getText();
-				//String ConfirmPinText1 = ConfirmPinText.getText();
 				int phoneLength = PhoneNumber.length();
-				//int passLength =  PinText.length();
-				//int passLength1 = ConfirmPinText.length();
-				
+				Random randomAccNUM = new Random(); 
+				int I  = 100000;
+				int intRandomI = randomAccNUM.nextInt(I);
+
+				String accNum = String.valueOf(intRandomI);
 				if (phoneLength != 10) 
 					success.setText("Enter a valid phone number (10 digits)");
-				//else if (passLength != 4)
-					//success.setText("Enter a valid pin number (4 digits");
-				//else if (passLength1 != 4)
-					//success.setText("Error: Passwords don't match");
-				
 				if(PinText.equals(ConfirmPinText)) {
 					 success.setText("Sign Up Successful! The account has been created");
 					}
@@ -161,8 +159,12 @@ public class SignUp extends JFrame{
 					    BufferedWriter bw = new BufferedWriter(fw);
 					    PrintWriter out = new PrintWriter(bw))
 					{
-					    out.println("Generate acc num;"+password+";"+user+";"+"0");
+					    out.println(accNum+";"+password+";"+user+";"+"0");
+					    String message = "Your account number is: " + accNum;
+				        JOptionPane.showMessageDialog(frame,message, message, JOptionPane.INFORMATION_MESSAGE);
 						frame.setVisible(false);
+						Login window = new Login();
+						window.frame.setVisible(true);
 					} catch (IOException e1) {
 					    //exception handling left as an exercise for the reader
 					}

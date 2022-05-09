@@ -75,6 +75,7 @@ public class MainMenu {
 		
 		//Balance button
 		JButton btnBalance = new JButton("create credit card");
+		btnBalance.setFont(new Font("Lucida Grande", Font.PLAIN, 13));
 		btnBalance.addActionListener(new ActionListener() {
 			
 			@Override  //Takes the user to the withdraw frame
@@ -82,12 +83,11 @@ public class MainMenu {
 				frame.dispose();
 				CreditCard panel = new CreditCard();
 				panel.setVisible(true);
-				panel.setLocation(400,250);
 			}
 			
 		});
 
-		btnBalance.setBounds(25, 29, 117, 52);
+		btnBalance.setBounds(25, 29, 127, 64);
 		panel.add(btnBalance);
 		
 		//Withdraw button
@@ -98,22 +98,20 @@ public class MainMenu {
 						frame.dispose();
 						WithdrawFrame panel = new WithdrawFrame();
 						panel.setVisible(true);
-						panel.setLocation(400,250);
 					}
 					
 				});
-		btnWithdraw.setBounds(25, 105, 117, 52);
+		btnWithdraw.setBounds(25, 105, 127, 64);
 		panel.add(btnWithdraw);
 		
 		//Deposite button
 		JButton btnDeposit = new JButton("Deposit");
-		btnDeposit.setBounds(24, 25, 120, 52);
+		btnDeposit.setBounds(24, 25, 127, 64);
 		btnDeposit.addActionListener(new ActionListener() {
 		public void actionPerformed(ActionEvent e) {
 			frame.dispose();
 			DepositeFrame panel = new DepositeFrame();
 			panel.setVisible(true);
-			panel.setLocation(400,250);
 		}
 		
 	});
@@ -121,7 +119,7 @@ public class MainMenu {
 		
 		//Logout button
 		JButton btnLogout = new JButton("Logout");
-		btnLogout.setBounds(24, 101, 120, 52);
+		btnLogout.setBounds(24, 101, 127, 64);
 		panel_2.add(btnLogout);
 		btnLogout.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
