@@ -1,5 +1,7 @@
+import java.awt.Component;
 import java.awt.EventQueue;
 import java.awt.Frame;
+import java.awt.Window;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.BufferedReader;
@@ -42,13 +44,12 @@ public class SignUp extends JFrame{
 	String user;
 	String password;
 	double b;
-	static SignUp frame;
-	
+
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					frame = new SignUp();
+					SignUp frame = new SignUp();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -58,6 +59,7 @@ public class SignUp extends JFrame{
 	}
 
 	public SignUp(){
+		
 		setTitle("SignUp");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(200, 200, 800, 300);
@@ -155,15 +157,15 @@ public class SignUp extends JFrame{
 				if(PinText.equals(ConfirmPinText)) {
 					 success.setText("Sign Up Successful! The account has been created");
 					}
-				try(FileWriter fw = new FileWriter("./src/RounterInfo.txt", true);
+				try(FileWriter fw = new FileWriter("./src/LoginInfo.txt", true);
 					    BufferedWriter bw = new BufferedWriter(fw);
 					    PrintWriter out = new PrintWriter(bw))
 					{
 					    out.println(accNum+";"+password+";"+user+";"+"0");
 					    String message = "Your account number is: " + accNum;
-				        JOptionPane.showMessageDialog(frame,message, message, JOptionPane.INFORMATION_MESSAGE);
-						frame.setVisible(false);
-						Login window = new Login();
+				        JOptionPane.showMessageDialog(null,message,"Account Number", JOptionPane.INFORMATION_MESSAGE);
+						dispose();
+				        Login window = new Login();
 						window.frame.setVisible(true);
 					} catch (IOException e1) {
 					    //exception handling left as an exercise for the reader

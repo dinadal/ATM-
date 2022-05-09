@@ -156,8 +156,8 @@ public class Login {
 		btnSignUp.addActionListener(new ActionListener() {
 		public void actionPerformed(ActionEvent e) {
 			frame.dispose();
-			SignUp frame = new SignUp();
-			frame.setVisible(true);
+			SignUp panel = new SignUp();
+			panel.setVisible(true);
 			}
 		});
 		btnSignUp.setBounds(24, 101, 120, 52);
@@ -350,7 +350,7 @@ public class Login {
 			String b = null;
 	        try {
 	        	//Reads information from the text file
-				Scanner in = new Scanner(new File("./src/RounterInfo.txt"));
+				Scanner in = new Scanner(new File("./src/LoginInfo.txt"));
 				while(in.hasNextLine()){
 					 //if there is a line, print it out
 					 String line = in.nextLine();

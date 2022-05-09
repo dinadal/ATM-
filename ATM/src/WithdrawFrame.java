@@ -137,7 +137,7 @@ public class WithdrawFrame extends JFrame {
 						e2.printStackTrace();
 					}
 					    try {
-							fw = new FileWriter("./src/RounterInfo.txt", true);
+							fw = new FileWriter("./src/LoginInfo.txt", true);
 						} catch (IOException e1) {
 							// TODO Auto-generated catch block
 							e1.printStackTrace();
@@ -325,7 +325,7 @@ public class WithdrawFrame extends JFrame {
 						e2.printStackTrace();
 					}
 					    try {
-							fw = new FileWriter("./src/RounterInfo.txt", true);
+							fw = new FileWriter("./src/LoginInfo.txt", true);
 						} catch (IOException e1) {
 							// TODO Auto-generated catch block
 							e1.printStackTrace();
@@ -359,7 +359,7 @@ public class WithdrawFrame extends JFrame {
 	}
 	//Updates new balance to the text file
 	public void updateFile() throws IOException {
-		File inputFile = new File("./src/RounterInfo.txt");
+		File inputFile = new File("./src/LoginInfo.txt");
         File tempFile = new File("./src/myTempFile.txt");
 
         BufferedReader reader = new BufferedReader(new FileReader(inputFile));
@@ -375,7 +375,6 @@ public class WithdrawFrame extends JFrame {
         writer.close(); 
         reader.close(); 
         boolean successful = tempFile.renameTo(inputFile);
-        System.out.println(successful);
 	}
 	
 }
