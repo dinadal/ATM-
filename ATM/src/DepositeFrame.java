@@ -101,18 +101,21 @@ public class DepositeFrame extends JFrame {
 					nonNegative.setText("Balance updated");
 					String b = Double. toString(balance);
 					balanceText.setText(newBalance);
+					Login.balance = balance;
 					nonNegative.setText("Balance updated");
 					FileWriter fw = null;
 					BufferedWriter bw = null;
 					PrintWriter out = null;
 					try {
-						updateFile(); //Changes balance in file
+						updateFile();
 					} catch (IOException e2) {
+						// TODO Auto-generated catch block
 						e2.printStackTrace();
 					}
 					    try {
 							fw = new FileWriter("./src/RounterInfo.txt", true);
 						} catch (IOException e1) {
+							// TODO Auto-generated catch block
 							e1.printStackTrace();
 						}
 					    bw = new BufferedWriter(fw);
@@ -386,5 +389,7 @@ public class DepositeFrame extends JFrame {
         }
         writer.close(); 
         reader.close(); 
+        boolean successful = tempFile.renameTo(inputFile);
+        System.out.println(successful);
 	}
 }

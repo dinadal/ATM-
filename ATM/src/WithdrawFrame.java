@@ -125,6 +125,7 @@ public class WithdrawFrame extends JFrame {
 					balance = balance - withdrawD; //answer as double
 					String newBalance = String.valueOf(balance);
 					balanceText.setText(newBalance);
+					Login.balance = balance;
 					nonNegative1.setText("Balance updated");
 					FileWriter fw = null;
 					BufferedWriter bw = null;
