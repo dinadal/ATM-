@@ -3,12 +3,15 @@ import java.awt.Color;
 import java.awt.EventQueue;
 import java.awt.Font;
 import java.awt.Image;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.GregorianCalendar;
 import java.util.Random;
 import java.util.Scanner;
 import java.io.File;
 import java.io.FileNotFoundException;
 import javax.swing.ImageIcon;
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -105,7 +108,7 @@ public class creditCard extends JFrame {
 	 */
 	public creditCard() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
+		setBounds(100, 100, 450, 400);
 		contentPane = new JPanel();
 		contentPane.setBackground(new Color(51, 102, 51));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -189,6 +192,18 @@ public class creditCard extends JFrame {
 	    image3=new ImageIcon(newimg3); 
 	    madaLabel.setIcon(image3);
 	    
+	  //Main Menu button
+	  		JButton backButton = new JButton("Main Menu");
+	  		backButton.setBounds(34, 300, 270, 28);
+	  		backButton.addActionListener(new ActionListener() {
+	  			public void actionPerformed(ActionEvent m) {
+	  				dispose();
+	  				// main frame should be here
+	  				MainMenu panel = new MainMenu();
+	  				panel.frame.setVisible(true);
+	  				}
+	  		});
+	  		contentPane.add(backButton);
 	    
 	}
 
