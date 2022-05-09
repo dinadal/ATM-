@@ -1,4 +1,3 @@
-import java.awt.BorderLayout;
 import java.awt.EventQueue;
 import java.awt.Font;
 import javax.swing.JFrame;
@@ -6,30 +5,25 @@ import javax.swing.JPanel;
 import javax.swing.border.BevelBorder;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
-import javax.swing.JOptionPane;
 import javax.swing.JTextField;
-import javax.print.attribute.standard.OutputDeviceAssigned;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;		
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.Scanner;
 import java.awt.event.ActionEvent;
-import java.awt.Color;
 import java.awt.SystemColor;
 
 public class WithdrawFrame extends JFrame {
+	private static final long serialVersionUID = 1L;
 	private JTextField jLabDisplay;
 	public JFrame frame;
 	private JPanel contentPane;
-	private JTextField txtTf;
 	private JTextField balanceText;
 	private JTextField nonNegative1;
 	
@@ -122,6 +116,9 @@ public class WithdrawFrame extends JFrame {
 				nonNegative1.setText(null);
 				if (withdrawD < 0) {
 					nonNegative1.setText("Error: negative amount!");
+		        }
+				else if (withdrawD > balance) {
+					nonNegative1.setText("Error: Insuffiecient funds!");
 		        }
 				else {
 					String b = Double. toString(balance);

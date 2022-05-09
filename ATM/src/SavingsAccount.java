@@ -1,9 +1,9 @@
 
-public class savingsAccount extends Account {
+public class SavingsAccount extends Account {
 	
 	  double overdraftLimit = 0;
 
-	    public savingsAccount(String id, double balance, int pin) {
+	    public SavingsAccount(String id, double balance, int pin) {
 	        super(id, balance,pin);
 	    }
 

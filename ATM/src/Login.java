@@ -8,13 +8,10 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.security.PublicKey;
+import java.io.IOException;
 import java.util.Scanner;
 import java.awt.event.ActionEvent;
 import java.awt.Color;
-import javax.swing.JLabel;
-import javax.swing.JOptionPane;
-
 import java.awt.Font;
 import javax.swing.JTextField;
 import javax.swing.ImageIcon;
@@ -33,7 +30,6 @@ public class Login {
 	boolean user_found = false; //Checks if the user logged in with the correct info
 	static double balance = 0; //balance
 
-//test
 
 	//Launch the application
 	public static void main(String[] args) {

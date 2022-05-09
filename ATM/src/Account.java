@@ -23,9 +23,6 @@ public class Account {
 		accountNumber = n;
 		balance = b;
 		pin = p;
-		//annualInterestRate = r;
-		//date = d;
-		
 	}
 	
 	public Account(String n, String i,  double b, int p) {
@@ -48,36 +45,21 @@ public class Account {
 		return name;
 	}
 	
-	/* public void setAccountNumber(String i) {
-		accountNumber = i;
-	}*/
-	
 	public String getAccountNumber() {
 		return accountNumber;
 	}
-	
-	/* public void setBalance(double b) {
-		balance = b;
-	}
-	*/
+
 	public double getBalance() {
 		return balance;
 	}
 	public int getPin() {
 		return pin;
 	}
-	/* public void setAnnualInterestRate(double r) {
-		annualInterestRate = r;
-	}*/
-	
+
 	public double getAnnualInterestRate() {
 		return annualInterestRate;
 	}
-	
-	/* public void setDate(Date d) {
-		date = d;
-	}*/
-	
+
 	public Date getDate() {
 		return date;
 	}
@@ -114,10 +96,6 @@ public class Account {
 	public ArrayList<Transactions> getTransactions() {
 		return transactions;
 	}
-    
-    //public ArrayList<Transactions> getTransactions() {
-    //    return new ArrayList<>(transactions);
-   // }
 	
 	ArrayList<Transactions> getTransaction(){
 		for(int i = 0; i < transactions.size(); i++) {

@@ -1,5 +1,4 @@
 import java.awt.EventQueue;
-
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.BevelBorder;
@@ -7,7 +6,6 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.Color;
-import javax.swing.JLabel;
 import java.awt.Font;
 import javax.swing.JTextField;
 import javax.swing.ImageIcon;
@@ -82,7 +80,7 @@ public class MainMenu {
 			@Override  //Takes the user to the withdraw frame
 			public void actionPerformed(ActionEvent e) {
 				frame.dispose();
-				creditCard panel = new creditCard();
+				CreditCard panel = new CreditCard();
 				panel.setVisible(true);
 				panel.setLocation(400,250);
 			}

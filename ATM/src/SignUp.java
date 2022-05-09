@@ -1,4 +1,5 @@
 import java.awt.EventQueue;
+import java.awt.Frame;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.BufferedReader;
@@ -11,34 +12,40 @@ import java.io.PrintWriter;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
-import java.util.Scanner;
-
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 
-public class SignUp extends JFrame implements ActionListener{
+public class SignUp extends JFrame{
 	
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 	private static JLabel userLabel;
 	private static JTextField userText;
+	private static JTextField name;
 	private static JPasswordField PinText;
 	private static JPasswordField ConfirmPinText;
 	private static JTextField PhoneNum;
 	private static JLabel passwordLabel;
 	private static JLabel success;
+	String user;
+	String password;
+	double b;
+	static SignUp frame;
 	
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					SignUp frame = new SignUp();
+					frame = new SignUp();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -57,20 +64,20 @@ public class SignUp extends JFrame implements ActionListener{
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		userLabel = new JLabel("First Name");
+		userLabel = new JLabel("Last Name");
 		userLabel.setBounds(10, 20, 160, 25);
 		contentPane.add(userLabel);
 		
-		userText = new JTextField();
-		userText.setBounds(120, 20, 165, 25);
-		contentPane.add(userText);
+		name = new JTextField();
+		name.setBounds(120, 50, 165, 25);
+		contentPane.add(name);
 		
-		userLabel = new JLabel("Last Name");
+		userLabel = new JLabel("First Name");
 		userLabel.setBounds(10, 50, 80, 25);
 		contentPane.add(userLabel);
 		
 		userText = new JTextField();
-		userText.setBounds(120, 50, 165, 25);
+		userText.setBounds(120, 20, 165, 25);
 		contentPane.add(userText);
 		
 		userLabel = new JLabel("Address");
@@ -130,6 +137,9 @@ public class SignUp extends JFrame implements ActionListener{
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
+				user = name.getText();
+				password = PinText.getText();
+				b = 0.0;
 				String PhoneNumber = PhoneNum.getText();
 				//String PinText1 = PinText.getText();
 				//String ConfirmPinText1 = ConfirmPinText.getText();
@@ -147,23 +157,22 @@ public class SignUp extends JFrame implements ActionListener{
 				if(PinText.equals(ConfirmPinText)) {
 					 success.setText("Sign Up Successful! The account has been created");
 					}
+				try(FileWriter fw = new FileWriter("./src/RounterInfo.txt", true);
+					    BufferedWriter bw = new BufferedWriter(fw);
+					    PrintWriter out = new PrintWriter(bw))
+					{
+					    out.println("Generate acc num;"+password+";"+user+";"+"0");
+						frame.setVisible(false);
+					} catch (IOException e1) {
+					    //exception handling left as an exercise for the reader
+					}
 				
 			}
 		});
-		
-		try {
-		    Files.write(Paths.get("Rounter.txt"), "the text".getBytes(), StandardOpenOption.APPEND);
-		    System.out.println("successful");
-		}catch (IOException e) {
-		    //exception handling left as an exercise for the reader
-		}
+
 				
 	
 
 }
-
-	@Override
-	public void actionPerformed(ActionEvent e) {
-		// TODO Auto-generated method stub
-		
-	}}
+			
+}

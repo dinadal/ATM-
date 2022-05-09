@@ -1,4 +1,3 @@
-import java.awt.BorderLayout;
 import java.awt.EventQueue;
 import java.awt.Font;
 import java.awt.SystemColor;
@@ -8,7 +7,6 @@ import javax.swing.JPanel;
 import javax.swing.border.BevelBorder;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
-import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -16,20 +14,21 @@ import java.awt.event.ActionListener;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.Scanner;
 import java.awt.event.ActionEvent;
 
 public class DepositeFrame extends JFrame {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	public JFrame frame;
 	private JTextField jLabDisplay;
 	private JPanel contentPane;
-	private JTextField txtTf;
 	private JTextField balanceText;
 	private JTextField nonNegative;
 
@@ -160,12 +159,7 @@ public class DepositeFrame extends JFrame {
 		contentPane.add(panel);
 		//frame.getContentPane().add(panel);
 		panel.setLayout(null);
-		
-		/**
-		txtTf = new JTextField();
-		panel_1.add(txtTf);
-		txtTf.setColumns(10);
-		*/
+
 		JButton btnNewButton_1 = new JButton(" ");
 		btnNewButton_1.setIcon(new ImageIcon(MainMenu.class.getResource("/Icons/1.jpeg")));
 		btnNewButton_1.addActionListener(new ActionListener() {
