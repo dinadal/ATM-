@@ -1,13 +1,21 @@
 import java.util.Date;
+import java.util.Random;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import java.util.ArrayList;
 
+
 public class Account {
-	
+
 	String accountNumber;
-	String name;
+	String fname;
+	String lname;
+	String address;
+	String email;
+	String pin;
+	String phoneNum;
 	double balance;
 	double annualInterestRate;
-	int pin;
 	Date date;
     ArrayList<Transactions> transactions = new ArrayList<Transactions>();
 	
@@ -15,45 +23,104 @@ public class Account {
 	public Account() {
 		
 	}
-	
-	public Account(String n, double b,int p) {
-		if (b < 0) {
-            throw new IllegalArgumentException("Accounts with a negative balance cannot be created!");
-        }
-		accountNumber = n;
-		balance = b;
-		pin = p;
-	}
-	
-	public Account(String n, String i,  double b, int p) {
-		if (b < 0) {
-            throw new IllegalArgumentException("Accounts with a negative balance cannot be created!");
-        }
-		name = n;
-		accountNumber = i;
-		balance = b;
-		pin = p;
+
+	public Account(String fn,String ln,String add,String em,String p,String pn) throws Exception
+	{
+		setAccountNumber();
+		setFName(fn);
+		setLName(ln);
+		setAddress(add);
+		setPin(p);
+		setEmail(em);
+		setPhoneNum(pn);
+		date = new Date();
 		
 	}
-	
 	//setters and getters
-	public void setName(String n) {
-		name = n;
+	public void setAccountNumber() {
+		Random randomAccNUM = new Random(); 
+		int I  = 100000;
+		int intRandomI = randomAccNUM.nextInt(I);
+		accountNumber = String.valueOf(intRandomI);
+		System.out.print(accountNumber);
 	}
-	
-	public String getName() {
-		return name;
-	}
-	
+
 	public String getAccountNumber() {
 		return accountNumber;
 	}
+	
+	public void setFName(String n) {
+		fname = n;
+	}
+	
+	public String getFName() {
+		return fname;
+	}
+	
+	public void setLName(String n) {
+		lname = n;
+	}
+	
+	public String getLName() {
+		return lname;
+	}
+	
+	public void setAddress(String a) {
+		address = a;
+	}
+	
+	public String setAddress() {
+		return address;
+	}
+	
+	public String getEmail()
+	{
+		return email;
+	}
 
+	public void setEmail(String email) throws Exception
+	{
+		boolean checkEmail = email
+				.matches("^[a-zA-Z0-9_+&-]+(?:\\.[a-zA-Z0-9_+&-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,7}$");
+		if (!checkEmail)
+		{
+			throw new Exception("Email is not valid");
+		} else
+			this.email = email;
+	}
+	
+	public String getPhoneNum()
+	{
+		return phoneNum;
+	}
+
+	public void setPhoneNum(String phoneNum) throws Exception
+	{
+		boolean checkMobile = phoneNum.matches("05[\\d]{8}");
+		if (!checkMobile)
+		{
+			throw new Exception("Mobile number is not valid");
+		} else
+			this.phoneNum = phoneNum;
+	}
+	
+	public String getPin()
+	{
+		return pin;
+	}
+
+	public void setPin(String pin) throws Exception
+	{
+		Matcher m = Pattern.compile("\\d{4}").matcher(pin);
+		if (m.matches()) {
+			this.pin = pin;		} else {
+			throw new Exception("password must only be maximum 4 digits");
+		}
+
+	}
+	
 	public double getBalance() {
 		return balance;
-	}
-	public int getPin() {
-		return pin;
 	}
 
 	public double getAnnualInterestRate() {
@@ -107,7 +174,7 @@ public class Account {
 	
     //toString method 
     public String toString() {
-      return "Account holder name: " + name + "\n" + "Account number: " + accountNumber + "\n" +
+      return "Account holder name: " + fname + "\n" + lname + "\n" +"Account number: " + accountNumber + "\n" +
         "Balance: " + balance + "\n" + "Transactions: " + transactions;
     }
 	
