@@ -349,7 +349,7 @@ public class DepositeFrame extends JFrame {
 						e2.printStackTrace();
 					}
 					    try {
-							fw = new FileWriter("C:\\Users\\KHALID\\git\\ATM\\ATM\\src\\LoginInfo.txt", true);
+							fw = new FileWriter(".src/LoginInfo.txt", true);
 						} catch (IOException e1) {
 							// TODO Auto-generated catch block
 							e1.printStackTrace();

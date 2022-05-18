@@ -26,10 +26,14 @@ public class WithdrawFrame extends JFrame {
 	private JPanel contentPane;
 	private JTextField balanceText;
 	private JTextField nonNegative1;
+	Account info;
 	
 	//Takes balance from Login class
-	double balance = Login.balance;  
-	String balanceS = String.valueOf(balance);
+	//double balance = Login.getBalance();  
+	//String balanceS = String.valueOf(balance);
+	double balance = Account.getBalance();
+	//double balance = Account.balance;  
+	String balanceS = Double.toString(balance);
 
 	//Launch the application
 	public static void main(String[] args) {
@@ -121,11 +125,12 @@ public class WithdrawFrame extends JFrame {
 					nonNegative1.setText("Error: Insuffiecient funds!");
 		        }
 				else {
-					String b = Double. toString(balance);
-					balance = balance - withdrawD; //answer as double
+					
+					balance = Account.withdraw(withdrawD); //answer as double
 					String newBalance = String.valueOf(balance);
+					String b = Double. toString(balance);
 					balanceText.setText(newBalance);
-					Login.balance = balance;
+					Login.setBalance(balance);
 					nonNegative1.setText("Balance updated");
 					FileWriter fw = null;
 					BufferedWriter bw = null;
@@ -137,7 +142,7 @@ public class WithdrawFrame extends JFrame {
 						e2.printStackTrace();
 					}
 					    try {
-							fw = new FileWriter("./src/LoginInfo.txt", true);
+							fw = new FileWriter(".src/LoginInfo.txt", true);
 						} catch (IOException e1) {
 							// TODO Auto-generated catch block
 							e1.printStackTrace();
@@ -310,10 +315,12 @@ public class WithdrawFrame extends JFrame {
 					nonNegative1.setText("Error: negative amount!");
 		        }
 				else {
-					String b = Double. toString(balance);
-					balance = balance - withdrawD; //answer as double
+
+					balance = Account.withdraw(withdrawD); //answer as double
 					String newBalance = String.valueOf(balance);
+					String b = Double. toString(balance);
 					balanceText.setText(newBalance);
+					Login.setBalance(balance);
 					nonNegative1.setText("Balance updated");
 					FileWriter fw = null;
 					BufferedWriter bw = null;
@@ -325,7 +332,7 @@ public class WithdrawFrame extends JFrame {
 						e2.printStackTrace();
 					}
 					    try {
-							fw = new FileWriter("./src/LoginInfo.txt", true);
+							fw = new FileWriter(".src/LoginInfo.txt", true);
 						} catch (IOException e1) {
 							// TODO Auto-generated catch block
 							e1.printStackTrace();
@@ -339,6 +346,7 @@ public class WithdrawFrame extends JFrame {
 				}
 			}
 		});
+
 		jBtnEnter.setBounds(410, 230, 101, 64);
 		panel.add(jBtnEnter);
 		
@@ -359,7 +367,7 @@ public class WithdrawFrame extends JFrame {
 	}
 	//Updates new balance to the text file
 	public void updateFile() throws IOException {
-		File inputFile = new File("./src/LoginInfo.txt");
+		File inputFile = new File(".src/LoginInfo.txt");
         File tempFile = new File("./src/myTempFile.txt");
 
         BufferedReader reader = new BufferedReader(new FileReader(inputFile));

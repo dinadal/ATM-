@@ -144,13 +144,13 @@ public class Account {
 	
 	
 	//Methods to deposit and withdraw funds
-    public void withdraw(double amount) {
+    public static double withdraw(double amount) {
 //We can have exceptions here
     	   if(amount < balance)
     	   {
     	    balance = balance-amount;
-    	    System.out.println("You have withdrawn "+amount+ " and your new balance is "+balance);
-    	    transactions.add(new Transactions('W', amount, balance, "withdraw" ));
+    	    //System.out.println("You have withdrawn "+amount+ " and your new balance is "+balance);
+    	    //transactions.add(new Transactions('W', amount, balance, "withdraw" ));
     	   }
     	   else  if (amount < 0) {
     		   System.out.println("Don't withdraw a negative amount!");
@@ -158,6 +158,7 @@ public class Account {
     	   else if (balance < amount) {
     		   System.out.println("Insuffiecient funds");
     	      }
+    	   return balance;
     }
     
     
