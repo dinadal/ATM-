@@ -42,7 +42,6 @@ public class Account {
 		int I  = 100000;
 		int intRandomI = randomAccNUM.nextInt(I);
 		accountNumber = String.valueOf(intRandomI);
-		System.out.print(accountNumber);
 	}
 
 	public String getAccountNumber() {
