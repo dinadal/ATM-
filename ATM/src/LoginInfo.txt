@@ -3,4 +3,3 @@ Acc num; Pin; Name; Balance
 22133;1235;Mayan;19277.0
 20106;1234;Dina;18052
 11026;1234;Sara;520.0
-t
