@@ -115,7 +115,7 @@ public class DepositeFrame extends JFrame {
 						e2.printStackTrace();
 					}
 					    try {
-							fw = new FileWriter("C:\\Users\\KHALID\\git\\ATM\\ATM\\src\\LoginInfo.txt", true);
+							fw = new FileWriter("./src/LoginInfo.txt", true);
 						} catch (IOException e1) {
 							// TODO Auto-generated catch block
 							e1.printStackTrace();
@@ -386,7 +386,7 @@ public class DepositeFrame extends JFrame {
 	}
 	//Updates new balance to the text file
 	public void updateFile() throws IOException {
-		File inputFile = new File("C:\\Users\\KHALID\\git\\ATM\\ATM\\src\\LoginInfo.txt");
+		File inputFile = new File("./src/LoginInfo.txt");
         File tempFile = new File("./src/myTempFile.txt");
 
         BufferedReader reader = new BufferedReader(new FileReader(inputFile));
