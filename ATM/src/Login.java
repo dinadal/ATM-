@@ -350,7 +350,7 @@ public class Login {
 			String b = null;
 	        try {
 	        	//Reads information from the text file
-				Scanner in = new Scanner(new File("./src/LoginInfo.txt"));
+				Scanner in = new Scanner(new File("C:\\Users\\KHALID\\git\\ATM\\ATM\\src\\LoginInfo.txt"));
 				while(in.hasNextLine()){
 					 //if there is a line, print it out
 					 String line = in.nextLine();
@@ -368,7 +368,15 @@ public class Login {
 			} catch (FileNotFoundException e1) {
 				e1.printStackTrace();
 			}
-			balance = Double.parseDouble(b);
+			setBalance(Double.parseDouble(b));
+		}
+
+		public static double getBalance() {
+			return balance;
+		}
+
+		public static void setBalance(double balance) {
+			Login.balance = balance;
 		}
 		
 }

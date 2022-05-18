@@ -3,21 +3,32 @@ import java.util.Random;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.ArrayList;
+import java.util.Scanner;
+import java.io.*;
+
 
 
 public class Account {
-
-	String accountNumber;
-	String fname;
-	String lname;
+	
+	//Login log;
+	static String accountNumber;
+	static String fname;
+	static String lname;
 	String address;
 	String email;
-	String pin;
+	static String pin;
 	String phoneNum;
-	double balance;
+	//static double balance;
 	double annualInterestRate;
 	Date date;
     ArrayList<Transactions> transactions = new ArrayList<Transactions>();
+    /////////////////////////////////////////////
+
+    Login t = new Login();
+	static double balance= Login.balance ; //balance
+	
+	
+	
 	
 	//No argument constructor
 	public Account() {
@@ -118,7 +129,8 @@ public class Account {
 
 	}
 	
-	public double getBalance() {
+	public static double getBalance() {
+		//balance = 
 		return balance;
 	}
 
@@ -147,18 +159,25 @@ public class Account {
     		   System.out.println("Insuffiecient funds");
     	      }
     }
+    
+    
 
-    public void deposit(double amount) {
+    public static double deposit(double amount) {
     	
     	if (amount < 0) {
-    		System.out.println("Don't deposit a negative amount!");
+    		System.out.println("Error: negative amount!");
         }
     	else {
     		 balance += amount;
-    	     transactions.add(new Transactions('D', amount, balance, "deposite" ));
+    		 return balance;
+    		// String newBalance = String.valueOf(balance);
+    	     //transactions.add(new Transactions('D', amount, balance, "deposite" ));
 		}
+		
+    	return balance;
+    	
     }
-    
+   
 	public ArrayList<Transactions> getTransactions() {
 		return transactions;
 	}

@@ -22,19 +22,19 @@ import java.awt.event.ActionEvent;
 
 public class DepositeFrame extends JFrame {
 
-	/**
-	 * 
-	 */
+	
 	private static final long serialVersionUID = 1L;
 	public JFrame frame;
 	private JTextField jLabDisplay;
 	private JPanel contentPane;
 	private JTextField balanceText;
 	private JTextField nonNegative;
+	Account info;
 
 	//Takes balance from Login class
-	double balance = Login.balance;  
-	String balanceS = String.valueOf(balance);
+	double balance = Account.getBalance();
+	//double balance = Account.balance;  
+	String balanceS = Double.toString(balance);
 
 	//Launch the application
 	public static void main(String[] args) {
@@ -95,13 +95,15 @@ public class DepositeFrame extends JFrame {
 					nonNegative.setText("Error: negative amount!");
 		        }
 				else {
-					balance = balance + depositeD; //answer as double
+					///////////////////////////////////////////////////////////////////////////
+					balance = Account.deposit(depositeD);//answer as double
+					//ba=balance;
 					String newBalance = String.valueOf(balance);
 					balanceText.setText(newBalance);
 					nonNegative.setText("Balance updated");
 					String b = Double. toString(balance);
 					balanceText.setText(newBalance);
-					Login.balance = balance;
+					//ba = balance;
 					nonNegative.setText("Balance updated");
 					FileWriter fw = null;
 					BufferedWriter bw = null;
@@ -113,7 +115,7 @@ public class DepositeFrame extends JFrame {
 						e2.printStackTrace();
 					}
 					    try {
-							fw = new FileWriter("./src/LoginInfo.txt", true);
+							fw = new FileWriter("C:\\Users\\KHALID\\git\\ATM\\ATM\\src\\LoginInfo.txt", true);
 						} catch (IOException e1) {
 							// TODO Auto-generated catch block
 							e1.printStackTrace();
@@ -121,7 +123,9 @@ public class DepositeFrame extends JFrame {
 					    bw = new BufferedWriter(fw);
 					    out = new PrintWriter(bw);
 					    String text = Login.accNum_from_file+";"+Login.password_form_file+";"+Login.name+";"+b;
-					    text.replaceAll(text, "");
+					    text.replaceAll(Login.accNum_from_file+";"+Login.password_form_file+";"+Login.name+";"+b, "");
+					    
+					    //im checking the value of accountNumber
 					    out.println(Login.accNum_from_file+";"+Login.password_form_file+";"+Login.name+";"+newBalance);
 					    out.close();
 				}
@@ -140,6 +144,7 @@ public class DepositeFrame extends JFrame {
 		balanceText.setBounds(186, 11, 159, 45);
 		contentPane.add(balanceText);
 		balanceText.setColumns(10);
+		
 		balanceText.setText(balanceS);
 		
 		//Main Menu button
@@ -324,30 +329,37 @@ public class DepositeFrame extends JFrame {
 					nonNegative.setText("Error: negative amount!");
 		        }
 				else {
-					balance = balance + depositeD; //answer as double
+					///////////////////////////////////////////////////////////////////////////
+					balance = Account.deposit(depositeD);//answer as double
+					//ba=balance;
 					String newBalance = String.valueOf(balance);
 					balanceText.setText(newBalance);
 					nonNegative.setText("Balance updated");
 					String b = Double. toString(balance);
 					balanceText.setText(newBalance);
+					//ba = balance;
 					nonNegative.setText("Balance updated");
 					FileWriter fw = null;
 					BufferedWriter bw = null;
 					PrintWriter out = null;
 					try {
-						updateFile(); //Changes balance in file
+						updateFile();
 					} catch (IOException e2) {
+						// TODO Auto-generated catch block
 						e2.printStackTrace();
 					}
 					    try {
-							fw = new FileWriter("./src/LoginInfo.txt", true);
+							fw = new FileWriter("C:\\Users\\KHALID\\git\\ATM\\ATM\\src\\LoginInfo.txt", true);
 						} catch (IOException e1) {
+							// TODO Auto-generated catch block
 							e1.printStackTrace();
 						}
 					    bw = new BufferedWriter(fw);
 					    out = new PrintWriter(bw);
 					    String text = Login.accNum_from_file+";"+Login.password_form_file+";"+Login.name+";"+b;
-					    text.replaceAll(text, "");
+					    text.replaceAll(Login.accNum_from_file+";"+Login.password_form_file+";"+Login.name+";"+b, "");
+					    
+					    //im checking the value of accountNumber
 					    out.println(Login.accNum_from_file+";"+Login.password_form_file+";"+Login.name+";"+newBalance);
 					    out.close();
 				}
@@ -374,7 +386,7 @@ public class DepositeFrame extends JFrame {
 	}
 	//Updates new balance to the text file
 	public void updateFile() throws IOException {
-		File inputFile = new File("./src/LoginInfo.txt");
+		File inputFile = new File("C:\\Users\\KHALID\\git\\ATM\\ATM\\src\\LoginInfo.txt");
         File tempFile = new File("./src/myTempFile.txt");
 
         BufferedReader reader = new BufferedReader(new FileReader(inputFile));
