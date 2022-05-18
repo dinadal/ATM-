@@ -350,7 +350,7 @@ public class Login {
 			String b = null;
 	        try {
 	        	//Reads information from the text file
-				Scanner in = new Scanner(new File(".src/LoginInfo.txt"));
+				Scanner in = new Scanner(new File("./src/LoginInfo.txt"));
 				while(in.hasNextLine()){
 					 //if there is a line, print it out
 					 String line = in.nextLine();
