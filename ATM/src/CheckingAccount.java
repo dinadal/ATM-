@@ -3,8 +3,8 @@ public class CheckingAccount extends Account {
 	
 	double overdraftLimit = -100;
 	
-	 public CheckingAccount(String id, double balance, int pin) {
-	        super(id, balance, pin);
+	 public CheckingAccount(String fn,String ln,String add,String em,String p,String pn) throws Exception {
+	        super(fn,ln,add,em,p,pn);
 	    }
 
 	    @Override
