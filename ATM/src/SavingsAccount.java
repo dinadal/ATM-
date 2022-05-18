@@ -7,8 +7,7 @@ public class SavingsAccount extends Account {
 	        super(fn,ln,add,em,p,pn);
 	    }
 
-	    @Override
-	    public void withdraw(double amount) {
+	    public void withdraw1(double amount) {
 	        if (balance - amount >= overdraftLimit) {
 	            super.withdraw(amount);
 	        }
